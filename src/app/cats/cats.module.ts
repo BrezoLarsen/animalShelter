@@ -5,6 +5,7 @@ import { AllCatsComponent } from './all-cats.component';
 import { SickCatsComponent } from './sick-cats.component';
 import { WeakCatsComponent } from './weak-cats.component';
 import { TabsComponent } from '../tabs/tabs.component';
+import { CardComponent } from '../card/card.component';
 
 
 @NgModule({
@@ -12,9 +13,10 @@ import { TabsComponent } from '../tabs/tabs.component';
     TabsComponent,
     AllCatsComponent,
     SickCatsComponent,
-    WeakCatsComponent
+    WeakCatsComponent,
+    CardComponent
   ],
-  exports: [TabsComponent],
+  exports: [TabsComponent, CardComponent],
   imports: [
     RouterModule.forChild([
       { path: 'main', component: AllCatsComponent },

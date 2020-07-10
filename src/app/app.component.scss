@@ -1,0 +1,22 @@
+.navbar {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 16px;
+}
+
+.tabs {
+    background: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
