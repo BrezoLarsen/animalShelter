@@ -6,6 +6,7 @@ import { SickCatsComponent } from './sick-cats.component';
 import { WeakCatsComponent } from './weak-cats.component';
 import { TabsComponent } from '../tabs/tabs.component';
 import { CardComponent } from '../card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CardComponent } from '../card/card.component';
   ],
   exports: [TabsComponent, CardComponent],
   imports: [
+    HttpClientModule,
     RouterModule.forChild([
       { path: 'main', component: AllCatsComponent },
       { path: 'sick', component: SickCatsComponent },

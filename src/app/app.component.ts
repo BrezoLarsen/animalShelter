@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  isMenuVisible: boolean = false;
+
+  presentMenu(e) {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
+
 }

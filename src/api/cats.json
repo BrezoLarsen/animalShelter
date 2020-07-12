@@ -1,0 +1,53 @@
+[
+    {
+      "catId": 1,
+      "catName": "Nina",
+      "catChip": "GDN-0011",
+      "entryDate": "March 19, 2019",
+      "characteristic": "Muy delgada",
+      "gender": "hembra",
+      "captureZone": "Alcorcón",
+      "imageUrl": "assets/images/leaf_rake.png",
+      "medicalHistory": []
+    },
+    {
+      "catId": 2,
+      "catName": "Batman",
+      "catChip": "GDN-0023",
+      "entryDate": "March 18, 2019",
+      "characteristic": "Cariñoso",
+      "gender": "macho",
+      "captureZone": "Madrid",
+      "imageUrl": "assets/images/garden_cart.png"
+    },
+    {
+      "catId": 5,
+      "catName": "Tibu",
+      "catChip": "TBX-0048",
+      "entryDate": "May 21, 2019",
+      "characteristic": "Muy mimoso",
+      "gender": "macho",
+      "captureZone": "Madrid",
+      "imageUrl": "assets/images/hammer.png"
+    },
+    {
+      "catId": 8,
+      "catName": "Condesita",
+      "catChip": "TBX-0022",
+      "entryDate": "May 15, 2019",
+      "characteristic": "Asustadiza y delgada",
+      "gender": "hembra",
+      "captureZone": "Madrid",
+      "imageUrl": "assets/images/saw.png"
+    },
+    {
+      "catId": 10,
+      "catName": "Luna",
+      "catChip": "GMG-0042",
+      "entryDate": "October 15, 2018",
+      "characteristic": "Normalmente en la zona de las camas dentro de la nave",
+      "gender": "hembra",
+      "captureZone": "Leganés",
+      "imageUrl": "assets/images/xbox-controller.png"
+    }
+  ]

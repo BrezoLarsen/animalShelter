@@ -8,7 +8,8 @@ const routes: Routes = [
   // Default URL:
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   // 404 URL: 
-  { path: '**', redirectTo: 'main', pathMatch: 'full' }];
+  { path: '**', redirectTo: 'main', pathMatch: 'full' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

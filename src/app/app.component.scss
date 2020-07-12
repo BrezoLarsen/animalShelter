@@ -1,8 +1,118 @@
 .navbar {
-    margin: 10px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 6px 1px 4px 0px #c7c7c7;
+    &__search {
+        position: relative;
+        &-input {
+            appearance: none;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid grey;
+            padding: 0 10px;
+            font-size: 16px;
+            &:focus {
+                outline: none;
+            }
+        }
+        &-icon {
+            width: 40px;
+            height: 40px;
+            background: url('/assets/img/search.svg') no-repeat center;
+            background-size: 20px;
+            border-left: 1px solid grey;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+    }
+    &__burger {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        cursor: pointer;
+        &-menu {
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            &-line {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background: black;
+                transition: 0.5s;
+                &:first-child {
+                    position: relative;
+                    top: 10px;
+                }
+                &:nth-child(2) {
+                    position: relative;
+                    top: 0;
+                }
+                &:last-child {
+                    position: relative;
+                    top: -10px;
+                }
+            }
+            &--open {
+                .navbar__burger-menu-line:first-child {
+                    transition: 0.5s;
+                    transform: rotate(45deg);
+                    position: relative;
+                    top: 3px;
+                }
+                .navbar__burger-menu-line:nth-child(2) {
+                    display: none;
+                }
+                .navbar__burger-menu-line:last-child {
+                    transition: 0.5s;
+                    transform: rotate(-45deg);
+                    position: relative;
+                    top: 0;
+                }
+            }
+        }
+    }
+    &__menu {
+        width: 400px;
+        height: 100vh;
+        position: absolute;
+        top: 70px;
+        left: -400px;
+        z-index: 9;
+        background: #151212;
+        transition: 0.5s;
+        &-list {
+            list-style: none;
+            padding: 30px 40px;
+        }
+        &-item  {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            padding: 20px;
+            border-bottom: 1px solid white;
+            cursor: pointer;
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+        &--open {
+            transition: 0.5s;
+            left: 0;
+            box-shadow: 5px 0 4px -2px rgba(45, 45, 45, 0.5);
+        }
+    }
 }
 
 .content {
@@ -19,4 +129,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 10px 10px 10px 10px #c7c7c7;
 }
