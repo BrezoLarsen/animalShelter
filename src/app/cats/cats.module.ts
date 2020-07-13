@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [TabsComponent, CardComponent],
   imports: [
+    BrowserModule,
     HttpClientModule,
     RouterModule.forChild([
       { path: 'main', component: AllCatsComponent },

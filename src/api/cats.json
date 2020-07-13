@@ -7,9 +7,9 @@
       "characteristic": "Muy delgada",
       "gender": "hembra",
       "captureZone": "Alcorcón",
-      "imageUrl": "assets/images/leaf_rake.png",
-      "medicalHistory": []
-    },
+      "imageUrl": "assets/images/leaf_rake.png"
+    }
+    ,
     {
       "catId": 2,
       "catName": "Batman",

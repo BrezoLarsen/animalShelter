@@ -13,7 +13,6 @@ export class CatService {
 
     private catsUrl = 'api/cats.json';
 
-
     constructor(private httpClient: HttpClient) { }
 
     getCats(): Observable<ICat[]> { 

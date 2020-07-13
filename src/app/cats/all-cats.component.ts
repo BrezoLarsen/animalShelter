@@ -9,16 +9,21 @@ import { ICat } from '../interfaces/cat';
 export class AllCatsComponent implements OnInit {
 
     cats: ICat[] = [];
+    catsLoaded: boolean = false;
+    errorMessage: string;
 
     constructor(
         private catService: CatService
     ) {}
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.catService.getCats().subscribe({
             next: cats => {
                 this.cats = cats;
-            }
+                this.catsLoaded = true;
+                console.log('TODOS: ', this.cats);
+            },
+            error: err => this.errorMessage = err
         });
     }
 

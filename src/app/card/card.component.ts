@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { ICat } from '../interfaces/cat';
 
 @Component({
   selector: 'as-card',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  cats: ICat[] = [];
 
-  ngOnInit(): void {
-  }
+  @Input() cat: ICat;
+
+  constructor() {}
+
+  ngOnInit(): void { }
 
 }

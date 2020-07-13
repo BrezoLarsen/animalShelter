@@ -1,12 +1,9 @@
 <div class="main-title">Todos</div>
-<div *ngFor="let cat of cats">{{ cat.name }}</div>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
-    <as-card></as-card>
+<div>
+    <div *ngFor="let cat of cats">
+        <as-card [cat]='cat'></as-card>
+    </div>
+</div>
+
+
 
