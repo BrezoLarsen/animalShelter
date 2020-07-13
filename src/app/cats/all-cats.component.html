@@ -1,6 +1,12 @@
-<div class="main-title">Todos</div>
+<div class="searchbox">
+    <input [(ngModel)]='listFilter' class="searchbox-input" type="text">
+    <div class="searchbox-icon"></div>
+</div>
+
+<!-- <div class="main-title">Todos</div> -->
+
 <div>
-    <div *ngFor="let cat of cats">
+    <div *ngFor="let cat of filteredCats">
         <as-card [cat]='cat'></as-card>
     </div>
 </div>

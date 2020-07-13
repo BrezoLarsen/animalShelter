@@ -1,10 +1,12 @@
-<div class="main-title">Enfermos</div>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
-<as-card></as-card>
+<div class="searchbox">
+    <input [(ngModel)]='listFilter' class="searchbox-input" type="text">
+    <div class="searchbox-icon"></div>
+</div>
+
+<!-- <div class="main-title">Para medicar</div> -->
+
+<div>
+    <div *ngFor="let cat of filteredCats">
+        <as-card [cat]='cat'></as-card>
+    </div>
+</div>

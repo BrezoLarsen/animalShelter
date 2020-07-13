@@ -9,8 +9,10 @@ import { ICat } from '../interfaces/cat';
 export class AllCatsComponent implements OnInit {
 
     cats: ICat[] = [];
+    filteredCats: ICat[] = [];
     catsLoaded: boolean = false;
     errorMessage: string;
+    _listFilter: string;
 
     constructor(
         private catService: CatService
@@ -20,11 +22,27 @@ export class AllCatsComponent implements OnInit {
         this.catService.getCats().subscribe({
             next: cats => {
                 this.cats = cats;
+                this.filteredCats = this.cats;
                 this.catsLoaded = true;
                 console.log('TODOS: ', this.cats);
             },
             error: err => this.errorMessage = err
         });
+    }
+
+    get listFilter():string {
+        return this._listFilter;
+    }
+
+    set listFilter(value:string) {
+        this._listFilter = value;
+        this.filteredCats = this.listFilter ? this.perfomFilter(this.listFilter) : this.cats;
+    }
+
+    perfomFilter(filterBy: string): ICat[] {
+        filterBy = filterBy.toLocaleLowerCase();
+        return this.cats.filter((cat: ICat) =>
+            cat.catName.toLocaleLowerCase().indexOf(filterBy) !== -1)
     }
 
 }
