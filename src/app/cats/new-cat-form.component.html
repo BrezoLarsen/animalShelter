@@ -1,0 +1,51 @@
+<div class="c-add-cat-form">
+    <div class="c-add-cat-form__title">Añadir nuevo gatito:</div> 
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="name" name="Nombre">
+        </div>
+    </div>
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label for="gender">Género:</label>
+            <select class="form-control" id="gender" required>
+              <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+            </select>
+          </div>
+    </div>
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label for="chip">Número de chip:</label>
+            <input type="text" class="form-control" id="chip" required [(ngModel)]="chip" name="Número de chip">
+        </div>
+    </div>
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label for="entryDate">Fecha de recogida (mes/día/año):</label>
+            <input type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="form-control" id="entryDate" required [(ngModel)]="entryDate" name="Fecha de recogida">
+        </div>
+    </div>
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label for="characteristic">Característica principal:</label>
+            <input type="text" class="form-control" id="characteristic" required [(ngModel)]="characteristic" name="Característica">
+        </div>
+    </div>
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label for="captureZone">Lugar de recogida:</label>
+            <input type="text" class="form-control" id="captureZone" required [(ngModel)]="captureZone" name="Lugar de recogida">
+        </div>
+    </div>
+    <div class="c-add-cat-form__row">
+        <div class="form-group">
+            <label>Foto:</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="imageUrl" [(ngModel)]="imageUrl" (change)="onFileSelected($event)" placeholder="PLACEHOLDER">
+                <label class="custom-file-label" for="imageUrl">{{ imageUrlText }}</label>
+                <div class="custom-file-delete" (click)="deleteFile($event)">X</div>
+            </div>
+        </div>
+    </div>
+</div>

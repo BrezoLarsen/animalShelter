@@ -6,10 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { AllCatsComponent } from './all-cats.component';
 import { SickCatsComponent } from './sick-cats.component';
 import { WeakCatsComponent } from './weak-cats.component';
+import { NewCatFormComponent } from './new-cat-form.component';
 import { TabsComponent } from '../tabs/tabs.component';
 import { CardComponent } from '../card/card.component';
 import { HttpClientModule } from '@angular/common/http';
-
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AllCatsComponent,
     SickCatsComponent,
     WeakCatsComponent,
-    CardComponent
+    CardComponent,
+    NewCatFormComponent
   ],
   exports: [TabsComponent, CardComponent],
   imports: [

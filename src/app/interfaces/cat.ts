@@ -7,5 +7,7 @@ export interface ICat {
     gender: string;
     captureZone: string;
     imageUrl: string;
+    isSick: boolean;
+    isWeak: boolean;
     //medicalHistory: [];
 }

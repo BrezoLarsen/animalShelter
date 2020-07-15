@@ -11,12 +11,19 @@ import { ICat } from '../interfaces/cat';
 
 export class CatService {
 
-    private catsUrl = 'api/cats.json';
+    private catsUrl = 'api/';
 
     constructor(private httpClient: HttpClient) { }
 
     getCats(): Observable<ICat[]> { 
-        return this.httpClient.get<ICat[]>(this.catsUrl).pipe(
+        return this.httpClient.get<ICat[]>(this.catsUrl + 'cats.json').pipe(
+            tap(data => console.log('All ' + JSON.stringify(data))),
+            catchError(this.handleError)
+        );
+    }
+
+    getWeakCats(): Observable<ICat[]> { 
+        return this.httpClient.get<ICat[]>(this.catsUrl + 'weakCats.json').pipe(
             tap(data => console.log('All ' + JSON.stringify(data))),
             catchError(this.handleError)
         );

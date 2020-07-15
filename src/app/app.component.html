@@ -8,7 +8,7 @@
     </div>
     <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
         <ul class="navbar__menu-list">
-            <li class="navbar__menu-item">Añadir gatito</li>
+            <li class="navbar__menu-item" [routerLink]="['/newCatForm']" (click)="isMenuVisible = false">Añadir gatito</li>
             <li class="navbar__menu-item">Borrar gatito</li>
         </ul>
     </div>
