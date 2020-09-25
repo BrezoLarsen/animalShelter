@@ -1,19 +1,4 @@
-// TODO: Quitar datos inecesarios
-
 [
-    {
-      "catId": 1,
-      "catName": "Nina",
-      "catChip": "GDN-0011",
-      "entryDate": "March 19, 2019",
-      "characteristic": "Muy delgada",
-      "gender": "hembra",
-      "captureZone": "Alcorcón",
-      "imageUrl": "assets/images/leaf_rake.png",
-      "isSick": false,
-      "isWeak": true
-    }
-    ,
     {
       "catId": 2,
       "catName": "Batman",

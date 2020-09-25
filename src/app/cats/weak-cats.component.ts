@@ -24,7 +24,7 @@ export class WeakCatsComponent {
                 this.cats = cats;
                 this.filteredCats = this.cats;
                 this.catsLoaded = true;
-                console.log('TODOS: ', this.cats);
+                console.log('ENFERMOS: ', this.cats);
             },
             error: err => this.errorMessage = err
         });

@@ -41,3 +41,36 @@ body {
         cursor: pointer;
     }
 }
+
+.c-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+    font-size: 14px;
+    color: #353535;
+    line-height: 27px;
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .c-checkbox__checkmark {
+            background: #353535 url(assets/img/icon-checkbox.svg) center;
+            border: 2px solid #353535;
+        }
+    }
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        background-color: var(--ion-white);
+        border: 2px solid #353535;
+        border-radius: 2px;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

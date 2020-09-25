@@ -24,7 +24,7 @@ export class CatService {
 
     getWeakCats(): Observable<ICat[]> { 
         return this.httpClient.get<ICat[]>(this.catsUrl + 'weakCats.json').pipe(
-            tap(data => console.log('All ' + JSON.stringify(data))),
+            tap(data => console.log('Weak ' + JSON.stringify(data))),
             catchError(this.handleError)
         );
     }

@@ -3,11 +3,30 @@
     <div class="c-card__characteristic">{{cat.characteristic}}</div>
     <div class="c-card__img" style="background-image: url('../assets/img/IMG_4169.JPG')"></div>
     <div class="c-card__buttons">
-        <div><span>+</span> Añadir para medicar</div>
-        <div><span>+</span> Añadir para reforzar</div>
+        <div *ngIf="!cat.isSick" (click)="setAsSick()"><span>+</span> Añadir para medicar</div>
+        <div *ngIf="!cat.isWeak" (click)="setAsWeak()"><span>+</span> Añadir para reforzar</div>
     </div>
-    <div class="c-card__medical">1,5 ml de Meloxidil</div>
-    <div class="c-card__button">
-        <input type="checkbox">¡Medicado!
+    <form *ngIf="cat.isSick && cat.medicalDosis == undefined" class="c-card__sick-form">
+        <div class="c-card__sick-form-group">
+            <div class="c-card__sick-form-input">
+                <mat-form-field>
+                    <mat-label>Nombre del medicamento</mat-label>
+                    <input matInput placeholder="Nombre del medicamento">
+                    <mat-error>Este campo no puede estar vacío</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="c-card__sick-form-input">
+                <mat-form-field>
+                    <mat-label>Dosis</mat-label>
+                    <input matInput placeholder="Dosis">
+                    <mat-error>Este campo no puede estar vacío</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-raised-button color="primary">Guardar</button>
+    </form>
+    <div *ngIf="cat.medicalDosis" class="c-card__medical">1,5 ml de Meloxidil</div>
+    <div *ngIf="cat.isSick" class="c-card__bottom">
+        <mat-checkbox color="primary">¡Medicado!</mat-checkbox>
     </div>
 </div>

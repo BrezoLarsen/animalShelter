@@ -8,6 +8,7 @@ export interface ICat {
     captureZone: string;
     imageUrl: string;
     isSick: boolean;
+    medicalDosis: string;
     isWeak: boolean;
     //medicalHistory: [];
 }

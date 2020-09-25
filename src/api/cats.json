@@ -1,18 +1,5 @@
 [
     {
-      "catId": 1,
-      "catName": "Nina",
-      "catChip": "GDN-0011",
-      "entryDate": "March 19, 2019",
-      "characteristic": "Muy delgada",
-      "gender": "hembra",
-      "captureZone": "Alcorcón",
-      "imageUrl": "assets/images/leaf_rake.png",
-      "isSick": false,
-      "isWeak": true
-    }
-    ,
-    {
       "catId": 2,
       "catName": "Batman",
       "catChip": "GDN-0023",
@@ -22,6 +9,7 @@
       "captureZone": "Madrid",
       "imageUrl": "assets/images/garden_cart.png",
       "isSick": true,
+      "medicalDosis": "1,5ml Meloxidil",
       "isWeak": false
     },
     {

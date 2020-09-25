@@ -48,4 +48,24 @@
             </div>
         </div>
     </div>
+    <div class="c-add-cat-form__checkboxes">
+        <div class="form-group">
+            <label class="c-checkbox">¿Es necesario reforzarlo?
+                <input type="checkbox">
+                <span class="c-checkbox__checkmark"></span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="c-checkbox">¿Es necesario medicar?
+                <input type="checkbox" ([ngModel])="isSick">
+                <span class="c-checkbox__checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <div class="c-add-cat-form__row" *ngIf="isSick">
+        <div class="form-group">
+            <label for="medicalDosis">Medicamento y dosis:</label>
+            <input type="text" class="form-control" id="medicalDosis" required [(ngModel)]="medicalDosis" name="Medicamento y dosis">
+        </div>
+    </div>
 </div>

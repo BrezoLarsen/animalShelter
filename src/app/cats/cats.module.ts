@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AllCatsComponent } from './all-cats.component';
 import { SickCatsComponent } from './sick-cats.component';
@@ -25,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule,
     RouterModule.forChild([
       { path: 'main', component: AllCatsComponent },
       { path: 'sick', component: SickCatsComponent },

@@ -17,6 +17,9 @@ export class NewCatFormComponent implements OnInit {
   public captureZone: string;
   public imageUrl?: string;
   public imageUrlText: string = "Seleccionar archivo";
+  public isSick: boolean = false;
+  public medicalDosis: string;
+  public isWeak: boolean = false;
 
   constructor() { }
 
@@ -27,7 +30,6 @@ export class NewCatFormComponent implements OnInit {
     if(event.target.files.length > 0) 
      {
        this.imageUrlText = event.target.files[0].name;
-       console.log('1', event.target.files.length);
      } else {
       this.imageUrlText = "Seleccionar archivo"; 
      }
@@ -35,7 +37,6 @@ export class NewCatFormComponent implements OnInit {
 
   deleteFile(event) {
     event.target.files = [];
-    console.log('2', event.target.files.length);
     this.imageUrlText = "Seleccionar archivo"; 
   }
 
