@@ -1,5 +1,5 @@
 <div class="c-add-cat-form">
-    <div class="c-add-cat-form__title">Añadir nuevo gatito:</div> 
+    <div class="c-add-cat-form__title">Añadir nuevo gatito:</div>
     <div class="c-add-cat-form__row">
         <div class="form-group">
             <label for="name">Nombre:</label>
@@ -56,7 +56,7 @@
             </label>
         </div>
         <div class="form-group">
-            <label class="c-checkbox">¿Es necesario medicar?
+            <label class="c-checkbox">¿Es necesario medicarlo?
                 <input type="checkbox" ([ngModel])="isSick">
                 <span class="c-checkbox__checkmark"></span>
             </label>
@@ -64,8 +64,12 @@
     </div>
     <div class="c-add-cat-form__row" *ngIf="isSick">
         <div class="form-group">
-            <label for="medicalDosis">Medicamento y dosis:</label>
-            <input type="text" class="form-control" id="medicalDosis" required [(ngModel)]="medicalDosis" name="Medicamento y dosis">
+            <label for="medicineName">Medicamento:</label>
+            <input type="text" class="form-control" id="medicineName" required [(ngModel)]="medicineName" name="Nombre del medicamento">
+        </div>
+        <div class="form-group">
+            <label for="medicineDose">Dosis:</label>
+            <input type="text" class="form-control" id="medicineDose" required [(ngModel)]="medicineDose" name="Dosis del medicamento">
         </div>
     </div>
 </div>

@@ -17,8 +17,9 @@ export class NewCatFormComponent implements OnInit {
   public captureZone: string;
   public imageUrl?: string;
   public imageUrlText: string = "Seleccionar archivo";
-  public isSick: boolean = false;
-  public medicalDosis: string;
+  public isSick: boolean;
+  public medicineName: string;
+  public medicineDose: string;
   public isWeak: boolean = false;
 
   constructor() { }
