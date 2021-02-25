@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ICat } from '../interfaces/cat';
+import { IAnimal } from '../interfaces/animal';
 
 @Component({
   selector: 'as-card',
@@ -8,22 +8,22 @@ import { ICat } from '../interfaces/cat';
 })
 export class CardComponent implements OnInit {
 
-  cats: ICat[] = [];
+  animals: IAnimal[] = [];
 
-  @Input() cat: ICat;
+  @Input() animal: IAnimal;
 
   constructor() {}
 
-  ngOnInit(): void {console.log(this.cat);}
+  ngOnInit(): void {console.log(this.animal);}
 
   setAsSick() {
-    this.cat.isSick = true;
-    console.log(this.cat);
+    this.animal.isSick = true;
+    console.log(this.animal);
   }
 
   setAsWeak() {
-    this.cat.isWeak = true;
-    console.log(this.cat);
+    this.animal.isWeak = true;
+    console.log(this.animal);
   }
 
 }

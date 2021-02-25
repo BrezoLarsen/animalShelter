@@ -1,7 +1,7 @@
-export interface ICat {
-    catId: number;
-    catName: string;
-    catChip: string;
+export interface IAnimal {
+    id: number;
+    name: string;
+    chip: string;
     entryDate: string;
     characteristic: string;
     gender: string;

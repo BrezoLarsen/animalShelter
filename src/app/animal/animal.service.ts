@@ -3,27 +3,27 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
-import { ICat } from '../interfaces/cat';
+import { IAnimal } from '../interfaces/animal';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class CatService {
+export class AnimalService {
 
-    private catsUrl = 'api/';
+    private animalsUrl = 'api/';
 
     constructor(private httpClient: HttpClient) { }
 
-    getCats(): Observable<ICat[]> { 
-        return this.httpClient.get<ICat[]>(this.catsUrl + 'cats.json').pipe(
+    getAnimals(): Observable<IAnimal[]> {
+        return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
             tap(data => console.log('All ' + JSON.stringify(data))),
             catchError(this.handleError)
         );
     }
 
-    getWeakCats(): Observable<ICat[]> { 
-        return this.httpClient.get<ICat[]>(this.catsUrl + 'weakCats.json').pipe(
+    getWeakAnimals(): Observable<IAnimal[]> {
+        return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'weakCats.json').pipe(
             tap(data => console.log('Weak ' + JSON.stringify(data))),
             catchError(this.handleError)
         );
@@ -32,7 +32,7 @@ export class CatService {
     private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
         if (err.error instanceof ErrorEvent) {
-            errorMessage = `An error ocurred: ${err.error.message}`; 
+            errorMessage = `An error ocurred: ${err.error.message}`;
         } else {
             errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
         }

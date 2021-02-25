@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ICat } from '../interfaces/cat';
+import { IAnimal } from '../interfaces/animal';
 
 @Component({
-  selector: 'app-new-cat-form',
-  templateUrl: './new-cat-form.component.html',
-  styleUrls: ['./new-cat-form.component.scss']
+  selector: 'app-new-animal-form',
+  templateUrl: './new-animal-form.component.html',
+  styleUrls: ['./new-animal-form.component.scss']
 })
-export class NewCatFormComponent implements OnInit {
+export class NewAnimalFormComponent implements OnInit {
 
   public id: number;
   public name: string;

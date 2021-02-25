@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { AllCatsComponent } from './all-cats.component';
-import { SickCatsComponent } from './sick-cats.component';
-import { WeakCatsComponent } from './weak-cats.component';
-import { NewCatFormComponent } from './new-cat-form.component';
+import { AllAnimalComponent } from './all-animal.component';
+import { SickAnimalComponent } from './sick-animal.component';
+import { WeakAnimalComponent } from './weak-animal.component';
+import { NewAnimalFormComponent } from './new-animal-form.component';
 import { TabsComponent } from '../tabs/tabs.component';
 import { CardComponent } from '../card/card.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,11 +15,11 @@ import { MaterialModule } from '../material.module';
 @NgModule({
   declarations: [
     TabsComponent,
-    AllCatsComponent,
-    SickCatsComponent,
-    WeakCatsComponent,
+    AllAnimalComponent,
+    SickAnimalComponent,
+    WeakAnimalComponent,
     CardComponent,
-    NewCatFormComponent
+    NewAnimalFormComponent
   ],
   exports: [TabsComponent, CardComponent],
   imports: [
@@ -28,10 +28,10 @@ import { MaterialModule } from '../material.module';
     HttpClientModule,
     MaterialModule,
     RouterModule.forChild([
-      { path: 'main', component: AllCatsComponent },
-      { path: 'sick', component: SickCatsComponent },
-      { path: 'weak', component: WeakCatsComponent }
+      { path: 'main', component: AllAnimalComponent },
+      { path: 'sick', component: SickAnimalComponent },
+      { path: 'weak', component: WeakAnimalComponent }
     ])
   ]
 })
-export class CatsModule { }
+export class AnimalsModule { }
