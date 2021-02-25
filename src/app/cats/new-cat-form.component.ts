@@ -17,10 +17,10 @@ export class NewCatFormComponent implements OnInit {
   public captureZone: string;
   public imageUrl?: string;
   public imageUrlText: string = "Seleccionar archivo";
+  public isWeak: boolean = false;
   public isSick: boolean;
   public medicineName: string;
   public medicineDose: string;
-  public isWeak: boolean = false;
 
   constructor() { }
 
@@ -28,17 +28,17 @@ export class NewCatFormComponent implements OnInit {
   }
 
   onFileSelected(event) {
-    if(event.target.files.length > 0) 
+    if(event.target.files.length > 0)
      {
        this.imageUrlText = event.target.files[0].name;
      } else {
-      this.imageUrlText = "Seleccionar archivo"; 
+      this.imageUrlText = "Seleccionar archivo";
      }
   }
 
   deleteFile(event) {
     event.target.files = [];
-    this.imageUrlText = "Seleccionar archivo"; 
+    this.imageUrlText = "Seleccionar archivo";
   }
 
 }
