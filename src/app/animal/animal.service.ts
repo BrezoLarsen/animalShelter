@@ -22,13 +22,6 @@ export class AnimalService {
         );
     }
 
-    getWeakAnimals(): Observable<IAnimal[]> {
-        return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'weakCats.json').pipe(
-            tap(data => console.log('Weak ' + JSON.stringify(data))),
-            catchError(this.handleError)
-        );
-    }
-
     private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
         if (err.error instanceof ErrorEvent) {

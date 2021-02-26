@@ -1,23 +1,19 @@
 <nav class="navbar">
-    <div class="navbar__burger" (click)="presentMenu($event)">
-        <span class="navbar__burger-menu" [ngClass]="isMenuVisible ? 'navbar__burger-menu--open' : ''">
-            <span class="navbar__burger-menu-line"></span>
-            <span class="navbar__burger-menu-line"></span>
-            <span class="navbar__burger-menu-line"></span>
-        </span>
-    </div>
-    <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
-        <ul class="navbar__menu-list">
-            <li class="navbar__menu-item" [routerLink]="['/newAnimalForm']" (click)="isMenuVisible = false">Añadir gatito</li>
-            <li class="navbar__menu-item">Borrar gatito</li>
-        </ul>
-    </div>
+  <div class="navbar__burger" (click)="presentMenu($event)">
+      <span class="navbar__burger-menu" [ngClass]="isMenuVisible ? 'navbar__burger-menu--open' : ''">
+          <span class="navbar__burger-menu-line"></span>
+          <span class="navbar__burger-menu-line"></span>
+          <span class="navbar__burger-menu-line"></span>
+      </span>
+  </div>
+  <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
+      <ul class="navbar__menu-list">
+          <li class="navbar__menu-item" [routerLink]="['/newAnimalForm']" (click)="isMenuVisible = false">Añadir gatito</li>
+          <li class="navbar__menu-item">Borrar gatito</li>
+      </ul>
+  </div>
 </nav>
 
 <div class="content">
     <router-outlet></router-outlet>
-</div>
-
-<div>
-    <as-tabs class="tabs"></as-tabs>
 </div>
