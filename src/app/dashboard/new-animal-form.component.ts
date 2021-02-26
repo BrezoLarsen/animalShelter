@@ -10,7 +10,7 @@ export class NewAnimalFormComponent implements OnInit {
 
   public id: number;
   public name: string;
-  public genders = ['Macho', 'Hembra'];
+  public genders = ['Macho', 'Hembra', 'No definido'];
   public chip?: string;
   public entryDate?: string;
   public characteristic?: string;

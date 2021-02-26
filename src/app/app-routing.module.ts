@@ -3,14 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MainPageComponent } from './dashboard/main-page.component';
 import { NewAnimalFormComponent } from './dashboard/new-animal-form.component';
+import { HomeComponent } from './web/home/home.component';
 
 const routes: Routes = [
-  { path: 'main', component: MainPageComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'dashboard', component: MainPageComponent },
   { path: 'newAnimalForm', component: NewAnimalFormComponent },
   // Default URL:
-  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   // 404 URL:
-  { path: '**', redirectTo: 'main', pathMatch: 'full' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
