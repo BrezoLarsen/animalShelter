@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimalService } from './animal.service';
+import { DashboardService } from './dashboard.service';
 import { IAnimal } from '../interfaces/animal';
 
 @Component({
     selector: 'as-all',
-    templateUrl: './all-animal.component.html'
+    templateUrl: './main-page.component.html'
 })
-export class AllAnimalComponent implements OnInit {
+export class MainPageComponent implements OnInit {
 
     animals: IAnimal[] = [];
     filteredAnimals: IAnimal[] = [];
@@ -15,7 +15,7 @@ export class AllAnimalComponent implements OnInit {
     _listFilter: string;
 
     constructor(
-        private animalService: AnimalService
+        private animalService: DashboardService
     ) {}
 
     ngOnInit(): void {

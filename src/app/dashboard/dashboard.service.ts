@@ -9,7 +9,7 @@ import { IAnimal } from '../interfaces/animal';
     providedIn: 'root'
 })
 
-export class AnimalService {
+export class DashboardService {
 
     private animalsUrl = 'api/';
 

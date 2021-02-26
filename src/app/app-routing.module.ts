@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AllAnimalComponent } from './animal/all-animal.component';
-import { NewAnimalFormComponent } from './animal/new-animal-form.component';
+import { MainPageComponent } from './dashboard/main-page.component';
+import { NewAnimalFormComponent } from './dashboard/new-animal-form.component';
 
 const routes: Routes = [
-  { path: 'main', component: AllAnimalComponent },
+  { path: 'main', component: MainPageComponent },
   { path: 'newAnimalForm', component: NewAnimalFormComponent },
   // Default URL:
   { path: '', redirectTo: 'main', pathMatch: 'full' },
