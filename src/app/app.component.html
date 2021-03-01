@@ -2,7 +2,7 @@
   <div class="navbar__top">
     <div class="navbar__top-rrss">
       <div>IG</div>
-      <div>FB</div>
+      <div><i class="fas fa-user"></i></div>
     </div>
     <img class="navbar__top-logo" src="assets/img/logo.jpg" alt="">
   </div>
@@ -17,12 +17,15 @@
   </div>
   <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
       <ul class="navbar__menu-list">
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Home</li>
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Nosotros</li>
+        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Inicio</li>
+        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Sobre nosotros</li>
         <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">En Adopción</li>
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Colabora</li>
-        <li class="navbar__menu-item" [routerLink]="['/dashboard']" (click)="isMenuVisible = false">Dashboard</li>
-        <li class="navbar__menu-item" [routerLink]="['/newAnimalForm']" (click)="isMenuVisible = false">Añadir gatito</li>
+        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Hazte voluntario</li>
+        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Apadrina a un hakuna</li>
+        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Acoge</li>
+        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Ayúdanos</li>
+        <!-- <li class="navbar__menu-item" [routerLink]="['/dashboard']" (click)="isMenuVisible = false">Dashboard</li> -->
+        <!-- <li class="navbar__menu-item" [routerLink]="['/newAnimalForm']" (click)="isMenuVisible = false">Añadir gatito</li> -->
       </ul>
   </div>
 </nav>

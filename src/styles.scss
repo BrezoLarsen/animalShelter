@@ -3,14 +3,6 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.main-title {
-    margin: 10px 0;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .searchbox {
     position: relative;
     width: 100%;
@@ -73,4 +65,37 @@ body {
     }
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
+
+.u-title {
+  font-size: 30px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.u-subtitle {
+  font-size: 24px;
+  margin: 20px 0 40px;
+}
+
+.mat-icon.u-icon-big {
+  width: 50px;
+  height: 50px;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("./theme/fonts/fa-solid-900.eot");
+  src: url("./theme/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+  url("./theme/fonts/fa-solid-900.woff2") format("woff2"),
+  url("./theme/fonts/fa-solid-900.woff") format("woff"),
+  url("./theme/fonts/fa-solid-900.ttf") format("truetype"),
+  url("./theme/fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }

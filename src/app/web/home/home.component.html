@@ -1,50 +1,72 @@
 <div class="c-home">
   <div class="c-home__boxes">
     <div class="c-home__main-box">
-      rescate, recuperación y rehabilitación animal
+      <div class="c-home__main-box-text">Rescate, recuperación y rehabilitación animal</div>
     </div>
     <div class="c-home__main-box">
-      buscar la mejor familia a los animales que recuperamos
+      <div class="c-home__main-box-text">Busqueda de la mejor familia a los animales que recuperamos</div>
     </div>
     <div class="c-home__main-box">
-      fomentamos la educación de las personas para la convivencia armoniosa de animales y personas
+      <div class="c-home__main-box-text">Fomentar la educación para la convivencia armoniosa entre animales y personas</div>
     </div>
   </div>
   <div class="c-home__help">
-    <div class="c-home__help-title">
-      <h2>¿Cómo puedes ayudarnos?</h2>
-      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+    <div>
+      <div class="u-title">¿Cómo puedes ayudarnos?</div>
+      <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
     </div>
     <div class="c-home__boxes">
       <div class="c-home__help-box">
-        DONACIÓN
+        <div class="c-home__help-box-header">
+          <icon-piggy></icon-piggy>
+          <h3>DONATIVOS</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
       </div>
       <div class="c-home__help-box">
-        DONACIÓN
+        <div class="c-home__help-box-header">
+          <icon-volunteer></icon-volunteer>
+          <h3>VOLUNTARIADO</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
       </div>
       <div class="c-home__help-box">
-        DONACIÓN
+        <div class="c-home__help-box-header">
+          <icon-sponsor></icon-sponsor>
+          <h3>APADRINA</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
       </div>
       <div class="c-home__help-box">
-        DONACIÓN
+        <div class="c-home__help-box-header">
+          <icon-shelter></icon-shelter>
+          <h3>ACOGE</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
       </div>
     </div>
   </div>
   <div class="c-home__gallery">
-    <div class="c-home__gallery-item">
-      1
+    <div>
+      <div class="u-title">En adopción</div>
+      <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
     </div>
-    <div class="c-home__gallery-item">
-      2
-    </div>
-    <div class="c-home__gallery-item">
-      3
-    </div>
-    <div class="c-home__gallery-item">
-      4
-    </div>
-    <div class="c-home__gallery-item">
-      5
+    <div class="c-home__boxes">
+      <div class="c-home__gallery-item" (click)="showGallery(0)" [ngStyle]="{'background-image' : 'url(https://www.hola.com/imagenes/estar-bien/20180925130054/consejos-para-cuidar-a-un-gatito-recien-nacido-cs/0-601-526/cuidardgatito-t.jpg)'}">
+        <p class="c-home__gallery-text">Dumbo</p>
+      </div>
+      <div class="c-home__gallery-item" (click)="showGallery(1)" [ngStyle]="{'background-image' : 'url(https://www.barcelona-metropolitan.com/downloads/32285/download/Cat-House-photo-by-Josep-Maria-Ezcurra-01.jpg)'}">
+        <p class="c-home__gallery-text">Lassie</p>
+      </div>
+      <div class="c-home__gallery-item" (click)="showGallery(2)" [ngStyle]="{'background-image' : 'url(https://images.squarespace-cdn.com/content/v1/5c74288d9b8fe8141c2f96cd/1555288510844-DT8C4TKOK1SCQAYCL5SZ/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/cat-read-to-pounce-julie-austin-photography.jpg)'}">
+        <p class="c-home__gallery-text">Rintintin</p>
+      </div>
+      <div class="c-home__gallery-item" (click)="showGallery(3)" [ngStyle]="{'background-image' : 'url(https://www.petmd.com/sites/default/files/styles/slide_show_840_574/public/petmd-calming-cat.jpg?itok=aln2Frkl)'}">
+        <p class="c-home__gallery-text">Milú</p>
+      </div>
+      <div class="c-home__gallery-item" (click)="showGallery(4)" [ngStyle]="{'background-image' : 'url(https://www.adventurecats.org/wp-content/uploads/2015/09/attentive-cat.jpg)'}">
+        <p class="c-home__gallery-text">Golfo</p>
+      </div>
     </div>
   </div>
 </div>
