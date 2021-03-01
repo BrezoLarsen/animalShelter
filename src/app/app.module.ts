@@ -16,6 +16,8 @@ import { IconShelter } from 'src/theme/custom-icons/shelter';
 import { IconSponsor } from 'src/theme/custom-icons/sponsor';
 import { IconFacebook } from 'src/theme/custom-icons/facebook';
 import { IconInstagram } from 'src/theme/custom-icons/instagram';
+import { HelpUsComponent } from './web/help-us/help-us.component';
+import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { IconInstagram } from 'src/theme/custom-icons/instagram';
     IconShelter,
     IconSponsor,
     IconFacebook,
-    IconInstagram
+    IconInstagram,
+    HelpUsComponent,
+    ForAdoptionComponent
   ],
   imports: [
     BrowserModule,

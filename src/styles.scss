@@ -69,14 +69,63 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
 
+.u-content {
+  max-width: 950px;
+  margin: 80px auto;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.u-header {
+  margin-bottom: 50px;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
 .u-title {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: normal;
   margin: 20px 0;
   text-transform: uppercase;
+  display: inline-block;
+  &:after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    background: #ef2368;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    &:after {
+      content: none;
+    }
+  }
 }
+
 .u-subtitle {
   font-size: 24px;
   margin: 20px 0 40px;
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+    margin: 0 0 25px;
+  }
+}
+
+.u-justify {
+  text-align: justify;
+}
+
+.u-list-check {
+  text-align: left;
+  list-style-type: '\2713';
+  li {padding: 0 5px 5px;}
+  @media only screen and (max-width: 768px) {
+    -webkit-padding-start: 20px;
+  }
 }
 
 .mat-icon.u-icon-big {
