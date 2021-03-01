@@ -1,0 +1,14 @@
+.c-about {
+  &__content {
+    max-width: 950px;
+    margin: 80px auto;
+  }
+  &__block {
+    margin: 50px 0;
+    &-flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <nav class="navbar">
   <div class="navbar__top">
     <div class="navbar__top-rrss">
-      <div>IG</div>
-      <div><i class="fas fa-user"></i></div>
+      <div><icon-instagram></icon-instagram></div>
+      <div><icon-facebook></icon-facebook></div>
     </div>
     <img class="navbar__top-logo" src="assets/img/logo.jpg" alt="">
   </div>
@@ -18,7 +18,7 @@
   <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
       <ul class="navbar__menu-list">
         <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Inicio</li>
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Sobre nosotros</li>
+        <li class="navbar__menu-item" [routerLink]="['/sobre-nosotros']" (click)="isMenuVisible = false">Sobre nosotros</li>
         <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">En Adopción</li>
         <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Hazte voluntario</li>
         <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Apadrina a un hakuna</li>
