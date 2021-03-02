@@ -10,7 +10,8 @@
       "imageUrl": "assets/images/garden_cart.png",
       "isSick": true,
       "medicalDosis": "1,5ml Meloxidil",
-      "isWeak": false
+      "isWeak": false,
+      "specie": "perro"
     },
     {
       "catId": 5,
@@ -22,7 +23,8 @@
       "captureZone": "Madrid",
       "imageUrl": "assets/images/hammer.png",
       "isSick": false,
-      "isWeak": false
+      "isWeak": false,
+      "specie": "gato"
     },
     {
       "catId": 8,
@@ -34,7 +36,8 @@
       "captureZone": "Madrid",
       "imageUrl": "assets/images/saw.png",
       "isSick": true,
-      "isWeak": true
+      "isWeak": true,
+      "specie": "hurón"
     },
     {
       "catId": 10,
@@ -46,6 +49,20 @@
       "captureZone": "Leganés",
       "imageUrl": "assets/images/xbox-controller.png",
       "isSick": true,
-      "isWeak": false
+      "isWeak": false,
+      "specie": "conejo"
+    },
+    {
+      "catId": 11,
+      "catName": "Milu",
+      "catChip": "GMG-0042",
+      "entryDate": "October 15, 2018",
+      "characteristic": "Normalmente en la zona de las camas dentro de la nave",
+      "gender": "hembra",
+      "captureZone": "Leganés",
+      "imageUrl": "assets/images/xbox-controller.png",
+      "isSick": true,
+      "isWeak": false,
+      "specie": "conejo"
     }
   ]

@@ -7,12 +7,16 @@ import { AboutComponent } from './web/about/about.component';
 import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component';
 import { HelpUsComponent } from './web/help-us/help-us.component';
 import { HomeComponent } from './web/home/home.component';
+import { ShelterFormComponent } from './web/shelter-form/shelter-form.component';
+import { ShelterComponent } from './web/shelter/shelter.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'sobre-nosotros', component: AboutComponent },
   { path: 'en-adopcion', component: ForAdoptionComponent },
   { path: 'como-ayudar', component: HelpUsComponent },
+  { path: 'casas-de-acogida', component: ShelterComponent },
+  { path: 'casas-de-acogida/:specie', component: ShelterFormComponent, /*anActivate: [ProductDetailGuard]*/ },
   { path: 'dashboard', component: MainPageComponent },
   { path: 'newAnimalForm', component: NewAnimalFormComponent },
   // Default URL:

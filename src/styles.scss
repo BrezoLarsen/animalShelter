@@ -71,7 +71,7 @@ body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
 
 .u-content {
   max-width: 950px;
-  margin: 80px auto;
+  margin: 60px auto;
   text-align: center;
   @media only screen and (max-width: 768px) {
     margin: 0;
@@ -131,4 +131,8 @@ body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
 .mat-icon.u-icon-big {
   width: 50px;
   height: 50px;
+}
+
+.is-invalid {
+  border: 1px solid red!important;
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 
 import { IAnimal } from '../interfaces/animal';
 
@@ -19,6 +19,13 @@ export class DashboardService {
         return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
             tap(data => console.log('All ' + JSON.stringify(data))),
             catchError(this.handleError)
+        );
+    }
+
+    getAnimalBySpecie(specie: string): Observable<IAnimal | undefined> {
+      return this.getAnimals()
+        .pipe(
+          map((animals: IAnimal[]) => animals.find(animal => animal.specie === specie))
         );
     }
 

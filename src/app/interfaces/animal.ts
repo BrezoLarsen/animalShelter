@@ -10,5 +10,6 @@ export interface IAnimal {
     isSick: boolean;
     medicalDosis: string;
     isWeak: boolean;
+    specie?: string;
     //medicalHistory: [];
 }

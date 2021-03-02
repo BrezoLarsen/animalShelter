@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './web/home/home.component';
 import { AboutComponent } from './web/about/about.component';
 import { IvyGalleryModule } from 'angular-gallery';
-
+import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { IconPiggy } from 'src/theme/custom-icons/piggy';
 import { IconVolunteer } from 'src/theme/custom-icons/volunteer';
@@ -18,6 +19,8 @@ import { IconFacebook } from 'src/theme/custom-icons/facebook';
 import { IconInstagram } from 'src/theme/custom-icons/instagram';
 import { HelpUsComponent } from './web/help-us/help-us.component';
 import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component';
+import { ShelterComponent } from './web/shelter/shelter.component';
+import { ShelterFormComponent } from './web/shelter-form/shelter-form.component';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component'
     IconFacebook,
     IconInstagram,
     HelpUsComponent,
-    ForAdoptionComponent
+    ForAdoptionComponent,
+    ShelterComponent,
+    ShelterFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,9 @@ import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     IvyGalleryModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

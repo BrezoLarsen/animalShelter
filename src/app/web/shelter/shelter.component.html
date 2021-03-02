@@ -1,0 +1,16 @@
+<div class="c-shelter">
+  <div class="u-content">
+    <div class="u-header">
+      <h2 class="u-title">Casas de acogida</h2>
+      <p>Las casas de acogida son muy importantes para nosotros, ya que al no tener refugio es la única manera que tenemos de ayudar a nuestros animales.
+        Siendo casa de acogida ayudas a que podamos continuar con nuestra labor.</p>
+      <p>Pulsa en la acogida que te interese para completar el formulario correspondiente. ¡Te responderemos en cuanto podamos!</p>
+      <p>Estas son las principales casas de acogida que necesitamos:</p>
+    </div>
+    <div class="c-shelter__block">
+      <div *ngFor='let animal of animals'>
+        <a class="c-shelter__button" routerLinkActive='active' [routerLink]="['/casas-de-acogida', (animal.specie)]">Casa de acogida para {{ animal.specie }}</a>
+      </div>
+    </div>
+  </div>
+</div>
