@@ -133,6 +133,15 @@ body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
   height: 50px;
 }
 
+.u-mat-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  &-button {
+    margin: 5px;
+  }
+}
+
 .is-invalid {
   border: 1px solid red!important;
 }

@@ -25,5 +25,170 @@
       <li>CONEJO: 65€</li>
       <li>AVES, ROEDORES, REPTILES: DEPENDE DE LA ESPECIE</li>
     </ul>
+
+    <div class="c-for-adoption__process">
+      <div class="c-for-adoption__block">
+        <form novalidate (ngSubmit)="save()" [formGroup]="adoptForm">
+          <div class="c-for-adoption__form-title">Formulario de adopción</div>
+          <p class="c-for-adoption__text">Si quieres adoptar a uno de nuestros HAKUNAS, completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible. ¡Muchas gracias!</p>
+          <div class="c-for-adoption__form-group form-group">
+            <label class="c-for-adoption__label" for="name">Nombre</label>
+            <input class="c-for-adoption__input form-control" type="text" id="name"
+                  placeholder="Nombre (requerido)"
+                  formControlName="firstName"
+                  [ngClass]="{'is-invalid': (adoptForm.get('firstName').touched ||
+                                              adoptForm.get('firstName').dirty) &&
+                                              !adoptForm.get('firstName').valid }" />
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('firstName').hasError('required')">Por favor, introduzca su nombre</span>
+              </span>
+          </div>
+
+          <div class="c-for-adoption__form-group form-group">
+            <label class="c-for-adoption__label" for="lastName">Apellidos</label>
+            <input class="c-for-adoption__input form-control" type="text" id="lastName"
+                  placeholder="Apellidos (requerido)"
+                  formControlName="lastName"
+                  [ngClass]="{'is-invalid': (adoptForm.get('lastName').touched ||
+                                              adoptForm.get('lastName').dirty) &&
+                                              !adoptForm.get('lastName').valid }" />
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('lastName').hasError('required')">Por favor, introduzca al menos un apellido</span>
+              </span>
+          </div>
+
+          <div formGroupName="emailGroup">
+            <div class="c-for-adoption__form-group form-group">
+              <label class="c-for-adoption__label" for="emailId">Email</label>
+              <input class="c-for-adoption__input form-control"
+                      id="emailId"
+                      type="email"
+                      placeholder="Email (requerido)"
+                      formControlName="email"
+                      [ngClass]="{'is-invalid': emailMessage }" />
+              <span class="c-for-adoption__invalid-feedback">
+                {{ emailMessage }}
+              </span>
+            </div>
+            <div class="c-for-adoption__form-group form-group">
+              <label class="c-for-adoption__label" for="confirmEmailId">Confirma tu email</label>
+              <input class="c-for-adoption__input form-control"
+                      id="confirmEmailId"
+                      type="email"
+                      placeholder="Confirma el email (requerido)"
+                      formControlName="confirmEmail"
+                      [ngClass]="{'is-invalid': adoptForm.get('emailGroup').errors ||
+                                                ((adoptForm.get('emailGroup.confirmEmail').touched ||
+                                                adoptForm.get('emailGroup.confirmEmail').dirty) &&
+                                                !adoptForm.get('emailGroup.confirmEmail').valid) }" />
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('emailGroup.confirmEmail').errors?.required">
+                  Por favor, confirma tu email
+                </span>
+                <span *ngIf="adoptForm.get('emailGroup').errors?.match">
+                  Las direcciones de email no coinciden
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="c-for-adoption__form-group form-group">
+            <label class="c-for-adoption__label" for="phone">Teléfono</label>
+            <input class="c-for-adoption__input form-control" type="text" id="phone"
+                  placeholder="Teléfono (requerido)"
+                  formControlName="phone"
+                  [ngClass]="{'is-invalid': (adoptForm.get('phone').touched ||
+                                              adoptForm.get('phone').dirty) &&
+                                              !adoptForm.get('phone').valid }" />
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('phone').hasError('required')">Por favor, introduzca su teléfono</span>
+              </span>
+          </div>
+
+          <div formGroupName="addressGroup">
+            <div class="c-for-adoption__form-group">
+              <label class="c-for-adoption__label" for="street">Dirección</label>
+              <input class="c-for-adoption__input form-control"
+                      id="street"
+                      type="text"
+                      placeholder="Dirección (requerido)"
+                      formControlName="street"
+                      [ngClass]="{'is-invalid': (adoptForm.get('addressGroup').errors ||
+                                                adoptForm.get('addressGroup.street').dirty) &&
+                                                !adoptForm.get('addressGroup.street').valid }">
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('addressGroup.street').errors?.required">
+                  Por favor, introduzca su dirección
+                </span>
+              </span>
+            </div>
+            <div class="c-for-adoption__form-group c-for-adoption__form-group--address">
+              <label class="c-for-adoption__label" for="city">Ciudad</label>
+              <input class="c-for-adoption__input c-for-adoption__input--margin form-control"
+                      id="city"
+                      type="text"
+                      placeholder="Ciudad (requerido)"
+                      formControlName="city">
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('addressGroup.city').errors?.required">
+                  Por favor, introduzca la ciudad
+                </span>
+              </span>
+
+              <label class="c-for-adoption__label" for="state">Provincia</label>
+              <input class="c-for-adoption__input c-for-adoption__input--margin form-control"
+                      id="state"
+                      type="text"
+                      placeholder="Provincia (requerido)"
+                      formControlName="state">
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('addressGroup.state').errors?.required">
+                  Por favor, introduzca la provincia
+                </span>
+              </span>
+
+              <label class="c-for-adoption__label" for="pc">Código Postal</label>
+              <input class="c-for-adoption__input c-for-adoption__input--margin form-control"
+                      id="pc"
+                      type="number"
+                      placeholder="Código Postal (requerido)"
+                      formControlName="pc">
+              <span class="c-for-adoption__invalid-feedback">
+                <span *ngIf="submitted && adoptForm.get('addressGroup.pc').errors?.required">
+                  Por favor, introduzca el código postal
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="c-for-adoption__block">
+            <p class="c-for-adoption__form-title">¿Qué animal estás intersado en adoptar?</p>
+            <mat-radio-group class="u-mat-radio-group" formControlName="animalSpecie">
+              <mat-radio-button class="u-mat-radio-group-button" *ngFor="let specieSelected of species" [value]="specieSelected">
+                {{specieSelected}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <div class="c-for-adoption__block" *ngIf="adoptForm.get('animalSpecie').value === 'Perro'">
+            <div class="c-for-adoption__form-title">Formulario de adopción para perros:</div>
+          </div>
+
+          <div class="c-for-adoption__block" *ngIf="adoptForm.get('animalSpecie').value === 'Gato'">
+            <div class="c-for-adoption__form-title">Formulario de adopción para gatos:</div>
+          </div>
+
+          <div class="c-for-adoption__block" *ngIf="adoptForm.get('animalSpecie').value === 'Hurón'">
+            <div class="c-for-adoption__form-title">Formulario de adopción para hurones:</div>
+          </div>
+
+          <div class="c-for-adoption__block" *ngIf="adoptForm.get('animalSpecie').value === 'Conejo'">
+            <div class="c-for-adoption__form-title">Formulario de adopción para conejos:</div>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+
+    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,7 @@ import { AboutComponent } from './web/about/about.component';
 import { IvyGalleryModule } from 'angular-gallery';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
 import { IconPiggy } from 'src/theme/custom-icons/piggy';
 import { IconVolunteer } from 'src/theme/custom-icons/volunteer';
 import { IconShelter } from 'src/theme/custom-icons/shelter';
@@ -47,7 +48,9 @@ import { ShelterFormComponent } from './web/shelter-form/shelter-form.component'
     IvyGalleryModule,
     MatIconModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
