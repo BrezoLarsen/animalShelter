@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardService } from './dashboard.service';
+import { AnimalService } from './animal.service';
 import { IAnimal } from '../interfaces/animal';
 
 @Component({
@@ -15,7 +15,7 @@ export class MainPageComponent implements OnInit {
     _listFilter: string;
 
     constructor(
-        private animalService: DashboardService
+        private animalService: AnimalService
     ) {}
 
     ngOnInit(): void {

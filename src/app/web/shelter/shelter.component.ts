@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardService } from 'src/app/dashboard/dashboard.service';
+import { AnimalService } from 'src/app/dashboard/animal.service';
 import { IAnimal } from 'src/app/interfaces/animal';
 
 @Component({
@@ -15,7 +15,7 @@ export class ShelterComponent implements OnInit {
   errorMessage: string;
 
   constructor(
-    private animalService: DashboardService
+    private animalService: AnimalService
   ) { }
 
 
