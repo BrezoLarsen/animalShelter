@@ -1,6 +1,7 @@
 .c-home {
   max-width: 1200px;
   margin: auto;
+  text-align: center;
   &__boxes {
     display: flex;
     align-items: center;
@@ -39,7 +40,6 @@
   }
   &__help {
     margin: 105px 0;
-    text-align: center;
     &-box {
       color: #fff;
       width: 24%;
@@ -75,30 +75,17 @@
   }
   &__gallery {
     margin: 105px 0;
-    text-align: center;
-    &-item {
-      width: 18%;
-      height: 160px;
-      background-size: cover;
-      position: relative;
-      @media only screen and (max-width: 768px) {
-        width: 100%;
-        margin-bottom: 20px;
-        height: 220px;
-      }
-    }
-    &-text {
-      width: 100%;
-      margin: 0;
-      padding: 10px 0;
-      position: absolute;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      font-weight: 400;
-    }
     @media only screen and (max-width: 768px) {
       margin: 50px 0;
+    }
+    &-boxes {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

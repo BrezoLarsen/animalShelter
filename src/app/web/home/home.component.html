@@ -1,4 +1,8 @@
 <div class="c-home">
+  <div>
+    <h2 class="u-title">¿Qué hacemos?</h2>
+    <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+  </div>
   <div class="c-home__boxes">
     <div class="c-home__main-box">
       <div class="c-home__main-box-text">Rescate, recuperación y rehabilitación animal</div>
@@ -51,9 +55,9 @@
       <h2 class="u-title">En adopción</h2>
       <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
     </div>
-    <div class="c-home__boxes">
-      <div *ngFor="let animal of animals; let i = index" class="c-home__gallery-item" (click)="showGallery(i)" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}">
-        <p class="c-home__gallery-text">{{animal.name}}</p>
+    <div class="c-home__gallery-boxes">
+      <div *ngFor="let animal of animals; let i = index">
+        <app-adoption-card [animal]="animal"></app-adoption-card>
       </div>
     </div>
   </div>

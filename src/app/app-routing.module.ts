@@ -9,6 +9,7 @@ import { HelpUsComponent } from './web/help-us/help-us.component';
 import { HomeComponent } from './web/home/home.component';
 import { ShelterFormComponent } from './web/shelter-form/shelter-form.component';
 import { ShelterComponent } from './web/shelter/shelter.component';
+import { DetailComponent } from './web/components/detail/detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'casas-de-acogida/:specie', component: ShelterFormComponent, /*anActivate: [ProductDetailGuard]*/ },
   { path: 'dashboard', component: MainPageComponent },
   { path: 'newAnimalForm', component: NewAnimalFormComponent },
+  { path: 'detail/:id', component: DetailComponent },
   // Default URL:
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // 404 URL:

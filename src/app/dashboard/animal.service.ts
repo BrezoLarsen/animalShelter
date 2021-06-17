@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
@@ -27,6 +27,13 @@ export class AnimalService {
         .pipe(
           map((animals: IAnimal[]) => animals.find(animal => animal.specie === specie))
         );
+    }
+
+    getAnimalById(id) {
+      return this.getAnimals()
+          .pipe(
+            map((animals: IAnimal[]) => animals.find(animal => animal.id === id))
+          );
     }
 
     private handleError(err: HttpErrorResponse) {

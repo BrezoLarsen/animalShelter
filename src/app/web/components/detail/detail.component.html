@@ -1,0 +1,30 @@
+<div class="c-detail">
+  <div class="c-detail__row">
+    <div class="c-detail__img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}"> </div>
+    <div class="c-detail__text">
+      <h4>Detalles:</h4>
+      <mat-list>
+        <mat-list-item>
+          <icon-footprint mat-list-icon></icon-footprint>
+          <div mat-line><strong>Especie:</strong> {{animal.specie | titlecase}}</div>
+        </mat-list-item>
+        <mat-list-item>
+          <icon-footprint mat-list-icon></icon-footprint>
+          <div mat-line><strong>Nombre:</strong> {{animal.name}} </div>
+        </mat-list-item>
+        <mat-list-item>
+          <icon-footprint mat-list-icon></icon-footprint>
+          <div mat-line><strong>Edad:</strong> {{animal.age}} meses</div>
+        </mat-list-item>
+        <mat-list-item>
+          <icon-footprint mat-list-icon></icon-footprint>
+          <div mat-line><strong>Género:</strong> {{animal.gender}}</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="c-detail__description">
+    <h4>Más datos:</h4>
+    {{animal.characteristic}}
+  </div>
+</div>

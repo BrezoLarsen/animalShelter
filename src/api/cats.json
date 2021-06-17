@@ -1,6 +1,6 @@
 [
     {
-      "catId": 2,
+      "id": "2",
       "name": "Batman",
       "catChip": "GDN-0023",
       "entryDate": "March 18, 2019",
@@ -11,10 +11,11 @@
       "isSick": true,
       "medicalDosis": "1,5ml Meloxidil",
       "isWeak": false,
-      "specie": "perro"
+      "specie": "perro",
+      "age": 24
     },
     {
-      "catId": 5,
+      "id": "5",
       "name": "Tibu",
       "catChip": "TBX-0048",
       "entryDate": "May 21, 2019",
@@ -24,10 +25,11 @@
       "imageUrl": "assets/img/animals/IMG_3398.JPG",
       "isSick": false,
       "isWeak": false,
-      "specie": "gato"
+      "specie": "gato",
+      "age": 13
     },
     {
-      "catId": 8,
+      "id": "8",
       "name": "Condesita",
       "catChip": "TBX-0022",
       "entryDate": "May 15, 2019",
@@ -37,10 +39,11 @@
       "imageUrl": "assets/img/animals/IMG_3455.JPG",
       "isSick": true,
       "isWeak": true,
-      "specie": "hurón"
+      "specie": "hurón",
+      "age": 2
     },
     {
-      "catId": 10,
+      "id": "10",
       "name": "Luna",
       "catChip": "GMG-0042",
       "entryDate": "October 15, 2018",
@@ -50,10 +53,11 @@
       "imageUrl": "assets/img/animals/IMG_3523.JPG",
       "isSick": true,
       "isWeak": false,
-      "specie": "conejo"
+      "specie": "conejo",
+      "age": 4
     },
     {
-      "catId": 11,
+      "id": "11",
       "name": "Milu",
       "catChip": "GMG-0042",
       "entryDate": "October 15, 2018",
@@ -63,6 +67,7 @@
       "imageUrl": "assets/img/animals/IMG_3540.JPG",
       "isSick": true,
       "isWeak": false,
-      "specie": "conejo"
+      "specie": "conejo",
+      "age": 36
     }
   ]

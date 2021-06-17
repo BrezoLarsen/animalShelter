@@ -1,0 +1,24 @@
+.c-adoption-card {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px 0 rgb(63 63 63 / 15%);
+  overflow: hidden;
+  cursor: pointer;
+  &__img {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    position: relative;
+  }
+  &__text {
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 400;
+    p {
+      margin-block-start: 5px;
+      margin-block-end: 5px;
+    }
+  }
+}

@@ -13,29 +13,13 @@ export class HomeComponent implements OnInit {
   animals: IAnimal[] = []
 
   constructor(
-    private gallery: Gallery,
     private animalService: AnimalService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.animalService.getAnimals().subscribe(data => {
       this.animals = data;
     })
-    console.log(this.animals);
   }
-
-  showGallery(index: number) {
-    let prop = {
-        images: [
-            {path: this.animals[index].imageUrl},
-            {path: this.animals[index].imageUrl},
-            {path: this.animals[index].imageUrl},
-            {path: this.animals[index].imageUrl},
-            {path: this.animals[index].imageUrl}
-        ],
-        index
-    };
-    this.gallery.load(prop);
-}
 
 }
