@@ -1,0 +1,26 @@
+.c-shelter {
+  &__buttons {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 25px;
+    @media only screen and (max-width: 768px) {
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+  &__button {
+    padding: 20px;
+    background: #ef2368;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      background: #bf0746;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

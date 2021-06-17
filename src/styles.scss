@@ -145,3 +145,19 @@ body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
 .is-invalid {
   border: 1px solid red!important;
 }
+
+.u-button {
+  padding: 20px;
+  background: #ef2368;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background: #bf0746;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
