@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'
 import { AnimalService } from 'src/app/dashboard/animal.service';
 import { IAnimal } from 'src/app/interfaces/animal';
 
@@ -16,7 +17,8 @@ export class DetailSpecieComponent {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private animalService: AnimalService
+    private animalService: AnimalService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -26,9 +28,9 @@ export class DetailSpecieComponent {
     this.animalService.getAnimalsBySpecie(param).subscribe(data => {
       this.animals = data;
     })
-
   }
 
-
-
+  back() {
+    this.location.back();
+  }
 }

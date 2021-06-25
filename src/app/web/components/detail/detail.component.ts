@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'
 import { IAnimal } from 'src/app/interfaces/animal';
 import { AnimalService } from '../../../dashboard/animal.service';
 
@@ -15,7 +16,8 @@ export class DetailComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private animalService: AnimalService
+    private animalService: AnimalService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -30,6 +32,10 @@ export class DetailComponent implements OnInit {
         this.showLiscense = true;
       }
     });
+  }
+
+  back() {
+    this.location.back();
   }
 
 }

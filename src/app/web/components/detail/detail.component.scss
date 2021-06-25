@@ -1,5 +1,4 @@
 .c-detail {
-  max-width: 960px;
   margin: 60px auto;
   @media only screen and (max-width: 768px) {
     margin: 0 auto;
@@ -24,6 +23,10 @@
   }
   &__description {
     padding-top: 40px;
+    text-align: left;
+    &-text {
+      margin-left: 20px;
+    }
   }
   &__text {
     text-align: left;

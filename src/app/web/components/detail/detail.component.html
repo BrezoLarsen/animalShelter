@@ -1,98 +1,102 @@
 <div class="c-detail">
-  <div class="u-header">
-    <h2 class="u-title" *ngIf="animal.name">Ficha de {{animal.name}}:</h2>
-  </div>
-  <div class="c-detail__row">
-    <div class="c-detail__img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}"> </div>
-    <div class="c-detail__text">
-      <h3 class="c-detail__list-title">Detalles:</h3>
-      <mat-list>
+  <div class="u-content">
 
-        <mat-list-item *ngIf="animal.name">
-          <icon-footprint mat-list-icon></icon-footprint>
-          <div mat-line><strong>Nombre:</strong> {{animal.name}} </div>
-        </mat-list-item>
-        <mat-list-item *ngIf="animal.specie">
-          <icon-footprint mat-list-icon></icon-footprint>
-          <div mat-line><strong>Especie:</strong> {{animal.specie | titlecase}}</div>
-        </mat-list-item>
-        <mat-list-item *ngIf="animal.dateBirth">
-          <icon-footprint mat-list-icon></icon-footprint>
-          <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.dateBirth}}</div>
-        </mat-list-item>
-        <mat-list-item *ngIf="animal.gender">
-          <icon-footprint mat-list-icon></icon-footprint>
-          <div mat-line><strong>Sexo:</strong> {{animal.gender}}</div>
-        </mat-list-item>
-        <mat-list-item *ngIf="animal.breed">
-          <icon-footprint mat-list-icon></icon-footprint>
-          <div mat-line><strong>Raza:</strong> {{animal.breed}}</div>
-        </mat-list-item>
-        <mat-list-item>
-          <icon-footprint mat-list-icon></icon-footprint>
-          <div mat-line><strong>Esterilizad@:</strong> {{animal.isSterilized === true ? 'Sí' : 'No'}}</div>
-        </mat-list-item>
-
-      </mat-list>
+    <div class="u-header">
+      <div class="u-back" (click)="back()">&#x0003C; Volver</div>
+      <h2 class="u-title" *ngIf="animal.name">Ficha de {{animal.name}}:</h2>
     </div>
-  </div>
+    <div class="c-detail__row">
+      <div class="c-detail__img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}"> </div>
+      <div class="c-detail__text">
+        <h3 class="c-detail__list-title">Detalles:</h3>
+        <mat-list>
 
-  <div class="c-detail__description">
-    <h3>Más datos:</h3>
-    <p *ngIf="animal.behaviour"><strong>Carácter: </strong>{{animal.behaviour}}</p>
-    <p *ngIf="animal.story"><strong>Historia: </strong>{{animal.story}}</p>
-    <p *ngIf="animal.status"><strong>Estado: </strong>{{animal.status}}</p>
-    <p *ngIf="animal.compatibleWith"><strong>Compatible con: </strong>{{animal.compatibleWith}}</p>
-    <p *ngIf="animal.health"><strong>Salud: </strong>{{animal.health}}</p>
-    <p *ngIf="showLiscense"><strong>¿Es necesaria licencia? </strong>{{animal.needLiscense === true ? 'Sí' : 'No'}}</p>
-    <p *ngIf="animal.fbLink"><strong>Para más información sobre {{animal.name}} <a target="_blank" href="{{animal.fbLink}}">pulsa aquí</a>.</strong></p>
-  </div>
+          <mat-list-item *ngIf="animal.name">
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Nombre:</strong> {{animal.name}} </div>
+          </mat-list-item>
+          <mat-list-item *ngIf="animal.specie">
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Especie:</strong> {{animal.specie | titlecase}}</div>
+          </mat-list-item>
+          <mat-list-item *ngIf="animal.dateBirth">
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.dateBirth}}</div>
+          </mat-list-item>
+          <mat-list-item *ngIf="animal.gender">
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Sexo:</strong> {{animal.gender}}</div>
+          </mat-list-item>
+          <mat-list-item *ngIf="animal.breed">
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Raza:</strong> {{animal.breed}}</div>
+          </mat-list-item>
+          <mat-list-item>
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Esterilizad@:</strong> {{animal.isSterilized === true ? 'Sí' : 'No'}}</div>
+          </mat-list-item>
 
-  <hr>
-
-  <div class="c-detail__contact">
-    <h3>CONTACTO:</h3>
-    <div class="c-detail__contact-item">
-      <mat-icon mat-list-icon class="hidden-xs">alternate_email</mat-icon>
-      <strong>Email: </strong> <br class="visible-xs">&nbsp; hakunamatata.familiaanimalista@gmail.com
+        </mat-list>
+      </div>
     </div>
-    <div class="c-detail__contact-item">
-      <mat-icon mat-list-icon class="hidden-xs">call</mat-icon>
-      <strong>Teléfonos: </strong> <br class="visible-xs">&nbsp; 676 022 124  |  606 100 661
+
+    <div class="c-detail__description">
+      <h3>Más datos:</h3>
+      <p class="c-detail__description-text" *ngIf="animal.behaviour"><strong>Carácter: </strong>{{animal.behaviour}}</p>
+      <p class="c-detail__description-text" *ngIf="animal.story"><strong>Historia: </strong>{{animal.story}}</p>
+      <p class="c-detail__description-text" *ngIf="animal.status"><strong>Estado: </strong>{{animal.status}}</p>
+      <p class="c-detail__description-text" *ngIf="animal.compatibleWith"><strong>Compatible con: </strong>{{animal.compatibleWith}}</p>
+      <p class="c-detail__description-text" *ngIf="animal.health"><strong>Salud: </strong>{{animal.health}}</p>
+      <p class="c-detail__description-text" *ngIf="showLiscense"><strong>¿Es necesaria licencia? </strong>{{animal.needLiscense === true ? 'Sí' : 'No'}}</p>
+      <p class="c-detail__description-text" *ngIf="animal.fbLink"><strong>Para más información sobre {{animal.name}} <a target="_blank" href="{{animal.fbLink}}">pulsa aquí</a>.</strong></p>
     </div>
-  </div>
 
-  <hr>
+    <hr>
 
-  <div class="c-detail__conditions">
-    <h4>Condiciones de adopción:</h4>
-    <p class="c-detail__text">Todos nuestros HAKUNAS se entregan con tasa de adopción. La tasa de adopción es para cubrir parte de los gastos veterinarios que suponen.
-      La tasa de adopción es fija, independientemente de los gastos que ese HAKUNA en concreto haya tenido.</p>
-    <p class="c-detail__text"><strong>Todos nuestros HAKUNAS se entregan:</strong></p>
-    <ul class="u-list-check">
-      <li>con REVISIÓN VETERINARIA</li>
-      <li>DESPARASITACIÓN INTERNA Y EXTERNA (según especie)</li>
-      <li>VACUNAS AL DÍA (según especie, o si la especie lo requiere)</li>
-      <li>TEST Y/O PRUEBAS QUE LA ESPECIE NECESITE (coprológico, test de inmunodeficiencia y leucemia... etc)</li>
-      <li>CHIP O IDENTIFICACIÓN (según especie, siempre que se pueda)</li>
-      <li>ESTERILIZACIÓN, O IMPLANTE (siempre que la especie o estado de salud lo permitan) O COMPROMISO DE NO CRIAR CON ELLOS EN EL CASO DE NO PODER ESTERILIZAR.</li>
-      <li>SEGUIMIENTO DURANTE TODA LA VIDA DEL HAKUNA EN CUESTIÓN.</li>
-    </ul>
-    <p class="c-detail__text">Rescatamos animales, para darles una buena vida, en buenas condiciones, no son regalos, no son caprichos, no son juguetes ni objetos que se puedan desechar
-      cuando la vida nos cambia, o cuando nos hartamos de ellos.</p>
-    <p class="c-detail__text"><strong>Ejemplos de tasas de adopción:</strong></p>
-    <ul class="c-detail__text">
-      <li>PERROS: 170€</li>
-      <li>GATOS: 140€</li>
-      <li>HURÓN: 175€</li>
-      <li>CONEJO: 75€</li>
-      <li>COBAYA: 65€</li>
-      <li>AVES, ROEDORES PEQUEÑOS SIN CHIP, IMPLANTE O ESTERILIZACIÓN: 35€</li>
-      <li>AVES, ROEDORES PEQUEÑOS CON CHIP: 50€</li>
-      <li>AVES, ROEDORES PEQUEÑOS ESTERILIZADOS: 60€</li>
-      <li>TORTUGAS: 40€</li>
-      <li>RATAS: 60€</li>
-    </ul>
+    <div class="c-detail__contact">
+      <h3>CONTACTO:</h3>
+      <div class="c-detail__contact-item">
+        <mat-icon mat-list-icon class="hidden-xs">alternate_email</mat-icon>
+        <strong>Email: </strong> <br class="visible-xs">&nbsp; hakunamatata.familiaanimalista@gmail.com
+      </div>
+      <div class="c-detail__contact-item">
+        <mat-icon mat-list-icon class="hidden-xs">call</mat-icon>
+        <strong>Teléfonos: </strong> <br class="visible-xs">&nbsp; 676 022 124  |  606 100 661
+      </div>
+    </div>
 
+    <hr>
+
+    <div class="c-detail__conditions">
+      <h4>Condiciones de adopción:</h4>
+      <p class="c-detail__text">Todos nuestros HAKUNAS se entregan con tasa de adopción. La tasa de adopción es para cubrir parte de los gastos veterinarios que suponen.
+        La tasa de adopción es fija, independientemente de los gastos que ese HAKUNA en concreto haya tenido.</p>
+      <p class="c-detail__text"><strong>Todos nuestros HAKUNAS se entregan:</strong></p>
+      <ul class="u-list-check">
+        <li>con REVISIÓN VETERINARIA</li>
+        <li>DESPARASITACIÓN INTERNA Y EXTERNA (según especie)</li>
+        <li>VACUNAS AL DÍA (según especie, o si la especie lo requiere)</li>
+        <li>TEST Y/O PRUEBAS QUE LA ESPECIE NECESITE (coprológico, test de inmunodeficiencia y leucemia... etc)</li>
+        <li>CHIP O IDENTIFICACIÓN (según especie, siempre que se pueda)</li>
+        <li>ESTERILIZACIÓN, O IMPLANTE (siempre que la especie o estado de salud lo permitan) O COMPROMISO DE NO CRIAR CON ELLOS EN EL CASO DE NO PODER ESTERILIZAR.</li>
+        <li>SEGUIMIENTO DURANTE TODA LA VIDA DEL HAKUNA EN CUESTIÓN.</li>
+      </ul>
+      <p class="c-detail__text">Rescatamos animales, para darles una buena vida, en buenas condiciones, no son regalos, no son caprichos, no son juguetes ni objetos que se puedan desechar
+        cuando la vida nos cambia, o cuando nos hartamos de ellos.</p>
+      <p class="c-detail__text"><strong>Ejemplos de tasas de adopción:</strong></p>
+      <ul class="c-detail__text">
+        <li>PERROS: 170€</li>
+        <li>GATOS: 140€</li>
+        <li>HURÓN: 175€</li>
+        <li>CONEJO: 75€</li>
+        <li>COBAYA: 65€</li>
+        <li>AVES, ROEDORES PEQUEÑOS SIN CHIP, IMPLANTE O ESTERILIZACIÓN: 35€</li>
+        <li>AVES, ROEDORES PEQUEÑOS CON CHIP: 50€</li>
+        <li>AVES, ROEDORES PEQUEÑOS ESTERILIZADOS: 60€</li>
+        <li>TORTUGAS: 40€</li>
+        <li>RATAS: 60€</li>
+      </ul>
+
+    </div>
   </div>
 </div>
