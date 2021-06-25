@@ -2,31 +2,44 @@
   <div class="u-content">
     <div class="u-header">
       <h2 class="u-title">En adopción</h2>
+      <p class="u-subtitle">Haz click en la especie en la que estás interesado para ver los animales en adopción:</p>
     </div>
-    <p class="c-for-adoption__text">Todos nuestros HAKUNAS se entregan con tasa de adopción. La tasa de adopción es para cubrir parte de los gastos veterinarios que suponen.
-      La tasa de adopción es fija, independientemente de los gastos que ese HAKUNA en concreto haya tenido.</p>
-    <p class="c-for-adoption__text"><strong>Todos nuestros HAKUNAS se entregan:</strong></p>
-    <ul class="u-list-check">
-      <li>con REVISIÓN VETERINARIA</li>
-      <li>DESPARASITACIÓN INTERNA Y EXTERNA (según especie)</li>
-      <li>VACUNAS AL DÍA (según especie, o si la especie lo requiere)</li>
-      <li>TEST Y/O PRUEBAS QUE LA ESPECIE NECESITE (coprológico, test de inmunodeficiencia y leucemia... etc)</li>
-      <li>CHIP O IDENTIFICACIÓN (según especie, siempre que se pueda)</li>
-      <li>ESTERILIZACIÓN, O IMPLANTE (siempre que la especie o estado de salud lo permitan) O COMPROMISO DE NO CRIAR CON ELLOS EN EL CASO DE NO PODER ESTERILIZAR.</li>
-      <li>SEGUIMIENTO DURANTE TODA LA VIDA DEL HAKUNA EN CUESTIÓN.</li>
-    </ul>
-    <p class="c-for-adoption__text">Rescatamos animales, para darles una buena vida, en buenas condiciones, no son regalos, no son caprichos, no son juguetes ni objetos que se puedan desechar
-      cuando la vida nos cambia, o cuando nos hartamos de ellos.</p>
-    <p class="c-for-adoption__text"><strong>Ejemplos de tasas de adopción:</strong></p>
-    <ul class="c-for-adoption__text">
-      <li>PERROS: 160€</li>
-      <li>GATOS: 130€</li>
-      <li>HURÓN: 175€</li>
-      <li>CONEJO: 65€</li>
-      <li>AVES, ROEDORES, REPTILES: DEPENDE DE LA ESPECIE</li>
-    </ul>
 
-    <div class="c-for-adoption__process">
+    <div class="c-for-adoption__gallery">
+      <div class="c-for-adoption__gallery-boxes">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.DOG)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/dog.svg" alt="">
+          <div>Perros</div>
+        </div>
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.CAT)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/cat.svg" alt="">
+          <div>Gatos</div>
+        </div>
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RAT)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/rata.svg" alt="">
+          <div>Ratas</div>
+        </div>
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.BIRD)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/bird.svg" alt="">
+          <div>Aves</div>
+        </div>
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RABBIT)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/rabbit.svg" alt="">
+          <div>Conejos</div>
+        </div>
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.FERRET)">
+          <img class="c-for-adoption__gallery-img c-for-adoption__gallery-img-ferret" src="assets/img/ferret.svg" alt="">
+          <div>Hurones</div>
+        </div>
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.TURTLE)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/turtle.svg" alt="">
+          <div>Tortugas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOMULARIOS DE ADOPCIÓN -->
+    <!-- <div class="c-for-adoption__process">
       <div class="c-for-adoption__block">
         <form novalidate (ngSubmit)="save()" [formGroup]="adoptForm">
           <div class="c-for-adoption__form-title">Formulario de adopción</div>
@@ -190,5 +203,6 @@
         </form>
 
     </div>
+    </div> -->
   </div>
 </div>

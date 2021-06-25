@@ -83,13 +83,14 @@
   &__menu {
     &-list {
       max-width: 1200px;
-      margin: auto;
+      margin: 20px auto 0;
       display: flex;
       justify-content: space-around;
       padding: 20px 0;
       padding-inline-start: 0;
       list-style: none;
       text-transform: uppercase;
+      font-size: 18px;
     }
     &-item {
       cursor: pointer;
@@ -168,5 +169,8 @@
     margin: auto;
     padding: 40px;
     color: #fff;
+    @media only screen and (max-width: 992px) {
+      padding: 40px 8px;
+    }
   }
 }

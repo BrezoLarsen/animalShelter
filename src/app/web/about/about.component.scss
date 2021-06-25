@@ -11,4 +11,10 @@
       margin: 15px 0 50px;
     }
   }
+  &__list {
+    @media only screen and (max-width: 768px) {
+      padding-inline-start: 0;
+      list-style: none;
+    }
+  }
 }

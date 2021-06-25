@@ -1,8 +1,8 @@
 <nav class="navbar">
   <div class="navbar__top">
     <div class="navbar__top-rrss">
-      <div><icon-instagram></icon-instagram></div>
-      <div><icon-facebook></icon-facebook></div>
+      <div><a href="https://www.instagram.com/hakunamatatafamiliaanimalista/" target="_blank"><icon-instagram></icon-instagram></a></div>
+      <div><a href="https://www.facebook.com/Hakunamatatafamiliaanimalista/" target="_blank"><icon-facebook></icon-facebook></a></div>
     </div>
     <img class="navbar__top-logo" src="assets/img/logo.jpg" alt="">
   </div>
@@ -17,13 +17,14 @@
   </div>
   <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
       <ul class="navbar__menu-list">
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Inicio</li>
-        <li class="navbar__menu-item" [routerLink]="['/sobre-nosotros']" (click)="isMenuVisible = false">Sobre nosotros</li>
-        <li class="navbar__menu-item" [routerLink]="['/en-adopcion']" (click)="isMenuVisible = false">En Adopción</li>
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Hazte voluntario</li>
-        <li class="navbar__menu-item" [routerLink]="['/home']" (click)="isMenuVisible = false">Apadrina a un hakuna</li>
-        <li class="navbar__menu-item" [routerLink]="['/casas-de-acogida']" (click)="isMenuVisible = false">Acoge</li>
-        <li class="navbar__menu-item" [routerLink]="['/como-ayudar']" (click)="isMenuVisible = false">Ayúdanos</li>
+        <li class="navbar__menu-item" [routerLink]="['/inicio']" (click)="closeMenu()">Inicio</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/sobre-nosotros']" (click)="closeMenu()">Sobre nosotros</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/en-adopcion']" (click)="closeMenu()">En Adopción</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/voluntariado']" (click)="closeMenu()">Hazte voluntario</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/apadrina']" (click)="closeMenu()">Apadrina</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/casas-de-acogida']" (click)="closeMenu()">Acoge</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/como-ayudar']" (click)="closeMenu()">Ayúdanos</li>
+        <!-- <li class="navbar__menu-item" [routerLink]="['/colaboradores']" (click)="isMenuVisible = false">Colaboradores</li> -->
         <!-- <li class="navbar__menu-item" [routerLink]="['/dashboard']" (click)="isMenuVisible = false">Dashboard</li> -->
         <!-- <li class="navbar__menu-item" [routerLink]="['/newAnimalForm']" (click)="isMenuVisible = false">Añadir gatito</li> -->
       </ul>
@@ -40,7 +41,7 @@
 <footer class="footer">
   <div class="footer__content">
 
-    Hakuna Matata Familia Animalista · CIF: A36587394
+    Hakuna Matata Familia Animalista<br>CIF: A36587394
 
   </div>
 </footer>

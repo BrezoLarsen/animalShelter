@@ -1,12 +1,8 @@
 <div class="c-card">
     <div class="c-card__name">{{animal.name}}</div>
-    <div class="c-card__characteristic">{{animal.characteristic}}</div>
+    <div class="c-card__characteristic">{{animal.behaviour}}</div>
     <div class="c-card__img" style="background-image: url('../assets/img/IMG_4169.JPG')"></div>
-    <div class="c-card__buttons">
-        <div *ngIf="!animal.isSick" (click)="setAsSick()"><span>+</span> Añadir para medicar</div>
-        <div *ngIf="!animal.isWeak" (click)="setAsWeak()"><span>+</span> Añadir para reforzar</div>
-    </div>
-    <form *ngIf="animal.isSick && animal.medicalDosis == undefined" class="c-card__sick-form">
+    <!-- <form *ngIf="animal.isSick && animal.medicalDosis == undefined" class="c-card__sick-form">
         <div class="c-card__sick-form-group">
             <div class="c-card__sick-form-input">
                 <mat-form-field>
@@ -28,5 +24,5 @@
     <div *ngIf="animal.medicalDosis" class="c-card__medical">1,5 ml de Meloxidil</div>
     <div *ngIf="animal.isSick" class="c-card__bottom">
         <mat-checkbox color="primary">¡Medicado!</mat-checkbox>
-    </div>
+    </div> -->
 </div>

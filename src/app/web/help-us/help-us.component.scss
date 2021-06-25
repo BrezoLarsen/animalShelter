@@ -9,6 +9,7 @@
     text-align: left;
     &-title {
       margin: 0 0 20px;
+      font-size: 24px;
     }
     &-inline {
       display: flex;
@@ -23,6 +24,10 @@
       height: 100px;
       border-radius: 50%;
     }
+    &-text {
+      font-size: 18px;
+      line-height: 22px;
+    }
     &:nth-child(2) {
       background: #38ca81;
     }
@@ -34,6 +39,9 @@
     }
     &:nth-child(5) {
       background: #fc6230;
+    }
+    &:nth-child(6) {
+      background: #ef2368;
     }
   }
 }

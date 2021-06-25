@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
 import { IAnimal } from 'src/app/interfaces/animal';
 import { IShelterCandidate } from 'src/app/interfaces/shelterCandidate';
+import { SPECIES } from 'src/const/species';
 
 function emailMatcher(c: AbstractControl): { [key: string]: boolean } | null {
   const emailControl = c.get('email');
@@ -33,6 +34,7 @@ export class ShelterFormComponent implements OnInit {
   specie = '';
   submitted: boolean;
   emailMessage: string;
+  species = [SPECIES.DOG, SPECIES.CAT, SPECIES.FERRET, SPECIES.BIRD, SPECIES.RODENT, SPECIES.TURTLE, SPECIES.RABBIT];
 
   constructor(
     private route: ActivatedRoute,
@@ -56,13 +58,17 @@ export class ShelterFormComponent implements OnInit {
         email: ['', [Validators.required, Validators.email]],
         confirmEmail: ['', Validators.required],
       }, { validator: emailMatcher }),
+      dni: ['', [Validators.required]],
       phone: ['', Validators.required, Validators.minLength(9)],
       addressGroup: this.formBuilder.group({
         street: ['', Validators.required],
         city: ['', Validators.required],
         state: ['', Validators.required],
         pc: ['', Validators.required]
-      })
+      }),
+      birthDate: ['', [Validators.required]],
+      married: ['', [Validators.required]],
+      job: ['', [Validators.required]]
     });
 
     const emailControl = this.shelterForm.get('emailGroup.email');

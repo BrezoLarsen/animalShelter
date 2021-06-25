@@ -1,18 +1,47 @@
 .c-detail {
   max-width: 960px;
   margin: 60px auto;
+  @media only screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+  &__list-title {
+    margin: 0;
+  }
   &__row {
     display: grid;
     align-items: flex-start;
     grid-template-columns: 400px 1fr;
     gap: 50px;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
   }
   &__img {
     width: 100%;
     height: 300px;
     background-size: cover;
+    background-position: center;
   }
   &__description {
-    padding-top: 60px;
+    padding-top: 40px;
+  }
+  &__text {
+    text-align: left;
+    @media only screen and (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+  &__contact {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+  .mat-list-base .mat-list-item.mat-list-item-with-avatar, .mat-list-base .mat-list-option.mat-list-item-with-avatar {
+    height: 45px;
   }
 }

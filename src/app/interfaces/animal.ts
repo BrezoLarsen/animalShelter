@@ -1,16 +1,19 @@
 export class IAnimal {
-    id?: string;
+    id: string;
     name?: string;
-    chip?: string;
-    age?: number;
-    entryDate?: string;
-    characteristic?: string;
-    gender?: string;
-    captureZone?: string;
-    imageUrl?: string;
-    isSick?: boolean;
-    medicalDosis?: string;
-    isWeak?: boolean;
     specie?: string;
-    //medicalHistory?: [];
+    breed?: string;
+    gender?: string;
+    isSterilized?: boolean;
+    dateBirth?: string;
+    status?: string;
+    place?: string;
+    compatibleWith?: string;
+    health?: string;
+    behaviour?: string;
+    story?: string;
+    chip?: string;
+    imageUrl?: string;
+    needLiscense?: boolean;
+    fbLink?: string;
 }

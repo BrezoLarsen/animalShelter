@@ -10,9 +10,12 @@ import { HomeComponent } from './web/home/home.component';
 import { ShelterFormComponent } from './web/shelter-form/shelter-form.component';
 import { ShelterComponent } from './web/shelter/shelter.component';
 import { DetailComponent } from './web/components/detail/detail.component';
+import { DetailSpecieComponent } from './web/components/detail-specie/detail-specie.component';
+import { SponsorComponent } from './web/sponsor/sponsor.component';
+import { VolunteerComponent } from './web/volunteer/volunteer.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'inicio', component: HomeComponent },
   { path: 'sobre-nosotros', component: AboutComponent },
   { path: 'en-adopcion', component: ForAdoptionComponent },
   { path: 'como-ayudar', component: HelpUsComponent },
@@ -20,15 +23,18 @@ const routes: Routes = [
   { path: 'casas-de-acogida/:specie', component: ShelterFormComponent, /*anActivate: [ProductDetailGuard]*/ },
   { path: 'dashboard', component: MainPageComponent },
   { path: 'newAnimalForm', component: NewAnimalFormComponent },
-  { path: 'detail/:id', component: DetailComponent },
+  { path: 'detalle/:id', component: DetailComponent },
+  { path: 'detalle-especie/:specie', component: DetailSpecieComponent },
+  { path: 'apadrina', component: SponsorComponent },
+  { path: 'voluntariado', component: VolunteerComponent },
   // Default URL:
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   // 404 URL:
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  { path: '**', redirectTo: 'inicio', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy', scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

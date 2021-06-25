@@ -1,0 +1,58 @@
+.c-help-boxes {
+  margin: 105px 0;
+  &__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+   }
+  &__box {
+    color: #fff;
+    width: 24%;
+    min-height: 245px;
+    padding: 20px 30px;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:first-child {
+      background: #38ca81;
+      &:hover {
+        background-color: #30ab6d;
+      }
+    }
+    &:nth-child(2) {
+      background: #0eb5fb;
+      &:hover {
+        background: #05a1e2;
+      }
+    }
+    &:nth-child(3) {
+      background: #ef2368;
+      &:hover {
+        background: #bf0746;
+      }
+    }
+    &:nth-child(4) {
+      background: #fc6230;
+      &:hover {
+        background: #f14b15;
+      }
+    }
+    &-header {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 65px 1fr;
+    }
+    @media only screen and (max-width: 992px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    margin: 50px 0;
+    min-height: auto;
+  }
+}

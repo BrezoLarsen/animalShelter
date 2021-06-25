@@ -29,7 +29,10 @@ import { ShelterComponent } from './web/shelter/shelter.component';
 import { ShelterFormComponent } from './web/shelter-form/shelter-form.component';
 import { AdoptionCardComponent } from './web/components/adoption-card/adoption-card.component';
 import { DetailComponent } from './web/components/detail/detail.component';
-
+import { DetailSpecieComponent } from './web/components/detail-specie/detail-specie.component';
+import { SponsorComponent } from './web/sponsor/sponsor.component';
+import { VolunteerComponent } from './web/volunteer/volunteer.component';
+import { HelpBoxComponent } from './web/components/help-boxes/help-boxes.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,11 @@ import { DetailComponent } from './web/components/detail/detail.component';
     ShelterComponent,
     ShelterFormComponent,
     AdoptionCardComponent,
-    DetailComponent
+    DetailComponent,
+    DetailSpecieComponent,
+    SponsorComponent,
+    VolunteerComponent,
+    HelpBoxComponent
   ],
   imports: [
     BrowserModule,

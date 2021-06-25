@@ -6,11 +6,17 @@
         Siendo casa de acogida ayudas a que podamos continuar con nuestra labor.</p>
       <p>Pulsa en la acogida que te interese para completar el formulario correspondiente. ¡Te responderemos en cuanto podamos!</p>
       <p>Estas son las principales casas de acogida que necesitamos:</p>
+      <p class="visible-xs"><strong>Para descargarte los forularios en formato Word, hazlo desde el ordenador.</strong></p>
     </div>
     <div class="c-shelter__buttons">
-      <div *ngFor='let animal of animals' class="u-button" [routerLink]="['/casas-de-acogida', (animal.specie)]">
-        Casa de acogida para {{ animal.specie }}
-      </div>
+      <a class="c-shelter__button-link u-button hidden-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-perro.doc">Casa de acogida para perros</a>
+      <a class="c-shelter__button-link u-button hidden-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-gato.doc">Casa de acogida para gatos</a>
+      <a class="c-shelter__button-link u-button hidden-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-huron.doc">Casa de acogida para hurones</a>
+      <a class="c-shelter__button-link u-button hidden-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-cerdo.doc">Casa de acogida para cerdos</a>
+      <a class="c-shelter__button-link u-button visible-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-perro.pdf">Casa de acogida para perros</a>
+      <a class="c-shelter__button-link u-button visible-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-gato.pdf">Casa de acogida para gatos</a>
+      <a class="c-shelter__button-link u-button visible-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-huron.pdf">Casa de acogida para hurones</a>
+      <a class="c-shelter__button-link u-button visible-xs" href="assets/cuestionarios-acogida/Cuestionario-acogida-cerdo.pdf">Casa de acogida para cerdos</a>
     </div>
   </div>
 </div>

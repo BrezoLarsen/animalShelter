@@ -11,6 +11,7 @@ import { AnimalService } from '../../../dashboard/animal.service';
 export class DetailComponent implements OnInit {
 
   public animal: IAnimal = new IAnimal;
+  public showLiscense: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -21,12 +22,13 @@ export class DetailComponent implements OnInit {
     const param = this.activatedRoute.snapshot.paramMap.get('id');
     if (param) {
       this.animal.id = param;
-      console.log(this.animal.id)
     }
 
     this.animalService.getAnimalById(this.animal.id).subscribe(animal => {
       this.animal = animal;
-      console.log(animal)
+      if (this.animal.needLiscense !== undefined) {
+        this.showLiscense = true;
+      }
     });
   }
 

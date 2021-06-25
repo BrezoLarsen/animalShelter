@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Gallery } from 'angular-gallery';
 import { AnimalService } from 'src/app/dashboard/animal.service';
 import { IAnimal } from 'src/app/interfaces/animal';
 
@@ -10,7 +9,8 @@ import { IAnimal } from 'src/app/interfaces/animal';
 })
 export class HomeComponent implements OnInit {
 
-  animals: IAnimal[] = []
+  homeAnimals: IAnimal[] = [];
+  newAnimals;
 
   constructor(
     private animalService: AnimalService
@@ -18,8 +18,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.animalService.getAnimals().subscribe(data => {
-      this.animals = data;
+      this.homeAnimals = data;
+      this.homeAnimals = this.shuffle(data).splice(0, 3);
     })
+  }
+
+  shuffle(array): IAnimal[] {
+    return array.sort(() => Math.random() - 0.5)
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="c-home">
   <div>
     <h2 class="u-title">¿Qué hacemos?</h2>
-    <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div class="u-subtitle">Hakuna Matata Familia Animalista es una ONG dedicada a la protección animal, nuestros objetivos son:</div>
   </div>
   <div class="c-home__boxes">
     <div class="c-home__main-box">
@@ -15,48 +15,15 @@
     </div>
   </div>
   <div class="c-home__help">
-    <div>
-      <h2 class="u-title">¿Cómo puedes ayudarnos?</h2>
-      <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </div>
-    <div class="c-home__boxes">
-      <div class="c-home__help-box">
-        <div class="c-home__help-box-header">
-          <icon-piggy></icon-piggy>
-          <h3>DONATIVOS</h3>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
-      </div>
-      <div class="c-home__help-box">
-        <div class="c-home__help-box-header">
-          <icon-volunteer></icon-volunteer>
-          <h3>VOLUNTARIADO</h3>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
-      </div>
-      <div class="c-home__help-box">
-        <div class="c-home__help-box-header">
-          <icon-sponsor></icon-sponsor>
-          <h3>APADRINA</h3>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
-      </div>
-      <div class="c-home__help-box">
-        <div class="c-home__help-box-header">
-          <icon-shelter></icon-shelter>
-          <h3>ACOGE</h3>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem fugit minima similique.</p>
-      </div>
-    </div>
+    <app-help-boxes></app-help-boxes>
   </div>
   <div class="c-home__gallery">
     <div>
       <h2 class="u-title">En adopción</h2>
-      <div class="u-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+      <div class="u-subtitle">Estos son algunos de los animales que buscan un hogar, para ver más <a href="/en-adopcion">pulsa aquí</a>:</div>
     </div>
     <div class="c-home__gallery-boxes">
-      <div *ngFor="let animal of animals; let i = index">
+      <div *ngFor="let animal of homeAnimals; let i = index">
         <app-adoption-card [animal]="animal"></app-adoption-card>
       </div>
     </div>

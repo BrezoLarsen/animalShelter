@@ -17,9 +17,18 @@ export class AnimalService {
 
     getAnimals(): Observable<IAnimal[]> {
         return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
-            tap(data => console.log('All ' + JSON.stringify(data))),
+            tap(data => JSON.stringify(data)),
             catchError(this.handleError)
         );
+    }
+
+    getAnimalsBySpecie(specie: string): Observable<IAnimal[]> {
+      return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
+        map((animals: IAnimal[]) => {
+          let animalsArray = animals.filter(animal => animal.specie === specie);
+          return animalsArray;
+        })
+      );
     }
 
     getAnimalBySpecie(specie: string): Observable<IAnimal | undefined> {

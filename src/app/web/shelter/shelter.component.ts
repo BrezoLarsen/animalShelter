@@ -1,32 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { AnimalService } from 'src/app/dashboard/animal.service';
-import { IAnimal } from 'src/app/interfaces/animal';
+import { Component } from '@angular/core';
+import { SPECIES } from '../../../const/species';
 
 @Component({
   selector: 'app-shelter',
   templateUrl: './shelter.component.html',
   styleUrls: ['./shelter.component.scss']
 })
-export class ShelterComponent implements OnInit {
+export class ShelterComponent {
 
-  public animal: IAnimal;
-  animals: IAnimal[] = [];
-  animalsLoaded: boolean = false;
-  errorMessage: string;
+  species = [SPECIES.DOG, SPECIES.CAT, SPECIES.FERRET, SPECIES.BIRD, SPECIES.RODENT, SPECIES.TURTLE, SPECIES.RABBIT];
 
-  constructor(
-    private animalService: AnimalService
-  ) { }
-
-
-  ngOnInit(): void {
-    this.animalService.getAnimals().subscribe({
-        next: animals => {
-            this.animals = animals;
-            this.animalsLoaded = true;
-        },
-        error: err => this.errorMessage = err
-    });
-}
+  constructor() { }
 
 }

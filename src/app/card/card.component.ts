@@ -16,14 +16,4 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {console.log(this.animal);}
 
-  setAsSick() {
-    this.animal.isSick = true;
-    console.log(this.animal);
-  }
-
-  setAsWeak() {
-    this.animal.isWeak = true;
-    console.log(this.animal);
-  }
-
 }

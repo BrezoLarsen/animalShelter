@@ -1,0 +1,27 @@
+.c-detail-specie {
+  margin: 60px auto;
+  @media only screen and (max-width: 768px) {
+    min-height: calc(100vh - 320px);
+    margin: 0 auto;
+  }
+  &__gallery {
+    @media only screen and (max-width: 768px) {
+      margin: 50px 0;
+    }
+    &-boxes {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+    &-box {
+      @media only screen and (max-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+  }
+}

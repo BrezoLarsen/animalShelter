@@ -11,6 +11,16 @@ export class AppComponent {
 
   presentMenu(e) {
     this.isMenuVisible = !this.isMenuVisible;
+    if (this.isMenuVisible) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
+
+  closeMenu() {
+    document.body.classList.remove('overflow-hidden');
+    this.isMenuVisible = false;
   }
 
 }

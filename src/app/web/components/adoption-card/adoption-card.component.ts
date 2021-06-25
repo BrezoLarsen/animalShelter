@@ -19,7 +19,7 @@ export class AdoptionCardComponent implements OnInit {
   }
 
   goToDetail() {
-    this.router.navigate([`detail/${this.animal.id}`])
+    this.router.navigate([`detalle/${this.animal.id}`])
   }
 
 }

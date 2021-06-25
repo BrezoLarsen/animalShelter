@@ -9,46 +9,86 @@
   &__block {
     margin-top: 50px;
   }
-  &__form-group {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 20px;
-    &--address {
-      display: grid;
-      grid-template-columns: 1fr 3fr 1fr 3fr 1fr 3fr;
-      grid-gap: 30px;
+  &__gallery {
+    @media only screen and (max-width: 768px) {
+      margin: 50px 0;
     }
-    @media only screen and (max-width: 992px) {
-      display: block;
-    }
-  }
-  &__form-title {
-    margin: 45px 0 20px;
-    font-size: 22px;
-    text-align: left;
-  }
-  &__form-text {
-    text-align: left;
-  }
-  &__label {
-    margin-right: 20px;
-    flex: 2;
-    text-align: left;
-  }
-  &__input {
-    flex: 8;
-    &--margin {
-      @media only screen and (max-width: 992px) {
-        margin-bottom: 20px;
+    &-boxes {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      @media only screen and (max-width: 768px) {
+        display: block;
       }
     }
-  }
-  &__invalid-feedback {
-    position: absolute;
-    bottom: -15px;
-    left: 245px;
-    font-size: 12px;
-    color: #d00000;
+    &-box {
+      min-width: 20%;
+      height: 80px;
+      padding: 30px 15px;
+      // background-color: #38ca81;
+      font-weight: bold;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: #30ab6d;
+      }
+      &:first-child {
+        background: #38ca81;
+        &:hover {
+          background-color: #30ab6d;
+        }
+      }
+      &:nth-child(2) {
+        background: #0eb5fb;
+        &:hover {
+          background: #05a1e2;
+        }
+      }
+      &:nth-child(3) {
+        background: #ef2368;
+        &:hover {
+          background: #bf0746;
+        }
+      }
+      &:nth-child(4) {
+        background: #fc6230;
+        &:hover {
+          background: #f14b15;
+        }
+      }
+      &:nth-child(5) {
+        background: #ef2368;
+        &:hover {
+          background: #bf0746;
+        }
+      }
+      &:nth-child(6) {
+        background: #38ca81;
+        &:hover {
+          background: #38ca81;
+        }
+      }
+      &:nth-child(7) {
+        background: #0eb5fb;
+        &:hover {
+          background: #05a1e2;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 10px;
+        padding: 15px;
+      }
+    }
+    &-img {
+      width: 40px;
+      margin-bottom: 10px;
+      &-ferret {
+        width: 60px;
+        margin-bottom: 0;
+      }
+    }
   }
 }
