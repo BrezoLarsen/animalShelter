@@ -13,7 +13,7 @@
   }
   &__main-box {
     width: 30%;
-    height: 400px;
+    height: 465px;
     background-size: cover;
     position: relative;
     &:first-child {
@@ -53,6 +53,20 @@
       gap: 20px;
       @media only screen and (max-width: 768px) {
         grid-template-columns: 1fr;
+      }
+    }
+    &-photos {
+      margin: 50px 0;
+      column-count: 3;
+      column-gap: 1em;
+      img {
+        display: inline-block;
+        margin: 0 0 1em;
+        width: 100%;
+      }
+      @media only screen and (max-width: 768px) {
+        margin: 10px 0;
+        column-count: 2;
       }
     }
   }
