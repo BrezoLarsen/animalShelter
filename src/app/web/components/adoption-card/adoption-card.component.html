@@ -1,7 +1,8 @@
 <div class="c-adoption-card" (click)="goToDetail()">
-  <div class="c-adoption-card__img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}"></div>
+  <div class="c-adoption-card__img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}">
+    <div class="c-adoption-card__img-label">{{animal.name}}</div>
+  </div>
   <div class="c-adoption-card__text">
-    <p><strong>Nombre:</strong> {{animal.name}}</p>
     <p><strong>Sexo:</strong> {{animal.gender}}</p>
     <p><strong>F. nac:</strong> {{animal.dateBirth}}</p>
   </div>

@@ -8,7 +8,7 @@
     </div>
 
     <div *ngIf="animals.length > 0" class="c-detail-specie__gallery-boxes">
-      <div class="c-detail-specie__gallery-box" *ngFor="let animal of animals; let i = index">
+      <div class="c-detail-specie__gallery-box" *ngFor="let animal of animalsToShow; let i = index">
         <app-adoption-card [animal]="animal"></app-adoption-card>
       </div>
     </div>

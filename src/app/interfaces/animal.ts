@@ -2,6 +2,7 @@ export class IAnimal {
     id: string;
     name?: string;
     specie?: string;
+    subspecie?: string;
     breed?: string;
     gender?: string;
     isSterilized?: boolean;
@@ -16,4 +17,6 @@ export class IAnimal {
     imageUrl?: string;
     needLiscense?: boolean;
     fbLink?: string;
+    adoptionDate?: string;
+    passAwayDate?: string;
 }

@@ -3,6 +3,8 @@
     <div class="navbar__top-rrss">
       <div><a href="https://www.instagram.com/hakunamatatafamiliaanimalista/" target="_blank"><icon-instagram></icon-instagram></a></div>
       <div><a href="https://www.facebook.com/Hakunamatatafamiliaanimalista/" target="_blank"><icon-facebook></icon-facebook></a></div>
+      <div><a href="https://www.tiktok.com/@hakunamatatafamilia?" target="_blank"><icon-tiktok></icon-tiktok></a></div>
+      <div><a href="https://twitter.com/hakunamatatafa1" target="_blank"><icon-twitter></icon-twitter></a></div>
     </div>
     <img class="navbar__top-logo" src="assets/img/logo.jpg" alt="">
   </div>
@@ -18,16 +20,22 @@
   <div class="navbar__menu" [ngClass]="isMenuVisible ? 'navbar__menu--open' : ''">
       <ul class="navbar__menu-list">
         <li class="navbar__menu-item" [routerLink]="['/inicio']" (click)="closeMenu()">Inicio</li> <span class="hidden-xs"> · </span>
-        <li class="navbar__menu-item" [routerLink]="['/sobre-nosotros']" (click)="closeMenu()">Sobre nosotros</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/sobre-nosotras']" (click)="closeMenu()">Sobre nosotras</li> <span class="hidden-xs"> · </span>
         <li class="navbar__menu-item" [routerLink]="['/en-adopcion']" (click)="closeMenu()">En Adopción</li> <span class="hidden-xs"> · </span>
         <li class="navbar__menu-item" [routerLink]="['/voluntariado']" (click)="closeMenu()">Hazte voluntario</li> <span class="hidden-xs"> · </span>
         <li class="navbar__menu-item" [routerLink]="['/apadrina']" (click)="closeMenu()">Apadrina</li> <span class="hidden-xs"> · </span>
-        <li class="navbar__menu-item" [routerLink]="['/casas-de-acogida']" (click)="closeMenu()">Acoge</li> <span class="hidden-xs"> · </span>
+        <li class="navbar__menu-item" [routerLink]="['/casas-de-acogida']" (click)="closeMenu()">En acogida</li> <span class="hidden-xs"> · </span>
         <li class="navbar__menu-item" [routerLink]="['/como-ayudar']" (click)="closeMenu()">Ayúdanos</li>
         <!-- <li class="navbar__menu-item" [routerLink]="['/colaboradores']" (click)="isMenuVisible = false">Colaboradores</li> -->
         <!-- <li class="navbar__menu-item" [routerLink]="['/dashboard']" (click)="isMenuVisible = false">Dashboard</li> -->
         <!-- <li class="navbar__menu-item" [routerLink]="['/newAnimalForm']" (click)="isMenuVisible = false">Añadir gatito</li> -->
       </ul>
+      <div class="navbar__mobile-rrss">
+        <div><a href="https://www.instagram.com/hakunamatatafamiliaanimalista/" target="_blank"><icon-instagram></icon-instagram></a></div>
+        <div><a href="https://www.facebook.com/Hakunamatatafamiliaanimalista/" target="_blank"><icon-facebook></icon-facebook></a></div>
+        <div><a href="https://www.tiktok.com/@hakunamatatafamilia?" target="_blank"><icon-tiktok></icon-tiktok></a></div>
+        <div><a href="https://twitter.com/hakunamatatafa1" target="_blank"><icon-twitter></icon-twitter></a></div>
+      </div>
   </div>
 </nav>
 
@@ -41,7 +49,7 @@
 <footer class="footer">
   <div class="footer__content">
 
-    Hakuna Matata Familia Animalista<br>CIF: A36587394
+    Hakuna Matata Familia Animalista
 
   </div>
 </footer>

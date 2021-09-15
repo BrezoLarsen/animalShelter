@@ -27,6 +27,16 @@
       }
     }
   }
+  &__mobile-rrss {
+    display: none;
+    @media only screen and (max-width: 992px) {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin: auto;
+      padding: 20px;
+    }
+  }
   &__burger {
     display: none;
     @media only screen and (max-width: 992px) {

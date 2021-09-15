@@ -16,7 +16,7 @@ import { VolunteerComponent } from './web/volunteer/volunteer.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
-  { path: 'sobre-nosotros', component: AboutComponent },
+  { path: 'sobre-nosotras', component: AboutComponent },
   { path: 'en-adopcion', component: ForAdoptionComponent },
   { path: 'como-ayudar', component: HelpUsComponent },
   { path: 'casas-de-acogida', component: ShelterComponent },

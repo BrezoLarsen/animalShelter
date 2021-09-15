@@ -12,7 +12,9 @@ import { IAnimal } from 'src/app/interfaces/animal';
 export class DetailSpecieComponent {
 
   animals: IAnimal[] = [];
+  animalsToShow: IAnimal[] = [];
   specie: string;
+  param: string;
 
 
   constructor(
@@ -22,12 +24,19 @@ export class DetailSpecieComponent {
   ) { }
 
   ngOnInit(): void {
-    const param = this.activatedRoute.snapshot.paramMap.get('specie');
-    this.specie = param;
+    this.param = this.activatedRoute.snapshot.paramMap.get('specie');
+    this.specie = this.param;
+    this.getAnimalsToShow();
+  }
 
-    this.animalService.getAnimalsBySpecie(param).subscribe(data => {
+  getAnimalsToShow() {
+    this.animalService.getAnimalsBySpecie(this.param).subscribe(data => {
       this.animals = data;
-    })
+      this.animals.forEach((animal) => {
+        if (animal.adoptionDate || animal.passAwayDate) { return; }
+        this.animalsToShow.push(animal);
+      });
+    });
   }
 
   back() {

@@ -33,6 +33,8 @@ import { DetailSpecieComponent } from './web/components/detail-specie/detail-spe
 import { SponsorComponent } from './web/sponsor/sponsor.component';
 import { VolunteerComponent } from './web/volunteer/volunteer.component';
 import { HelpBoxComponent } from './web/components/help-boxes/help-boxes.component';
+import { IconTiktok } from '../theme/custom-icons/tiktok';
+import { IconTwitter } from 'src/theme/custom-icons/twitter';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { HelpBoxComponent } from './web/components/help-boxes/help-boxes.compone
     IconSponsor,
     IconFacebook,
     IconInstagram,
+    IconTiktok,
+    IconTwitter,
     IconFootprint,
     HelpUsComponent,
     ForAdoptionComponent,
