@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainPageComponent } from './dashboard/main-page.component';
+import { MainPageComponent } from './dashboard/main-page/main-page.component';
 import { NewAnimalFormComponent } from './dashboard/new-animal-form.component';
 import { AboutComponent } from './web/about/about.component';
 import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component';
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'en-adopcion', component: ForAdoptionComponent },
   { path: 'como-ayudar', component: HelpUsComponent },
   { path: 'casas-de-acogida', component: ShelterComponent },
-  { path: 'casas-de-acogida/:specie', component: ShelterFormComponent, /*anActivate: [ProductDetailGuard]*/ },
+  { path: 'casas-de-acogida/:specie', component: ShelterFormComponent, /*canActivate: [ProductDetailGuard]*/ },
   { path: 'dashboard', component: MainPageComponent },
   { path: 'newAnimalForm', component: NewAnimalFormComponent },
   { path: 'detalle/:id', component: DetailComponent },

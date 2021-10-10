@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimalService } from 'src/app/dashboard/animal.service';
-import { IAnimal } from 'src/app/interfaces/animal';
+import { AnimalService } from '../services/animal.service';
+import { IAnimal } from '../../interfaces/animal';
 
 @Component({
   selector: 'app-home',

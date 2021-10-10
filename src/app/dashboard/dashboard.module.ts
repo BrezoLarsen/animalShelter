@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { MainPageComponent } from './main-page.component';
+import { MainPageComponent } from './main-page/main-page.component';
 import { NewAnimalFormComponent } from './new-animal-form.component';
 import { CardComponent } from '../card/card.component';
 import { HttpClientModule } from '@angular/common/http';

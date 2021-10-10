@@ -3,13 +3,13 @@ import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
-import { IAnimal } from '../interfaces/animal';
+import { IAnimal } from '../../interfaces/animal';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class AnimalService {
+export class DashboardService {
 
     private animalsUrl = 'api/';
 

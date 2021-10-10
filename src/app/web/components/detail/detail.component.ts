@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
-import { IAnimal } from 'src/app/interfaces/animal';
-import { AnimalService } from '../../../dashboard/animal.service';
+import { IAnimal } from '../../../interfaces/animal';
+import { AnimalService } from '../../services/animal.service';
 
 @Component({
   selector: 'app-detail',

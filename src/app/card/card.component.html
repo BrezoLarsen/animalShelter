@@ -1,28 +1,4 @@
 <div class="c-card">
     <div class="c-card__name">{{animal.name}}</div>
-    <div class="c-card__characteristic">{{animal.behaviour}}</div>
-    <div class="c-card__img" style="background-image: url('../assets/img/IMG_4169.JPG')"></div>
-    <!-- <form *ngIf="animal.isSick && animal.medicalDosis == undefined" class="c-card__sick-form">
-        <div class="c-card__sick-form-group">
-            <div class="c-card__sick-form-input">
-                <mat-form-field>
-                    <mat-label>Nombre del medicamento</mat-label>
-                    <input matInput placeholder="Nombre del medicamento">
-                    <mat-error>Este campo no puede estar vacío</mat-error>
-                </mat-form-field>
-            </div>
-            <div class="c-card__sick-form-input">
-                <mat-form-field>
-                    <mat-label>Dosis</mat-label>
-                    <input matInput placeholder="Dosis">
-                    <mat-error>Este campo no puede estar vacío</mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-        <button mat-raised-button color="primary">Guardar</button>
-    </form>
-    <div *ngIf="animal.medicalDosis" class="c-card__medical">1,5 ml de Meloxidil</div>
-    <div *ngIf="animal.isSick" class="c-card__bottom">
-        <mat-checkbox color="primary">¡Medicado!</mat-checkbox>
-    </div> -->
+    <div class="c-card__img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}">
 </div>

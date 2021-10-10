@@ -8,7 +8,7 @@ export class IAnimal {
     isSterilized?: boolean;
     dateBirth?: string;
     status?: string;
-    place?: string;
+    placeText?: string;
     compatibleWith?: string;
     health?: string;
     behaviour?: string;
@@ -19,4 +19,6 @@ export class IAnimal {
     fbLink?: string;
     adoptionDate?: string;
     passAwayDate?: string;
+    showInAdoptionPage?: boolean;
+    place?: string;
 }

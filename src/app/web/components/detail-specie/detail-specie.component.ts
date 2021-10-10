@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
-import { AnimalService } from 'src/app/dashboard/animal.service';
-import { IAnimal } from 'src/app/interfaces/animal';
+import { AnimalService } from '../../services/animal.service';
+import { IAnimal } from '../../../interfaces/animal';
 
 @Component({
   selector: 'app-detail-specie',
@@ -34,6 +34,7 @@ export class DetailSpecieComponent {
       this.animals = data;
       this.animals.forEach((animal) => {
         if (animal.adoptionDate || animal.passAwayDate) { return; }
+        if (animal.showInAdoptionPage === false) { return; }
         this.animalsToShow.push(animal);
       });
     });
