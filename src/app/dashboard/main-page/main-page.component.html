@@ -29,6 +29,7 @@
               <th>Especie</th>
               <th>Subespecie</th>
               <th>Imagen</th>
+              <th></th>
             </tr>
            </thead>
            <tbody>
@@ -39,6 +40,7 @@
               <td>
                 <div class="dashboard__table-img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}"></div>
               </td>
+              <td (click)="goToDetail(animal.id)"><mat-icon>edit</mat-icon></td>
             </tr>
           </tbody>
         </table>

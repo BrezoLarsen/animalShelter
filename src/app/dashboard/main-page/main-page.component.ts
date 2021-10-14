@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DashboardMenuItem } from 'src/app/interfaces/dashboard-menu-item';
 import { IAnimal } from '../../interfaces/animal';
 import { DashboardService } from '../services/dashboard.service';
@@ -18,13 +19,27 @@ export class MainPageComponent implements OnInit {
     errorMessage: string;
     _listFilter: string;
 
+    get listFilter():string {
+      return this._listFilter;
+    }
+
+    set listFilter(value:string) {
+        this._listFilter = value;
+        this.filteredAnimals = this.listFilter ? this.perfomFilter(this.listFilter) : this.animals;
+    }
+
     constructor(
-        private dashboardService: DashboardService
+        private dashboardService: DashboardService,
+        private router: Router
     ) {}
 
     ngOnInit(): void {
       this.getAllAnimals();
       this.getMenu();
+    }
+
+    goToDetail(id: number) {
+      this.router.navigate([`dashboard-detalle/${id}`])
     }
 
     getMenu() {
@@ -48,7 +63,7 @@ export class MainPageComponent implements OnInit {
       }
     }
 
-    selectItem(item) {
+    selectItem(item: DashboardMenuItem) {
       this.menuItems.forEach(item => item.active = false);
       item.active = true;
       if (item.id === 1) {
@@ -76,15 +91,6 @@ export class MainPageComponent implements OnInit {
         this.animals = data;
         this.filteredAnimals = this.animals;
       });
-    }
-
-    get listFilter():string {
-        return this._listFilter;
-    }
-
-    set listFilter(value:string) {
-        this._listFilter = value;
-        this.filteredAnimals = this.listFilter ? this.perfomFilter(this.listFilter) : this.animals;
     }
 
     perfomFilter(filterBy: string): IAnimal[] {
