@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { AnimalService } from '../../services/animal.service';
 import { IAnimal } from '../../../interfaces/animal';
+import { finalize, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-detail-specie',
@@ -11,10 +13,12 @@ import { IAnimal } from '../../../interfaces/animal';
 })
 export class DetailSpecieComponent {
 
-  animals: IAnimal[] = [];
-  animalsToShow: IAnimal[] = [];
-  specie: string;
-  param: string;
+  public animalsToShow: IAnimal[] = [];
+  public specie: string;
+  public showLoading = false;
+  private _animals: IAnimal[] = [];
+  private _param: string;
+  private _ngUnsuscribe: Subject<void> = new Subject<void>();
 
 
   constructor(
@@ -24,20 +28,29 @@ export class DetailSpecieComponent {
   ) { }
 
   ngOnInit(): void {
-    this.param = this.activatedRoute.snapshot.paramMap.get('specie');
-    this.specie = this.param;
+    this._param = this.activatedRoute.snapshot.paramMap.get('specie');
+    this.specie = this._param;
     this.getAnimalsToShow();
   }
 
+  ngOnDestroy() {
+    this._ngUnsuscribe.next();
+    this._ngUnsuscribe.complete();
+  }
+
   getAnimalsToShow() {
-    this.animalService.getAnimalsBySpecie(this.param).subscribe(data => {
-      this.animals = data;
-      this.animals.forEach((animal) => {
-        if (animal.adoptionDate || animal.passAwayDate) { return; }
-        if (animal.showInAdoptionPage === false) { return; }
-        this.animalsToShow.push(animal);
+    this.showLoading = true;
+    this.animalService.getAnimalsBySpecie(this._param)
+      .pipe(takeUntil(this._ngUnsuscribe))
+      .pipe(finalize(() => this.showLoading = false))
+      .subscribe(data => {
+        this._animals = data;
+        this._animals.forEach((animal) => {
+          if (animal.adoptionDate || animal.passAwayDate) { return; }
+          if (animal.showInAdoptionPage === false) { return; }
+          this.animalsToShow.push(animal);
+        });
       });
-    });
   }
 
   back() {

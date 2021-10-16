@@ -4,16 +4,18 @@
     <div class="u-header">
       <div class="u-back" (click)="back()">&#x0003C; Volver</div>
       <h2 class="u-title">En adopción</h2>
-      <p *ngIf="animals.length > 0">Pulsa sobre cada tarjeta para obtener más información</p>
+      <p *ngIf="animalsToShow.length > 0">Pulsa sobre cada tarjeta para obtener más información</p>
     </div>
 
-    <div *ngIf="animals.length > 0" class="c-detail-specie__gallery-boxes">
+    <div *ngIf="animalsToShow.length > 0 && !showLoading" class="c-detail-specie__gallery-boxes">
       <div class="c-detail-specie__gallery-box" *ngFor="let animal of animalsToShow; let i = index">
         <app-adoption-card [animal]="animal"></app-adoption-card>
       </div>
     </div>
 
-    <div *ngIf="animals.length == 0">Ahora mismo no tenemos animales que coincidan con esta característica.<br class="hidden-xs">
+    <div *ngIf="showLoading"><img class="loading" src="assets/img/loading.gif" alt=""></div>
+
+    <div *ngIf="animalsToShow.length == 0 && !showLoading">Ahora mismo no tenemos animales que coincidan con esta característica.<br class="hidden-xs">
       Envíanos un email a <strong>hakunamatata.familiaanimalista@gmail.com</strong> <br class="hidden-xs"> y nos pondremos en contacto contigo cuando rescatemos a un animal de la especie <strong>{{specie}}</strong>.
     </div>
 
