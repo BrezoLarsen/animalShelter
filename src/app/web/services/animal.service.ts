@@ -22,19 +22,19 @@ export class AnimalService {
         );
     }
 
-    getAnimalsBySpecie(specie: string): Observable<IAnimal[]> {
+    getAnimalsBySpecie(specieText: string): Observable<IAnimal[]> {
       return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
         map((animals: IAnimal[]) => {
-          let animalsArray = animals.filter(animal => animal.specie === specie);
+          let animalsArray = animals.filter(animal => animal.specie.text === specieText);
           return animalsArray;
         })
       );
     }
 
-    getAnimalBySpecie(specie: string): Observable<IAnimal | undefined> {
+    getAnimalBySpecie(specieText: string): Observable<IAnimal | undefined> {
       return this.getAnimals()
         .pipe(
-          map((animals: IAnimal[]) => animals.find(animal => animal.specie === specie))
+          map((animals: IAnimal[]) => animals.find(animal => animal.specie.text === specieText))
         );
     }
 

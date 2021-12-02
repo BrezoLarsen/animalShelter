@@ -2,7 +2,7 @@
     {
       "id": "1",
       "name": "Norma",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": false,
@@ -21,7 +21,7 @@
     {
       "id": "2",
       "name": "Antlia",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": false,
@@ -40,7 +40,7 @@
     {
       "id": "3",
       "name": "Ara",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": false,
@@ -59,7 +59,7 @@
     {
       "id": "4",
       "name": "Lyra",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": false,
@@ -78,7 +78,7 @@
     {
       "id": "5",
       "name": "Lael",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Angora",
       "gender": "macho",
       "isSterilized": true,
@@ -97,7 +97,7 @@
     {
       "id": "6",
       "name": "Luxio",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": false,
@@ -116,7 +116,7 @@
     {
       "id": "7",
       "name": "Glameow",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": false,
@@ -135,7 +135,7 @@
     {
       "id": "8",
       "name": "Sargo",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": true,
@@ -154,7 +154,7 @@
     {
       "id": "9",
       "name": "Ellie",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": true,
@@ -173,7 +173,7 @@
     {
       "id": "10",
       "name": "Opie",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": true,
@@ -193,7 +193,7 @@
     {
       "id": "11",
       "name": "Jax",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": true,
@@ -212,7 +212,7 @@
     {
       "id": "12",
       "name": "Rayo",
-      "specie": "perro",
+      "specie": 2,
       "breed": "Mestizo (peso aproximado 18kg)",
       "gender": "macho",
       "isSterilized": true,
@@ -232,7 +232,7 @@
     {
       "id": "13",
       "name": "Kratos",
-      "specie": "perro",
+      "specie": 2,
       "breed": "Mastín (peso aproximado 45kg)",
       "gender": "macho",
       "isSterilized": true,
@@ -251,7 +251,7 @@
     {
       "id": "14",
       "name": "Thomas",
-      "specie": "perro",
+      "specie": 2,
       "breed": "Labrador Retriver (peso aproximado 30kg)",
       "gender": "macho",
       "isSterilized": true,
@@ -271,7 +271,7 @@
     {
       "id": "15",
       "name": "Bourbon (Aitor)",
-      "specie": "perro",
+      "specie": 2,
       "breed": "Mastín (peso aproximado 70 kg) ",
       "gender": "macho",
       "isSterilized": true,
@@ -291,7 +291,7 @@
     {
       "id": "16",
       "name": "Caeli",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": true,
@@ -310,7 +310,7 @@
     {
       "id": "17",
       "name": "Kurome",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": true,
@@ -329,7 +329,7 @@
     {
       "id": "18",
       "name": "Diago (el blanco y negro)",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": true,
@@ -348,7 +348,7 @@
     {
       "id": "19",
       "name": "Olbia",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": true,
@@ -367,7 +367,7 @@
     {
       "id": "20",
       "name": "Rhaegal",
-      "specie": "rata",
+      "specie": 8,
       "breed": "Dumbo",
       "gender": "macho",
       "isSterilized": true,
@@ -386,7 +386,7 @@
     {
       "id": "21",
       "name": "Viserion",
-      "specie": "rata",
+      "specie": 8,
       "breed": "Dumbo",
       "gender": "macho",
       "isSterilized": true,
@@ -406,7 +406,7 @@
     {
       "id": "22",
       "name": "Drogon",
-      "specie": "rata",
+      "specie": 8,
       "breed": "Dumbo",
       "gender": "macho",
       "isSterilized": true,
@@ -425,7 +425,7 @@
     {
       "id": "23",
       "name": "Kismet",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": false,
@@ -444,7 +444,7 @@
     {
       "id": "24",
       "name": "Menta",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": true,
@@ -463,7 +463,7 @@
     {
       "id": "25",
       "name": "Poleo",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": true,
@@ -482,7 +482,7 @@
     {
       "id": "26",
       "name": "Zafir",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "macho",
       "isSterilized": false,
@@ -501,7 +501,7 @@
     {
       "id": "27",
       "name": "Tortu Lola",
-      "specie": "tortuga",
+      "specie": 7,
       "subespecie": "Orejas rojas",
       "gender": "hembra",
       "isSterilized": false,
@@ -520,7 +520,7 @@
     {
       "id": "28",
       "name": "Ensalada",
-      "specie": "ave",
+      "specie": 5,
       "subspecie": "cotorra",
       "gender": "hembra",
       "isSterilized": false,
@@ -538,7 +538,7 @@
     {
       "id": "29",
       "name": "Reyna",
-      "specie": "conejo",
+      "specie": 4,
       "gender": "hembra",
       "isSterilized": true,
       "dateBirth": "14/06/20",
@@ -556,7 +556,7 @@
     {
       "id": "30",
       "name": "Klaus",
-      "specie": "gato",
+      "specie": 1,
       "gender": "macho",
       "isSterilized": true,
       "dateBirth": "12/04/2018",
@@ -574,7 +574,7 @@
     {
       "id": "31",
       "name": "Yaki",
-      "specie": "tortuga",
+      "specie": 7,
       "subespecie": "Orejas amarillas",
       "gender": "macho",
       "isSterilized": false,
@@ -592,7 +592,7 @@
     {
       "id": "32",
       "name": "Sky",
-      "specie": "tortuga",
+      "specie": 7,
       "subespecie": "Galápago chino de tres crestas",
       "gender": "macho",
       "isSterilized": false,
@@ -611,7 +611,7 @@
     {
       "id": "33",
       "name": "Salvia",
-      "specie": "gato",
+      "specie": 1,
       "breed": "Común Europeo",
       "gender": "hembra",
       "isSterilized": true,
