@@ -186,6 +186,10 @@ p {font-size: 18px; font-weight: 400;}
   height: 50px;
 }
 
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
 .u-mat-radio-group {
   display: flex;
   flex-direction: column;

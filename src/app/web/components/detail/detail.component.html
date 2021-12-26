@@ -17,7 +17,7 @@
           </mat-list-item>
           <mat-list-item *ngIf="animal.specie">
             <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Especie:</strong> {{animal.specie | titlecase}}</div>
+            <div mat-line><strong>Especie:</strong> {{animal.specie.text | titlecase}}</div>
           </mat-list-item>
           <mat-list-item *ngIf="animal.subspecie">
             <icon-footprint mat-list-icon></icon-footprint>

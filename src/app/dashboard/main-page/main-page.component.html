@@ -35,7 +35,7 @@
            <tbody>
             <tr *ngFor="let animal of filteredAnimals">
               <td><strong>{{animal.name}}</strong></td>
-              <td>{{animal.specie}}</td>
+              <td>{{animal.specie.text}}</td>
               <td>{{animal.subspecie}}</td>
               <td>
                 <div class="dashboard__table-img" [ngStyle]="{'background-image' : 'url(' + animal.imageUrl + ')'}"></div>

@@ -5,6 +5,7 @@ import { AnimalService } from '../../services/animal.service';
 import { IAnimal } from '../../../interfaces/animal';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { ISpecie } from 'src/app/interfaces/specie';
 
 @Component({
   selector: 'app-detail-specie',
@@ -14,7 +15,7 @@ import { Subject } from 'rxjs';
 export class DetailSpecieComponent {
 
   public animalsToShow: IAnimal[] = [];
-  public specie: string;
+  public specieText: string;
   public showLoading = false;
   private _animals: IAnimal[] = [];
   private _param: string;
@@ -29,7 +30,7 @@ export class DetailSpecieComponent {
 
   ngOnInit(): void {
     this._param = this.activatedRoute.snapshot.paramMap.get('specie');
-    this.specie = this._param;
+    this.specieText = this._param;
     this.getAnimalsToShow();
   }
 

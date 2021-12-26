@@ -1,7 +1,9 @@
+import { ISpecie } from './specie';
+
 export class IAnimal {
     id: string;
     name?: string;
-    specie?: string;
+    specie?: ISpecie;
     subspecie?: string;
     breed?: string;
     gender?: string;

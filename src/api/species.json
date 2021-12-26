@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "gato"
+  },
+  {
+    "id": 2,
+    "name": "perro"
+  },
+  {
+    "id": 3,
+    "name": "hurón"
+  },
+  {
+    "id": 4,
+    "name": "conejo"
+  },
+  {
+    "id": 5,
+    "name": "ave"
+  },
+  {
+    "id": 6,
+    "name": "roedor"
+  },
+  {
+    "id": 7,
+    "name": "tortuga"
+  },
+  {
+    "id": 8,
+    "name": "rata"
+  }
+]
