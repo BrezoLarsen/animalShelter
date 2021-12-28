@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IvyGalleryModule } from 'angular-gallery';
 
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material.module';
@@ -69,7 +68,6 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    IvyGalleryModule,
     RouterModule,
     ReactiveFormsModule,
     FormsModule
