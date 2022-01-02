@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IAnimal } from 'src/app/interfaces/animal';
-import { SPECIES } from 'src/const/species';
+import { AnimalService } from '../services/animal.service';
+import { ISpecie } from '../../interfaces/specie';
+import { finalize, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-for-adoption',
@@ -10,13 +12,37 @@ import { SPECIES } from 'src/const/species';
 })
 export class ForAdoptionComponent {
 
-  animal: IAnimal | undefined;
-  species = SPECIES;
+  public species: ISpecie[];
+  public isLoadingData: boolean;
 
-  constructor(private router: Router) { }
+  private _ngUnsubscribe = new Subject<void>();
 
-  goToSpeciesPage(specie: string) {
+  constructor(
+    private router: Router,
+    private animalService: AnimalService
+  ) { }
+
+  ngOnInit() {
+    this.fetchData();
+  }
+
+  ngOnDestroy(): void {
+    this._ngUnsubscribe.next();
+    this._ngUnsubscribe.complete();
+  }
+
+  public goToSpeciesPage(specie: string): void {
     this.router.navigate([`detalle-especie/${specie}`])
+  }
+
+  private fetchData(): void {
+    this.isLoadingData = true;
+    this.animalService.getSpecies()
+      .pipe(takeUntil(this._ngUnsubscribe))
+      .pipe(finalize(() => this.isLoadingData = false))
+      .subscribe(data => {
+        this.species = data;
+      });
   }
 
 }

@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
 import { IAnimal } from '../../interfaces/animal';
+import { ISpecie } from 'src/app/interfaces/specie';
 
 @Injectable({
     providedIn: 'root'
@@ -11,19 +12,24 @@ import { IAnimal } from '../../interfaces/animal';
 
 export class AnimalService {
 
-    private animalsUrl = 'api/';
+    private apiUrl = 'http://hakunamatatafamiliaanimalista.org/api/';
 
     constructor(private httpClient: HttpClient) { }
 
+    getSpecies(): Observable<ISpecie[]> {
+      return this.httpClient.get<ISpecie[]>(this.apiUrl + 'getSpecies.php').pipe(
+          tap(data => console.log(data)))
+  }
+
     getAnimals(): Observable<IAnimal[]> {
-        return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
+        return this.httpClient.get<IAnimal[]>(this.apiUrl + 'cats.json').pipe(
             tap(data => JSON.stringify(data)),
             catchError(this.handleError)
         );
     }
 
     getAnimalsBySpecie(specieText: string): Observable<IAnimal[]> {
-      return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
+      return this.httpClient.get<IAnimal[]>(this.apiUrl + 'cats.json').pipe(
         map((animals: IAnimal[]) => {
           let animalsArray = animals.filter(animal => animal.specie.text === specieText);
           return animalsArray;

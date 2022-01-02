@@ -1,4 +1,5 @@
 import { ISpecie } from './specie';
+import { IPhoto } from './animalPhotos';
 
 export class IAnimal {
     id: string;
@@ -22,5 +23,5 @@ export class IAnimal {
     adoptionDate?: string;
     passAwayDate?: string;
     showInAdoptionPage?: boolean;
-    place?: string;
+    photosArray?: IPhoto[];
 }

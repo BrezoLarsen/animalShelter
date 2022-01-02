@@ -23,6 +23,10 @@
             <icon-footprint mat-list-icon></icon-footprint>
             <div mat-line><strong>Subespecie:</strong> {{animal.subspecie | titlecase}}</div>
           </mat-list-item>
+          <mat-list-item *ngIf="animal.breed">
+            <icon-footprint mat-list-icon></icon-footprint>
+            <div mat-line><strong>Raza:</strong> {{animal.breed}}</div>
+          </mat-list-item>
           <mat-list-item *ngIf="animal.dateBirth">
             <icon-footprint mat-list-icon></icon-footprint>
             <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.dateBirth}}</div>
@@ -30,10 +34,6 @@
           <mat-list-item *ngIf="animal.gender">
             <icon-footprint mat-list-icon></icon-footprint>
             <div mat-line><strong>Sexo:</strong> {{animal.gender}}</div>
-          </mat-list-item>
-          <mat-list-item *ngIf="animal.breed">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Raza:</strong> {{animal.breed}}</div>
           </mat-list-item>
           <mat-list-item>
             <icon-footprint mat-list-icon></icon-footprint>
@@ -52,7 +52,36 @@
       <p class="c-detail__description-text" *ngIf="animal.compatibleWith"><strong>Compatible con: </strong>{{animal.compatibleWith}}</p>
       <p class="c-detail__description-text" *ngIf="animal.health"><strong>Salud: </strong>{{animal.health}}</p>
       <p class="c-detail__description-text" *ngIf="showLiscense"><strong>¿Es necesaria licencia? </strong>{{animal.needLiscense === true ? 'Sí' : 'No'}}</p>
+      <p class="c-detail__description-text" *ngIf="animal.placeText"><strong>Zona: </strong>{{animal.placeText}}</p>
       <p class="c-detail__description-text" *ngIf="animal.fbLink"><strong>Para más información sobre {{animal.name}} <a target="_blank" href="{{animal.fbLink}}">pulsa aquí</a>.</strong></p>
+    </div>
+
+    <hr *ngIf="animal.photosArray">
+
+    <div *ngIf="animal.photosArray" class="c-detail__gallery">
+      <h3>GALERÍA:</h3>
+      <div class="c-detail__gallery-content">
+        <!-- DOC: https://codepen.io/alexerlandsson/pen/ONqdZY -->
+        <div data-am-fadeshow="next-prev-navigation">
+          <!-- Radio -->
+          <input *ngFor="let item of photosArray" type="radio" name="css-fadeshow" id="slide-{{item.id}}" />
+          <!-- Slides -->
+          <div class="fs-slides">
+            <div *ngFor="let item of photosArray" class="fs-slide" style="background-image: url({{item.src}})"></div>
+          </div>
+
+          <!-- Prev Navigation -->
+          <div class="fs-prev-nav">
+            <label *ngFor="let item of photosArray" class="fs-prev-btn" for="slide-{{item.id}}"></label>
+          </div>
+
+          <!-- Next Navigation -->
+          <div class="fs-next-nav">
+            <label *ngFor="let item of photosArray" class="fs-next-btn" for="slide-{{item.id}}"></label>
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <hr>

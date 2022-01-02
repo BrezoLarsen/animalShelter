@@ -6,38 +6,11 @@
     </div>
 
     <div class="c-for-adoption__gallery">
+      <img *ngIf="isLoadingData" class="u-loading" src="assets/img/loading.gif" alt="">
       <div class="c-for-adoption__gallery-boxes">
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.DOG)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/dog.svg" alt="">
-          <div>Perros</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.CAT)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/cat.svg" alt="">
-          <div>Gatos</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RAT)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/rata.svg" alt="">
-          <div>Ratas</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.BIRD)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/bird.svg" alt="">
-          <div>Aves</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RABBIT)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/rabbit.svg" alt="">
-          <div>Conejos</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.FERRET)">
-          <img class="c-for-adoption__gallery-img c-for-adoption__gallery-img-ferret" src="assets/img/ferret.svg" alt="">
-          <div>Hurones</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.TURTLE)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/turtle.svg" alt="">
-          <div>Tortugas</div>
-        </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RODENT)">
-          <img class="c-for-adoption__gallery-img" src="assets/img/rata.svg" alt="">
-          <div>Roedores</div>
+        <div *ngFor="let specie of species" class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(specie.text)">
+          <img class="c-for-adoption__gallery-img" src="assets/img/{{specie.icon || 'paw'}}.svg" alt="">
+          <div>{{specie.text}}</div>
         </div>
       </div>
     </div>
