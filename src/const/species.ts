@@ -6,7 +6,6 @@ export const SPECIES = Object({
   RABBIT: 'conejo',
   BIRD: 'ave',
   RODENT: 'roedor',
-  TURTLE: 'tortuga',
-  RAT: 'rata'
+  TURTLE: 'tortuga'
 
 });

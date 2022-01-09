@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainPageComponent } from './dashboard/main-page/main-page.component';
-import { NewAnimalFormComponent } from './dashboard/new-animal-form.component';
 import { AboutComponent } from './web/about/about.component';
 import { ForAdoptionComponent } from './web/for-adoption/for-adoption.component';
 import { HelpUsComponent } from './web/help-us/help-us.component';
@@ -13,7 +11,6 @@ import { DetailComponent } from './web/components/detail/detail.component';
 import { DetailSpecieComponent } from './web/components/detail-specie/detail-specie.component';
 import { SponsorComponent } from './web/sponsor/sponsor.component';
 import { VolunteerComponent } from './web/volunteer/volunteer.component';
-import { DetailPageComponent } from './dashboard/detail-page/detail-page.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -26,10 +23,6 @@ const routes: Routes = [
   { path: 'detalle-especie/:specie', component: DetailSpecieComponent },
   { path: 'apadrina', component: SponsorComponent },
   { path: 'voluntariado', component: VolunteerComponent },
-  // Dashboard:
-  { path: 'dashboard', component: MainPageComponent },
-  { path: 'dashboard-detalle/:id', component: DetailPageComponent },
-  { path: 'newAnimalForm', component: NewAnimalFormComponent },
   // Default URL:
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   // 404 URL:

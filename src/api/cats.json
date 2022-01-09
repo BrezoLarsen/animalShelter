@@ -18,8 +18,7 @@
     "story": "Antlia y Norma, junto con todo el resto de la camada, aparecieron en una caja, abandonados.",
     "imageUrl": "assets/img/animals/normaantlia.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1952940788190106",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "2",
@@ -40,8 +39,7 @@
     "story": "Antlia y Norma, junto con todo el resto de la camada, aparecieron en una caja, abandonados.",
     "imageUrl": "assets/img/animals/normaantlia.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1952940788190106",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "3",
@@ -62,8 +60,7 @@
     "story": "Apareció en una caja con sus hermanos, abandonados.",
     "imageUrl": "assets/img/animals/ara.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1952936811523837",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "4",
@@ -84,8 +81,7 @@
     "story": "Apareció en una caja con sus hermanos, abandonados.",
     "imageUrl": "assets/img/animals/lyra.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1952936811523837",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "5",
@@ -94,6 +90,16 @@
       "id": 2,
       "text": "gato"
     },
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/lael2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/lael3.jpg"
+      }
+    ],
     "breed": "Angora",
     "gender": "macho",
     "isSterilized": true,
@@ -106,8 +112,7 @@
     "story": "Lael apareció en una colonia controlada, restregándose entre las piernas del alimentador, recién abandonado, sin chip, seguramente venga del mismo sitio que Chiara y Caronte.",
     "imageUrl": "assets/img/animals/lael.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1930087203808798",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "6",
@@ -128,8 +133,7 @@
     "story": "Estos peques estaban en una colonia en la que su madre desapareció. Uno de sus hermanos apareció muerto y estos dos peques estaban malitos, así que fueron rescatados.",
     "imageUrl": "assets/img/animals/luxio.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1952911974859654",
-    "showInAdoptionPage": true,
-    "place": "Almería"
+    "showInAdoptionPage": true
   },
   {
     "id": "7",
@@ -150,8 +154,7 @@
     "story": "Estos peques estaban en una colonia en la que su madre desapareció. Uno de sus hermanos apareció muerto y estos dos peques estaban malitos, así que fueron rescatados.",
     "imageUrl": "assets/img/animals/glameow.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1952911974859654",
-    "showInAdoptionPage": true,
-    "place": "Almería"
+    "showInAdoptionPage": true
   },
   {
     "id": "8",
@@ -172,8 +175,7 @@
     "story": "Sargo estaba en la calle y pidió ayuda, seguramente perdido o abandonado, se dejó coger a mano y meter en un transportín. Tenía heridas causadas probablemente por algún gato feral de la zona.",
     "imageUrl": "assets/img/animals/sargo.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1947138985436953",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "9",
@@ -194,8 +196,7 @@
     "story": "Ellie vivía en una colonia que empezamos a controlar (método CER). Al no tener dientes y ser algo mayor, decidimos que en la calle no iba a durar mucho más y que se podría adaptar a una casa y ser feliz y vivir muchos más años con los cuidados necesarios que en la calle no podía tener.",
     "imageUrl": "assets/img/animals/ellie.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1838935206257332",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "10",
@@ -217,8 +218,7 @@
     "imageUrl": "assets/img/animals/opie.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1947151888768996",
     "adoptionDate": "08/09/2021",
-    "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "showInAdoptionPage": true
   },
   {
     "id": "11",
@@ -240,7 +240,16 @@
     "imageUrl": "assets/img/animals/jax.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1947142635436588",
     "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/jax2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/jax3.jpg"
+      }
+    ]
   },
   {
     "id": "12",
@@ -263,7 +272,16 @@
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1631309683686553",
     "needLiscense": false,
     "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/rayo2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/rayo3.jpg"
+      }
+    ]
   },
   {
     "id": "13",
@@ -285,7 +303,24 @@
     "imageUrl": "assets/img/animals/kratos.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1838938789590307",
     "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/kratos2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/kratos3.jpg"
+      },
+      {
+        "id": 3,
+        "src": "assets/img/animals/kratos4.jpg"
+      },
+      {
+        "id": 4,
+        "src": "assets/img/animals/kratos5.jpg"
+      }
+    ]
   },
   {
     "id": "14",
@@ -307,8 +342,7 @@
     "imageUrl": "assets/img/animals/thomas.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1472377152913141",
     "needLiscense": false,
-    "showInAdoptionPage": true,
-    "place": "Bilbao"
+    "showInAdoptionPage": true
   },
   {
     "id": "15",
@@ -330,8 +364,7 @@
     "imageUrl": "assets/img/animals/bourbon.jpg",
     "fbLink": "",
     "needLiscense": false,
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "16",
@@ -352,8 +385,7 @@
     "story": "Caeli es una gata rescatada de la calle. Se pasó tres meses detrás de la gente buscando mimos y ronroneando hasta que tuvimos un hueco donde meterla y poder darle un hogar temporal hasta encontrarle un hogar definitivo.",
     "imageUrl": "assets/img/animals/caeli.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1057553131062214",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "17",
@@ -374,8 +406,7 @@
     "story": "Kurome vivía en la calle, apareció en la alcantarilla del hiperusera de Pioz, junto con la que creemos que era su hermana mayor, Akame. Era una gata muy pequeña y estaba todavía muy asustada, pero poco a poco se acostumbró a su nueva vida fuera de las calles.",
     "imageUrl": "assets/img/animals/kurome.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1510165165801006",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "18",
@@ -397,7 +428,16 @@
     "imageUrl": "assets/img/animals/diago.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1947152972102221",
     "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/diago2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/diago3.jpg"
+      }
+    ]
   },
   {
     "id": "19",
@@ -419,15 +459,29 @@
     "imageUrl": "assets/img/animals/olbia.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1947152268768958",
     "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/olbia2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/olbia3.jpg"
+      },
+      {
+        "id": 3,
+        "src": "assets/img/animals/olbia4.jpg"
+      }
+    ]
   },
   {
     "id": "20",
     "name": "Rhaegal",
     "specie": {
-      "id": 8,
-      "text": "rata"
+      "id": 6,
+      "text": "roedor"
     },
+    "subspecie": "rata",
     "breed": "Dumbo",
     "gender": "macho",
     "isSterilized": true,
@@ -441,16 +495,16 @@
     "imageUrl": "assets/img/animals/rhaegal.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1539770012840521",
     "showInAdoptionPage": false,
-    "passAwayDate": "19/09/2021",
-    "place": "Madrid"
+    "passAwayDate": "19/09/2021"
   },
   {
     "id": "21",
     "name": "Viserion",
     "specie": {
-      "id": 8,
-      "text": "rata"
+      "id": 6,
+      "text": "roedor"
     },
+    "subspecie": "rata",
     "breed": "Dumbo",
     "gender": "macho",
     "isSterilized": true,
@@ -464,30 +518,29 @@
     "imageUrl": "assets/img/animals/viserion.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1539772122840310",
     "passAwayDate": "19/08/2021",
-    "showInAdoptionPage": false,
-    "place": "Madrid"
+    "showInAdoptionPage": false
   },
   {
     "id": "22",
     "name": "Drogon",
     "specie": {
-      "id": 8,
-      "text": "rata"
+      "id": 6,
+      "text": "roedor"
     },
+    "subspecie": "rata",
     "breed": "Dumbo",
     "gender": "macho",
     "isSterilized": true,
     "dateBirth": "05/06/2019",
     "status": "En acogida, busca adopción",
     "placeText": "En Madrid, se valoran adopciones en otras comunidades",
-    "compatibleWith": "Todos, va en adopción conjunta con sus hermanos o a un hogar con más ratas",
+    "compatibleWith": "Todos, queremos que vaya a un hogar con más ratas",
     "health": "Buena, es una rata muy saludable",
-    "behaviour": "Es el más atrevido, siempre está investigando y en busca de comida.",
-    "story": "Drogon estaba con más de 100 ratas como él, en una situación de riesgo y estado de abandono. Por suerte han ido saliendo de allí y nosotras nos hicimos cargo de él y de dos más, Viserion y Rhaegal.",
+    "behaviour": "Es muy atrevido, siempre está investigando y en busca de comida.",
+    "story": "Drogon estaba con más de 100 ratas como él, en una situación de riesgo y estado de abandono. Por suerte han ido saliendo de allí y nosotras nos hicimos cargo de él y de dos más, Viserion y Rhaegal (fallecidos).",
     "imageUrl": "assets/img/animals/drogon.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1539773426173513",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "23",
@@ -508,8 +561,7 @@
     "story": "Kismet apareció en la calle, solito, lleno de mocos y hecho polvo, directo al veterinario y salvado por los pelos.",
     "imageUrl": "assets/img/animals/kismet.jpg",
     "fbLink": "https://www.facebook.com/413005055517028/posts/2006344052849779/",
-    "showInAdoptionPage": true,
-    "place": "Bizkaia"
+    "showInAdoptionPage": true
   },
   {
     "id": "24",
@@ -530,8 +582,7 @@
     "story": "Salvia tuvo a sus pequeños en la calle. Cuando la conocimos, solo tenía a Menta y Poleo, a los que trajo a las jardineras del patio de una amiga. Desapareció y supimos de ella al de unos días, estaba en casa de un vecino que no los quería en su patio, así que fuimos a por los tres.",
     "imageUrl": "assets/img/animals/menta.jpg",
     "fbLink": "https://www.facebook.com/413005055517028/posts/2006343122849872/",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "25",
@@ -552,8 +603,7 @@
     "story": "Salvia tuvo a sus pequeños en la calle. Cuando la conocimos, solo tenía a Menta y Poleo, a los que trajo a las jardineras del patio de una amiga. Desapareció y supimos de ella al de unos días, estaba en casa de un vecino que no los quería en su patio, así que fuimos a por los tres.",
     "imageUrl": "assets/img/animals/poleo.jpg",
     "fbLink": "https://www.facebook.com/413005055517028/posts/2006341769516674/",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "26",
@@ -575,8 +625,7 @@
     "imageUrl": "assets/img/animals/zafir.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1993486394135545",
     "showInAdoptionPage": false,
-    "adoptionDate": "10/09/2021",
-    "place": "Madrid"
+    "adoptionDate": "10/09/2021"
   },
   {
     "id": "27",
@@ -597,8 +646,7 @@
     "story": "Tortu Lola tenía una familia que nunca supo cómo cuidarla y su salud se fue deteriorando a lo largo de Los años. Ahora, ya viejita, buscamos un hogar para ella donde sí sepan cuidarla.",
     "imageUrl": "assets/img/animals/tortulola.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1978680298949488",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "28",
@@ -618,8 +666,7 @@
     "story": "Ensalada apareció herida en la calle, la recogieron pero no se hicieron cargo de ella, así que, con ayuda de la asociación Procats, nos hicimos cargo de ella.",
     "imageUrl": "assets/img/animals/ensalada.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1978671302283721",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "29",
@@ -640,8 +687,7 @@
     "imageUrl": "assets/img/animals/reyna.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.2010007892483395",
     "showInAdoptionPage": false,
-    "adoptionDate": "10/11/2021",
-    "place": "Madrid"
+    "adoptionDate": "10/11/2021"
   },
   {
     "id": "30",
@@ -661,8 +707,7 @@
     "story": "Klaus apareció en una de las colonias de gatos que controlamos, lleno de garrapatas. Lo cogimos en brazos y lo metimos en casa. Puede que se haya perdido o puede que lo hayan abandonado. Sea como sea, no tenía chip, en la calle no podía seguir porque le hubiera pasado cualquier cosa, iba pidiendo mimos a todo el que pasaba por su lado.",
     "imageUrl": "assets/img/animals/klaus.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1606652976152224",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "31",
@@ -682,8 +727,7 @@
     "behaviour": "Muy buena y tranquila.",
     "story": "Lleva ya muchos años en Hakuna Matata, necesita un lugar donde tenga espacio para nadar y también para tomar el sol.",
     "imageUrl": "assets/img/animals/yaki.jpg",
-    "showInAdoptionPage": true,
-    "place": "Bilbao"
+    "showInAdoptionPage": true
   },
   {
     "id": "32",
@@ -704,8 +748,7 @@
     "story": "Fue rescatada de la perrera, no tenemos claro cuál era su futuro allí.",
     "imageUrl": "assets/img/animals/sky.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.1244472735703585",
-    "showInAdoptionPage": true,
-    "place": "Bilbao"
+    "showInAdoptionPage": true
   },
   {
     "id": "33",
@@ -726,8 +769,7 @@
     "story": "Salvia tuvo a sus pequeños en la calle. Cuando la conocimos, solo tenía a Menta y Poleo, a los que trajo a las jardineras del patio de una amiga. Desapareció y supimos de ella al de unos días, estaba en casa de un vecino que no los quería en su patio, así que fuimos a por los tres.",
     "imageUrl": "assets/img/animals/salvia.jpg",
     "fbLink": "https://www.facebook.com/media/set/?vanity=Hakunamatatafamiliaanimalista&set=a.2006341592850025",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "34",
@@ -750,7 +792,16 @@
     "fbLink": "https://www.facebook.com/media/set/?set=a.2088671034617080&type=3",
     "showInAdoptionPage": true,
     "needLiscense": false,
-    "place": "Bizkaia"
+    "photosArray": [
+      {
+        "id": 1,
+        "src": "assets/img/animals/barry2.jpg"
+      },
+      {
+        "id": 2,
+        "src": "assets/img/animals/barry3.jpg"
+      }
+    ]
   },
   {
     "id": "35",
@@ -771,8 +822,7 @@
     "story": "-",
     "imageUrl": "assets/img/animals/mafalda.jpg",
     "fbLink": "-",
-    "showInAdoptionPage": true,
-    "place": "-"
+    "showInAdoptionPage": true
   },
       {
     "id": "36",
@@ -793,8 +843,7 @@
     "story": "-",
     "imageUrl": "assets/img/animals/mori.jpg",
     "fbLink": "-",
-    "showInAdoptionPage": true,
-    "place": "-"
+    "showInAdoptionPage": true
   },
   {
     "id": "37",
@@ -814,8 +863,7 @@
     "behaviour": "Muy buenina e inquieta",
     "story": "Timbal, por su parte, fue abandonada en una cajita según nos dijo la persona que nos la trajo.",
     "imageUrl": "assets/img/animals/timbal.jpg",
-    "showInAdoptionPage": true,
-    "place": "-"
+    "showInAdoptionPage": true
   },
   {
     "id": "38",
@@ -835,8 +883,7 @@
     "behaviour": "Muy buena y lista, ya sabe hacer sus cositas en el esquinero",
     "story": "Tukppy apareció debajo de un coche en Bilbao, al lado de una colonia de gatos, por lo que creemos que fue abandonada allí.",
     "imageUrl": "assets/img/animals/tukppy.jpg",
-    "showInAdoptionPage": true,
-    "place": "Bilbao"
+    "showInAdoptionPage": true
   },
   {
     "id": "39",
@@ -856,8 +903,7 @@
     "behaviour": "Muy bueno",
     "story": "Fue encontrado abandonado.",
     "imageUrl": "assets/img/animals/belgarath.jpg",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "40",
@@ -877,8 +923,7 @@
     "behaviour": "Muy buena",
     "story": "-",
     "imageUrl": "assets/img/animals/cupcake.jpg",
-    "showInAdoptionPage": true,
-    "place": "-"
+    "showInAdoptionPage": true
   },
   {
     "id": "41",
@@ -898,8 +943,7 @@
     "behaviour": "Muy bueno",
     "story": "Nació en Hakuna Matata, encontramos a su madre Polgara abandonada y estaba embarazada",
     "imageUrl": "assets/img/animals/polendra.jpg",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "42",
@@ -919,8 +963,7 @@
     "behaviour": "Muy bueno",
     "story": "Nació en Hakuna Matata, encontramos a su madre Polgara abandonada y estaba embarazada",
     "imageUrl": "assets/img/animals/cenedra.jpg",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
   },
   {
     "id": "43",
@@ -940,7 +983,46 @@
     "behaviour": "Muy bueno",
     "story": "Nació en Hakuna Matata, encontramos a su madre Polgara abandonada y estaba embarazada",
     "imageUrl": "assets/img/animals/garion.jpg",
-    "showInAdoptionPage": true,
-    "place": "Madrid"
+    "showInAdoptionPage": true
+  },
+  {
+    "id": "44",
+    "name": "Polgara",
+    "specie": {
+      "id": 4,
+      "text": "conejo"
+    },
+    "breed": "-",
+    "gender": "hembra",
+    "isSterilized": false,
+    "dateBirth": "20/11/2020",
+    "status": "En acogida, busca adopción",
+    "placeText": "Madrid",
+    "compatibleWith": "-",
+    "health": "Buena.",
+    "behaviour": "Bueno",
+    "story": "Fue rescatada en un solar en Parla, abandonada a su suerte.",
+    "imageUrl": "assets/img/animals/polgara.jpg",
+    "showInAdoptionPage": true
+  },
+  {
+    "id": "45",
+    "name": "Ruso",
+    "specie": {
+      "id": 4,
+      "text": "conejo"
+    },
+    "breed": "-",
+    "gender": "macho",
+    "isSterilized": false,
+    "dateBirth": "20/11/2020",
+    "status": "En acogida, busca adopción",
+    "placeText": "Madrid",
+    "compatibleWith": "-",
+    "health": "Vino con sobrepeso y con un problema en sus partes por su incapacidad para comerse los cecotrofos.",
+    "behaviour": "Muy bueno",
+    "story": "Abandonado",
+    "imageUrl": "assets/img/animals/ruso.jpg",
+    "showInAdoptionPage": true
   }
 ]

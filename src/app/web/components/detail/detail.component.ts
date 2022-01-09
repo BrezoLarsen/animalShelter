@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { IAnimal } from '../../../interfaces/animal';
 import { AnimalService } from '../../services/animal.service';
+import { IPhoto } from '../../../interfaces/animalPhotos';
+import { SPECIES } from '../../../../const/species';
 
 @Component({
   selector: 'app-detail',
@@ -13,6 +15,9 @@ export class DetailComponent implements OnInit {
 
   public animal: IAnimal = new IAnimal;
   public showLiscense: boolean = false;
+  public species = SPECIES;
+
+  public photosArray: IPhoto[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -28,10 +33,12 @@ export class DetailComponent implements OnInit {
 
     this.animalService.getAnimalById(this.animal.id).subscribe(animal => {
       this.animal = animal;
+      this.photosArray = this.animal.photosArray;
       if (this.animal.needLiscense !== undefined) {
         this.showLiscense = true;
       }
     });
+
   }
 
   back() {

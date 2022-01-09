@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { MaterialModule } from './material.module';
 import { WebModule } from './web/web.module';
 
@@ -22,12 +22,12 @@ import { WebModule } from './web/web.module';
     MaterialModule,
     BrowserAnimationsModule,
     RouterModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     WebModule,
-    DashboardModule,
     MatFormFieldModule,
-        MatInputModule
+    MatInputModule
   ],
   exports: [
     MatInputModule
