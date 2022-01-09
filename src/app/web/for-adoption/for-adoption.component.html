@@ -6,6 +6,7 @@
     </div>
 
     <div class="c-for-adoption__gallery">
+      <img *ngIf="isLoadingData" class="u-loading" src="assets/img/loading.gif" alt="">
       <div class="c-for-adoption__gallery-boxes">
         <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.DOG)">
           <img class="c-for-adoption__gallery-img" src="assets/img/dog.svg" alt="">
