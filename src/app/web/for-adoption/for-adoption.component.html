@@ -8,31 +8,31 @@
     <div class="c-for-adoption__gallery">
       <img *ngIf="isLoadingData" class="u-loading" src="assets/img/loading.gif" alt="">
       <div class="c-for-adoption__gallery-boxes">
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.DOG)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.DOG])">
           <img class="c-for-adoption__gallery-img" src="assets/img/dog.svg" alt="">
           <div>Perros</div>
         </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.CAT)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.CAT])">
           <img class="c-for-adoption__gallery-img" src="assets/img/cat.svg" alt="">
           <div>Gatos</div>
         </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.BIRD)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.BIRD])">
           <img class="c-for-adoption__gallery-img" src="assets/img/bird.svg" alt="">
           <div>Aves</div>
         </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RABBIT)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.RABBIT])">
           <img class="c-for-adoption__gallery-img" src="assets/img/rabbit.svg" alt="">
           <div>Conejos</div>
         </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.FERRET)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.FERRET])">
           <img class="c-for-adoption__gallery-img c-for-adoption__gallery-img-ferret" src="assets/img/ferret.svg" alt="">
           <div>Hurones</div>
         </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.TURTLE)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.TURTLE])">
           <img class="c-for-adoption__gallery-img" src="assets/img/turtle.svg" alt="">
           <div>Tortugas</div>
         </div>
-        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(species.RODENT)">
+        <div class="c-for-adoption__gallery-box" (click)="goToSpeciesPage(SpeciesLabels[species.RODENT])">
           <img class="c-for-adoption__gallery-img" src="assets/img/rodent.svg" alt="">
           <div>Roedores</div>
         </div>

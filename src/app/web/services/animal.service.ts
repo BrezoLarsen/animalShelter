@@ -1,62 +1,46 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpParams,
+} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
 import { IAnimal } from '../../interfaces/animal';
+import { SETTINGS } from 'src/app/config/settings';
+import { IFilter } from '../../../const/filters.model';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class AnimalService {
+  private animalsUrl = SETTINGS.API_URL;
 
-    private animalsUrl = 'api/';
+  constructor(private httpClient: HttpClient) {}
 
-    constructor(private httpClient: HttpClient) { }
-
-    getAnimals(): Observable<IAnimal[]> {
-        return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
-            tap(data => JSON.stringify(data)),
-            catchError(this.handleError)
-        );
-    }
-
-    getAnimalsBySpecie(specieText: string): Observable<IAnimal[]> {
-      return this.httpClient.get<IAnimal[]>(this.animalsUrl + 'cats.json').pipe(
-        map((animals: IAnimal[]) => {
-          let animalsArray = animals.filter(animal => animal.specie.text === specieText);
-          return animalsArray;
+  getAnimalsByFilters(filters: IFilter): Observable<IAnimal[]> {
+    filters.tenantId = SETTINGS.TENANTID;
+    return this.httpClient
+      .post<IAnimal[]>(
+        SETTINGS.API_URL + 'public/getAnimalsByFilters.php',
+        filters
+      )
+      .pipe(
+        map((data: IAnimal[]) => {
+          return data;
         })
       );
-    }
+  }
 
-    getAnimalBySpecie(specieText: string): Observable<IAnimal | undefined> {
-      return this.getAnimals()
-        .pipe(
-          map((animals: IAnimal[]) => animals.find(animal => animal.specie.text === specieText))
-        );
+  private handleError(err: HttpErrorResponse) {
+    let errorMessage = '';
+    if (err.error instanceof ErrorEvent) {
+      errorMessage = `An error ocurred: ${err.error.message}`;
+    } else {
+      errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
-
-    getAnimalById(id) {
-      return this.getAnimals()
-          .pipe(
-            map((animals: IAnimal[]) => animals.find(animal => animal.id === id))
-          );
-    }
-
-    private handleError(err: HttpErrorResponse) {
-        let errorMessage = '';
-        if (err.error instanceof ErrorEvent) {
-            errorMessage = `An error ocurred: ${err.error.message}`;
-        } else {
-            errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
-        }
-        console.error(errorMessage);
-        return throwError(errorMessage);
-    }
-
+    console.error(errorMessage);
+    return throwError(errorMessage);
+  }
 }
-
-
-
