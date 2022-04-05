@@ -39,7 +39,7 @@
             </mat-list-item>
             <mat-list-item *ngIf="animal.birthDate">
               <icon-footprint mat-list-icon></icon-footprint>
-              <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.birthDate}}</div>
+              <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.birthDate | date: 'dd/MM/yyyy'}}</div>
             </mat-list-item>
             <mat-list-item *ngIf="animal.gender">
               <icon-footprint mat-list-icon></icon-footprint>
