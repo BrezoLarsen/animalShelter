@@ -1,175 +1,177 @@
 <div class="c-detail">
+
   <div class="u-content">
+    <div *ngIf="showLoading"><img class="loading" src="assets/img/loading.gif" alt=""></div>
 
-    <div class="u-header">
-      <div class="u-back" (click)="back()">&#x0003C; Volver</div>
-      <h2 class="u-title" *ngIf="animal.name">Ficha de {{animal.name}}:</h2>
-    </div>
-    <div class="c-detail__row">
-      <div class="c-detail__img" *ngIf="animal.imageUrl"
-        [ngStyle]="
-          animal.imageUrl
-            ? {
-                'background-image': 'url(' + getAnimalImage() + ')'
-              }
-            : { 'background-image': 'url(assets/img/animal_default.jpg)' }
-        "> </div>
-      <div class="c-detail__text">
-        <h3 class="c-detail__list-title">Detalles:</h3>
-        <mat-list>
-
-          <mat-list-item *ngIf="animal.name">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Nombre:</strong> {{animal.name}} </div>
-          </mat-list-item>
-          <mat-list-item *ngIf="animal.specie">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Especie:</strong> {{animal.specie.text | titlecase}}</div>
-          </mat-list-item>
-          <mat-list-item *ngIf="animal.subspecie">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Subespecie:</strong> {{animal.subspecie | titlecase}}</div>
-          </mat-list-item>
-          <mat-list-item *ngIf="animal.breed">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Raza:</strong> {{animal.breed}}</div>
-          </mat-list-item>
-          <mat-list-item *ngIf="animal.dateBirth">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.dateBirth}}</div>
-          </mat-list-item>
-          <mat-list-item *ngIf="animal.gender">
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Sexo:</strong> {{animal.gender}}</div>
-          </mat-list-item>
-          <mat-list-item>
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong>Esterilizad@:</strong> {{animal.isSterilized === true ? 'Sí' : 'No'}}</div>
-          </mat-list-item>
-          <mat-list-item>
-            <icon-footprint mat-list-icon></icon-footprint>
-            <div mat-line><strong><a target="_blank" href="{{animal.fbLink}}">Ficha de Facebook</a></strong></div>
-          </mat-list-item>
-        </mat-list>
+    <div *ngIf="!showLoading">
+      <div class="u-header">
+        <div class="u-back" (click)="back()">&#x0003C; Volver</div>
+        <h2 class="u-title" *ngIf="animal.name">Ficha de {{animal.name}}:</h2>
       </div>
-    </div>
+      <div class="c-detail__row">
+        <div class="c-detail__img" *ngIf="animal.imageUrl"
+          [ngStyle]="
+            animal.imageUrl
+              ? {
+                  'background-image': 'url(' + getAnimalImage() + ')'
+                }
+              : { 'background-image': 'url(assets/img/animal_default.jpg)' }
+          "> </div>
+        <div class="c-detail__text">
+          <h3 class="c-detail__list-title">Detalles:</h3>
+          <mat-list>
 
-    <div class="c-detail__description">
-      <h3>Más datos:</h3>
-      <p class="c-detail__description-text" *ngIf="animal.behaviour"><strong>Carácter: </strong>{{animal.behaviour}}</p>
-      <p class="c-detail__description-text" *ngIf="animal.story"><strong>Historia: </strong>{{animal.story}}</p>
-      <p class="c-detail__description-text" *ngIf="animal.status"><strong>Estado: </strong>{{animal.status}}</p>
-      <p class="c-detail__description-text" *ngIf="animal.compatibleWith"><strong>Compatible con: </strong>{{animal.compatibleWith}}</p>
-      <p class="c-detail__description-text" *ngIf="animal.health"><strong>Salud: </strong>{{animal.health}}</p>
-      <p class="c-detail__description-text" *ngIf="showLiscense"><strong>¿Es necesaria licencia? </strong>{{animal.needLiscense === true ? 'Sí' : 'No'}}</p>
-      <p class="c-detail__description-text" *ngIf="animal.placeText"><strong>Zona: </strong>{{animal.placeText}}</p>
-      <p class="c-detail__description-text" *ngIf="animal.specie?.id === species.DOG"><strong>Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopción-perro.doc">Descargar formulario de adopción</a></strong></p>
-      <p class="c-detail__description-text" *ngIf="animal.specie?.id === species.CAT"><strong>Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-gato.docx">Descargar formulario de adopción</a></strong></p>
-      <p class="c-detail__description-text" *ngIf="animal.specie?.id === species.RABBIT"><strong>Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-conejo.doc">Descargar formulario de adopción</a></strong></p>
-    </div>
-
-    <hr *ngIf="animal.photosArray">
-
-    <div *ngIf="animal.photosArray" class="c-detail__gallery">
-      <h3>MÁS FOTOS DE {{animal.name | uppercase}}:</h3>
-      <div class="c-detail__gallery-content">
-        <!-- DOC: https://codepen.io/alexerlandsson/pen/ONqdZY -->
-        <div data-am-fadeshow="next-prev-navigation">
-          <!-- Radio -->
-          <input *ngFor="let item of photosArray" type="radio" name="css-fadeshow" id="slide-{{item.id}}" />
-          <!-- Slides -->
-          <div class="fs-slides">
-            <div *ngFor="let item of photosArray" class="fs-slide" style="background-image: url({{item.src}})"></div>
-          </div>
-
-          <!-- Prev Navigation -->
-          <div class="fs-prev-nav">
-            <label *ngFor="let item of photosArray" class="fs-prev-btn" for="slide-{{item.id}}"></label>
-          </div>
-
-          <!-- Next Navigation -->
-          <div class="fs-next-nav">
-            <label *ngFor="let item of photosArray" class="fs-next-btn" for="slide-{{item.id}}"></label>
-          </div>
-
+            <mat-list-item *ngIf="animal.name">
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Nombre:</strong> {{animal.name}} </div>
+            </mat-list-item>
+            <mat-list-item *ngIf="animal.specie">
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Especie:</strong> {{animal.specie}}</div>
+            </mat-list-item>
+            <mat-list-item *ngIf="animal.subspecie">
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Subespecie:</strong> {{animal.subspecie | titlecase}}</div>
+            </mat-list-item>
+            <mat-list-item *ngIf="animal.breed">
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Raza:</strong> {{animal.breed}}</div>
+            </mat-list-item>
+            <mat-list-item *ngIf="animal.birthDate">
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.birthDate}}</div>
+            </mat-list-item>
+            <mat-list-item *ngIf="animal.gender">
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Sexo:</strong> {{animal.gender}}</div>
+            </mat-list-item>
+            <mat-list-item>
+              <icon-footprint mat-list-icon></icon-footprint>
+              <div mat-line><strong>Esterilizad@:</strong> {{animal.isSterilized}}</div>
+            </mat-list-item>
+          </mat-list>
         </div>
       </div>
-    </div>
 
-    <hr *ngIf="animal.photosArray">
+      <div class="c-detail__description">
+        <h3>Más datos:</h3>
+        <p class="c-detail__description-text" *ngIf="animal.behaviour"><strong>Carácter: </strong>{{animal.behaviour}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.story"><strong>Historia: </strong>{{animal.story}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.status"><strong>Estado: </strong>{{animal.status}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.compatibleWith"><strong>Compatible con: </strong>{{animal.compatibleWith}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.health"><strong>Salud: </strong>{{animal.health}}</p>
+        <p class="c-detail__description-text" *ngIf="showLiscense"><strong>¿Es necesaria licencia? </strong>{{animal.needLicense}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.city"><strong>Zona: </strong>{{animal.city}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.extraInformation"><strong>Información extra: </strong>{{animal.extraInformation}}</p>
+        <p class="c-detail__description-text" *ngIf="animal.specie.toLowerCase() === speciesLabels[species.BIRD]"><strong>Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopción-perro.doc">Descargar formulario de adopción</a></strong></p>
+        <p class="c-detail__description-text" *ngIf="animal.specie.toLowerCase() === speciesLabels[species.CAT]"><strong>Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-gato.docx">Descargar formulario de adopción</a></strong></p>
+        <p class="c-detail__description-text" *ngIf="animal.specie.toLowerCase() === speciesLabels[species.RABBIT]"><strong>Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-conejo.doc">Descargar formulario de adopción</a></strong></p>
+      </div>
 
-    <div *ngIf="animal.photosArray" class="c-detail__gallery">
-      <h3>GALERÍA:</h3>
-      <div class="c-detail__gallery-content">
-        <!-- DOC: https://codepen.io/alexerlandsson/pen/ONqdZY -->
-        <div data-am-fadeshow="next-prev-navigation">
-          <!-- Radio -->
-          <input *ngFor="let item of photosArray" type="radio" name="css-fadeshow" id="slide-{{item.id}}" />
-          <!-- Slides -->
-          <div class="fs-slides">
-            <div *ngFor="let item of photosArray" class="fs-slide" style="background-image: url({{item.src}})"></div>
+      <hr *ngIf="animal.photosArray">
+
+      <div *ngIf="animal.photosArray" class="c-detail__gallery">
+        <h3>MÁS FOTOS DE {{animal.name | uppercase}}:</h3>
+        <div class="c-detail__gallery-content">
+          <!-- DOC: https://codepen.io/alexerlandsson/pen/ONqdZY -->
+          <div data-am-fadeshow="next-prev-navigation">
+            <!-- Radio -->
+            <input *ngFor="let item of photosArray" type="radio" name="css-fadeshow" id="slide-{{item.id}}" />
+            <!-- Slides -->
+            <div class="fs-slides">
+              <div *ngFor="let item of photosArray" class="fs-slide" style="background-image: url({{item.src}})"></div>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+              <label *ngFor="let item of photosArray" class="fs-prev-btn" for="slide-{{item.id}}"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+              <label *ngFor="let item of photosArray" class="fs-next-btn" for="slide-{{item.id}}"></label>
+            </div>
+
           </div>
-
-          <!-- Prev Navigation -->
-          <div class="fs-prev-nav">
-            <label *ngFor="let item of photosArray" class="fs-prev-btn" for="slide-{{item.id}}"></label>
-          </div>
-
-          <!-- Next Navigation -->
-          <div class="fs-next-nav">
-            <label *ngFor="let item of photosArray" class="fs-next-btn" for="slide-{{item.id}}"></label>
-          </div>
-
         </div>
       </div>
-    </div>
 
-    <hr>
+      <hr *ngIf="animal.photosArray">
 
-    <div class="c-detail__contact">
-      <h3>CONTACTO:</h3>
-      <div class="c-detail__contact-item">
-        <mat-icon mat-list-icon class="hidden-xs">alternate_email</mat-icon>
-        <strong>Email: </strong> <br class="visible-xs">&nbsp; hakunamatata.familiaanimalista@gmail.com
+      <div *ngIf="animal.photosArray" class="c-detail__gallery">
+        <h3>GALERÍA:</h3>
+        <div class="c-detail__gallery-content">
+          <!-- DOC: https://codepen.io/alexerlandsson/pen/ONqdZY -->
+          <div data-am-fadeshow="next-prev-navigation">
+            <!-- Radio -->
+            <input *ngFor="let item of photosArray" type="radio" name="css-fadeshow" id="slide-{{item.id}}" />
+            <!-- Slides -->
+            <div class="fs-slides">
+              <div *ngFor="let item of photosArray" class="fs-slide" style="background-image: url({{item.src}})"></div>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+              <label *ngFor="let item of photosArray" class="fs-prev-btn" for="slide-{{item.id}}"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+              <label *ngFor="let item of photosArray" class="fs-next-btn" for="slide-{{item.id}}"></label>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <div class="c-detail__contact-item">
-        <mat-icon mat-list-icon class="hidden-xs">call</mat-icon>
-        <strong>Teléfonos: </strong> <br class="visible-xs">&nbsp; 676 022 124  |  606 100 661
+
+      <hr>
+
+      <div class="c-detail__contact">
+        <h3>CONTACTO:</h3>
+        <div class="c-detail__contact-item">
+          <mat-icon mat-list-icon class="hidden-xs">alternate_email</mat-icon>
+          <strong>Email: </strong> <br class="visible-xs">&nbsp; hakunamatata.familiaanimalista@gmail.com
+        </div>
+        <div class="c-detail__contact-item">
+          <mat-icon mat-list-icon class="hidden-xs">call</mat-icon>
+          <strong>Teléfonos: </strong> <br class="visible-xs">&nbsp; 676 022 124  |  606 100 661
+        </div>
       </div>
-    </div>
 
-    <hr>
+      <hr>
 
-    <div class="c-detail__conditions">
-      <h4>Condiciones de adopción:</h4>
-      <p class="c-detail__text">Todos nuestros HAKUNAS se entregan con tasa de adopción. La tasa de adopción es para cubrir parte de los gastos veterinarios que suponen.
-        La tasa de adopción es fija, independientemente de los gastos que ese HAKUNA en concreto haya tenido.</p>
-      <p class="c-detail__text"><strong>Todos nuestros HAKUNAS se entregan:</strong></p>
-      <ul class="u-list-check">
-        <li>con REVISIÓN VETERINARIA</li>
-        <li>DESPARASITACIÓN INTERNA Y EXTERNA (según especie)</li>
-        <li>VACUNAS AL DÍA (según especie, o si la especie lo requiere)</li>
-        <li>TEST Y/O PRUEBAS QUE LA ESPECIE NECESITE (coprológico, test de inmunodeficiencia y leucemia... etc)</li>
-        <li>CHIP O IDENTIFICACIÓN (según especie, siempre que se pueda)</li>
-        <li>ESTERILIZACIÓN, O IMPLANTE (siempre que la especie o estado de salud lo permitan) O COMPROMISO DE NO CRIAR CON ELLOS EN EL CASO DE NO PODER ESTERILIZAR.</li>
-        <li>SEGUIMIENTO DURANTE TODA LA VIDA DEL HAKUNA EN CUESTIÓN.</li>
-      </ul>
-      <p class="c-detail__text">Rescatamos animales, para darles una buena vida, en buenas condiciones, no son regalos, no son caprichos, no son juguetes ni objetos que se puedan desechar
-        cuando la vida nos cambia, o cuando nos hartamos de ellos.</p>
-      <!-- <p class="c-detail__text"><strong>Ejemplos de tasas de adopción:</strong></p>
-      <ul class="c-detail__text">
-        <li>PERROS: 170€</li>
-        <li>GATOS: 140€</li>
-        <li>HURÓN: 175€</li>
-        <li>CONEJO: 75€</li>
-        <li>COBAYA: 65€</li>
-        <li>AVES, ROEDORES PEQUEÑOS SIN CHIP, IMPLANTE O ESTERILIZACIÓN: 35€</li>
-        <li>AVES, ROEDORES PEQUEÑOS CON CHIP: 50€</li>
-        <li>AVES, ROEDORES PEQUEÑOS ESTERILIZADOS: 60€</li>
-        <li>TORTUGAS: 40€</li>
-        <li>RATAS: 60€</li>
-      </ul> -->
+      <div class="c-detail__conditions">
+        <h4>Condiciones de adopción:</h4>
+        <p class="c-detail__text">Todos nuestros HAKUNAS se entregan con tasa de adopción. La tasa de adopción es para cubrir parte de los gastos veterinarios que suponen.
+          La tasa de adopción es fija, independientemente de los gastos que ese HAKUNA en concreto haya tenido.</p>
+        <p class="c-detail__text"><strong>Todos nuestros HAKUNAS se entregan:</strong></p>
+        <ul class="u-list-check">
+          <li>con REVISIÓN VETERINARIA</li>
+          <li>DESPARASITACIÓN INTERNA Y EXTERNA (según especie)</li>
+          <li>VACUNAS AL DÍA (según especie, o si la especie lo requiere)</li>
+          <li>TEST Y/O PRUEBAS QUE LA ESPECIE NECESITE (coprológico, test de inmunodeficiencia y leucemia... etc)</li>
+          <li>CHIP O IDENTIFICACIÓN (según especie, siempre que se pueda)</li>
+          <li>ESTERILIZACIÓN, O IMPLANTE (siempre que la especie o estado de salud lo permitan) O COMPROMISO DE NO CRIAR CON ELLOS EN EL CASO DE NO PODER ESTERILIZAR.</li>
+          <li>SEGUIMIENTO DURANTE TODA LA VIDA DEL HAKUNA EN CUESTIÓN.</li>
+        </ul>
+        <p class="c-detail__text">Rescatamos animales, para darles una buena vida, en buenas condiciones, no son regalos, no son caprichos, no son juguetes ni objetos que se puedan desechar
+          cuando la vida nos cambia, o cuando nos hartamos de ellos.</p>
+        <!-- <p class="c-detail__text"><strong>Ejemplos de tasas de adopción:</strong></p>
+        <ul class="c-detail__text">
+          <li>PERROS: 170€</li>
+          <li>GATOS: 140€</li>
+          <li>HURÓN: 175€</li>
+          <li>CONEJO: 75€</li>
+          <li>COBAYA: 65€</li>
+          <li>AVES, ROEDORES PEQUEÑOS SIN CHIP, IMPLANTE O ESTERILIZACIÓN: 35€</li>
+          <li>AVES, ROEDORES PEQUEÑOS CON CHIP: 50€</li>
+          <li>AVES, ROEDORES PEQUEÑOS ESTERILIZADOS: 60€</li>
+          <li>TORTUGAS: 40€</li>
+          <li>RATAS: 60€</li>
+        </ul> -->
 
+      </div>
     </div>
   </div>
+
 </div>

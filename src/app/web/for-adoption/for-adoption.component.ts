@@ -10,7 +10,7 @@ import { Species, SpeciesLabels } from '../../../const/species';
 })
 export class ForAdoptionComponent {
   public species = Species;
-  public SpeciesLabels = SpeciesLabels;
+  public speciesLabels = SpeciesLabels;
   public isLoadingData: boolean;
 
   private _ngUnsubscribe = new Subject<void>();

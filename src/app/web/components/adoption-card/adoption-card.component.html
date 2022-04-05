@@ -11,7 +11,7 @@
   </div>
   <div class="c-adoption-card__text">
     <p><strong>Sexo:</strong> {{animal.gender}}</p>
-    <p><strong>F. nac:</strong> {{animal.dateBirth}}</p>
+    <p><strong>F. nac:</strong> {{animal.birthDate ? (animal.birthDate | date: 'dd/MM/yyyy') : '-'}}</p>
   </div>
 </div>
 

@@ -173,7 +173,7 @@
   background: rgb(36, 36, 36);
   &__content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: auto;
@@ -181,6 +181,11 @@
     color: #fff;
     @media only screen and (max-width: 992px) {
       padding: 40px 8px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-img {
+      border-radius: 6px;
     }
   }
 }

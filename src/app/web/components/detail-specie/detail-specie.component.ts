@@ -5,7 +5,6 @@ import { AnimalService } from '../../services/animal.service';
 import { IAnimal } from '../../../interfaces/animal';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { ISpecie } from 'src/app/interfaces/specie';
 import { Species, SpeciesLabels } from '../../../../const/species';
 import { IFilter } from 'src/const/filters.model';
 
@@ -17,6 +16,7 @@ import { IFilter } from 'src/const/filters.model';
 export class DetailSpecieComponent {
   public animalsToShow: IAnimal[] = [];
   public showLoading = false;
+
   private _animals: IAnimal[] = [];
   private _param: string;
   private _ngUnsuscribe: Subject<void> = new Subject<void>();

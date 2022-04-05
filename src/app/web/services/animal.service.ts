@@ -15,8 +15,6 @@ import { IFilter } from '../../../const/filters.model';
   providedIn: 'root',
 })
 export class AnimalService {
-  private animalsUrl = SETTINGS.API_URL;
-
   constructor(private httpClient: HttpClient) {}
 
   getAnimalsByFilters(filters: IFilter): Observable<IAnimal[]> {
