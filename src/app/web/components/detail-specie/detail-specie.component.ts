@@ -20,7 +20,9 @@ export class DetailSpecieComponent {
   private _animals: IAnimal[] = [];
   private _param: string;
   private _ngUnsuscribe: Subject<void> = new Subject<void>();
-  private _filters: IFilter = {};
+  private _filters: IFilter = {
+    showInAdoptionPage: true,
+  };
 
   constructor(
     private activatedRoute: ActivatedRoute,
