@@ -23,7 +23,9 @@ export class DetailComponent implements OnInit {
   public speciesLabels = SpeciesLabels;
   public showLoading: boolean;
 
-  private _filters: IFilter = {};
+  private _filters: IFilter = {
+    showInAdoptionPage: true,
+  };
   private _ngUnsuscribe: Subject<void> = new Subject<void>();
 
   constructor(
