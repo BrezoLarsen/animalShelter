@@ -10,7 +10,7 @@
     <div class="c-adoption-card__img-label">{{animal.name}}</div>
   </div>
   <div class="c-adoption-card__text">
-    <p><strong>Sexo:</strong> {{animal.gender}}</p>
+    <p><strong>Sexo:</strong> {{genderLabels[animal.genderId]}}</p>
     <p><strong>F. nac:</strong> {{animal.birthDate ? (animal.birthDate | date: 'dd/MM/yyyy') : '-'}}</p>
   </div>
 </div>

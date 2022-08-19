@@ -41,9 +41,9 @@
               <icon-footprint mat-list-icon></icon-footprint>
               <div mat-line><strong>Fecha de nacimiento:</strong> {{animal.birthDate | date: 'dd/MM/yyyy'}}</div>
             </mat-list-item>
-            <mat-list-item *ngIf="animal.gender">
+            <mat-list-item>
               <icon-footprint mat-list-icon></icon-footprint>
-              <div mat-line><strong>Sexo:</strong> {{animal.gender}}</div>
+              <div mat-line><strong>Sexo:</strong> {{genderLabels[animal.genderId]}}</div>
             </mat-list-item>
             <mat-list-item>
               <icon-footprint mat-list-icon></icon-footprint>

@@ -8,6 +8,7 @@ export class IAnimal {
   subspecie?: string;
   breed?: string;
   gender?: string;
+  genderId?: number;
   isSterilized?: string;
   birthDate?: string;
   status?: string;

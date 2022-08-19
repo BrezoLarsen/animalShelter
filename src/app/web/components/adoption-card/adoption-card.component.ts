@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SETTINGS } from 'src/app/config/settings';
+import { GenderLabels } from 'src/app/interfaces/genders';
 import { IAnimal } from '../../../interfaces/animal';
 
 @Component({
@@ -10,6 +11,7 @@ import { IAnimal } from '../../../interfaces/animal';
 })
 export class AdoptionCardComponent implements OnInit {
   @Input() animal: IAnimal;
+  public genderLabels = GenderLabels;
 
   constructor(private router: Router) {}
 

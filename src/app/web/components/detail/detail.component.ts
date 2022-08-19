@@ -9,6 +9,7 @@ import { IFilter } from '../../../../const/filters.model';
 import { SETTINGS } from 'src/app/config/settings';
 import { Subject } from 'rxjs';
 import { finalize, takeUntil } from 'rxjs/operators';
+import { GenderLabels } from '../../../interfaces/genders';
 
 @Component({
   selector: 'app-detail',
@@ -21,6 +22,7 @@ export class DetailComponent implements OnInit {
   public species = Species;
   public photosArray: IPhoto[];
   public speciesLabels = SpeciesLabels;
+  public genderLabels = GenderLabels;
   public showLoading: boolean;
 
   private _filters: IFilter = {
