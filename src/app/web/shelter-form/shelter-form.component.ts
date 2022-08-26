@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FormGroup,
-  FormBuilder,
+  UntypedFormGroup,
+  UntypedFormBuilder,
   Validators,
   AbstractControl,
 } from '@angular/forms';
@@ -31,7 +31,7 @@ function emailMatcher(c: AbstractControl): { [key: string]: boolean } | null {
 })
 export class ShelterFormComponent implements OnInit {
   animal: IAnimal | undefined;
-  shelterForm: FormGroup;
+  shelterForm: UntypedFormGroup;
   errorMessage = '';
   shelterCandidate: IShelterCandidate;
   specie = '';
@@ -41,7 +41,7 @@ export class ShelterFormComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {}
 
   ngOnInit(): void {
