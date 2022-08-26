@@ -19,7 +19,6 @@ import { IconTwitter } from 'src/theme/custom-icons/twitter';
 import { HelpUsComponent } from './help-us/help-us.component';
 import { ForAdoptionComponent } from './for-adoption/for-adoption.component';
 import { ShelterComponent } from './shelter/shelter.component';
-import { ShelterFormComponent } from './shelter-form/shelter-form.component';
 import { AdoptionCardComponent } from './components/adoption-card/adoption-card.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { DetailSpecieComponent } from './components/detail-specie/detail-specie.component';
@@ -35,7 +34,6 @@ import { AboutComponent } from './about/about.component';
     HelpUsComponent,
     ForAdoptionComponent,
     ShelterComponent,
-    ShelterFormComponent,
     AdoptionCardComponent,
     DetailComponent,
     DetailSpecieComponent,
@@ -51,7 +49,7 @@ import { AboutComponent } from './about/about.component';
     IconInstagram,
     IconTiktok,
     IconTwitter,
-    IconFootprint
+    IconFootprint,
   ],
   exports: [
     IconPiggy,
@@ -62,7 +60,7 @@ import { AboutComponent } from './about/about.component';
     IconInstagram,
     IconTiktok,
     IconTwitter,
-    IconFootprint
+    IconFootprint,
   ],
   imports: [
     BrowserModule,
@@ -70,8 +68,8 @@ import { AboutComponent } from './about/about.component';
     MaterialModule,
     RouterModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: []
+  providers: [],
 })
-export class WebModule { }
+export class WebModule {}

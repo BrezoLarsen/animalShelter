@@ -11,11 +11,8 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { WebModule } from './web/web.module';
 
-
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,12 +24,10 @@ import { WebModule } from './web/web.module';
     FormsModule,
     WebModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
-  exports: [
-    MatInputModule
-],
+  exports: [MatInputModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
