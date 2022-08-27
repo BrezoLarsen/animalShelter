@@ -24,5 +24,5 @@ export class IAnimal {
   passAwayDate?: string;
   showInAdoptionPage?: boolean;
   photosArray?: IPhoto[];
-  extraInformation: string;
+  extraInformation?: string;
 }
