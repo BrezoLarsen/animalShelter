@@ -1,6 +1,3 @@
-import { ISpecie } from './specie';
-import { IPhoto } from './animalPhotos';
-
 export class IAnimal {
   id: number;
   name?: string;
@@ -24,6 +21,5 @@ export class IAnimal {
   adoptionDate?: string;
   passAwayDate?: string;
   showInAdoptionPage?: boolean;
-  photosArray?: IPhoto[];
   extraInformation?: string;
 }
