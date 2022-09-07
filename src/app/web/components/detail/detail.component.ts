@@ -10,6 +10,7 @@ import { SETTINGS } from 'src/app/config/settings';
 import { Subject } from 'rxjs';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { GenderLabels } from '../../../interfaces/genders';
+import { IAnimalImage } from 'src/app/interfaces/animalImage';
 
 @Component({
   selector: 'app-detail',
@@ -24,6 +25,8 @@ export class DetailComponent implements OnInit {
   public speciesLabels = SpeciesLabels;
   public genderLabels = GenderLabels;
   public showLoading: boolean;
+  public imagesArray: IAnimalImage[] = [];
+  public imagesUrl = SETTINGS.ANIMALS_IMAGE_PATH;
 
   private _filters: IFilter = {
     showInAdoptionPage: true,
@@ -37,13 +40,13 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const param = this.activatedRoute.snapshot.paramMap.get('id');
+    const param = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     if (param) {
       this.animal.id = param;
-      this._filters.animalId = Number(param);
+      this._filters.animalId = param;
     }
-
     this.getAnimal();
+    this.getAnimalImages();
   }
 
   ngOnDestroy() {
@@ -52,11 +55,39 @@ export class DetailComponent implements OnInit {
   }
 
   getAnimalImage(): string {
-    return SETTINGS.ANIMALS_IMAGE_PATH + this.animal.imageUrl;
+    return this.imagesUrl + this.animal.principalImageFileName;
   }
 
   back() {
     this.location.back();
+  }
+
+  hiddenAnimalMoreData(): boolean {
+    return (
+      (this.animal.behaviour &&
+        this.animal.story &&
+        this.animal.status &&
+        this.animal.compatibleWith &&
+        this.animal.health &&
+        this.showLiscense &&
+        this.animal.city &&
+        this.animal.extraInformation &&
+        this.animal.specie) !== null
+    );
+  }
+
+  private getAnimalImages(): void {
+    this.animalService
+      .getAnimalImagesByAnimalId(this.animal.id)
+      .pipe(takeUntil(this._ngUnsuscribe))
+      .pipe(
+        finalize(() => {
+          this.showLoading = false;
+        })
+      )
+      .subscribe((data) => {
+        this.imagesArray = data;
+      });
   }
 
   private getAnimal(): void {

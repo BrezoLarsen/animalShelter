@@ -10,6 +10,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 import { IAnimal } from '../../interfaces/animal';
 import { SETTINGS } from 'src/app/config/settings';
 import { IFilter } from '../../../const/filters.model';
+import { IAnimalImage } from 'src/app/interfaces/animalImage';
 
 @Injectable({
   providedIn: 'root',
@@ -26,6 +27,23 @@ export class AnimalService {
       )
       .pipe(
         map((data: IAnimal[]) => {
+          return data;
+        })
+      );
+  }
+
+  getAnimalImagesByAnimalId(animalId: number): Observable<IAnimalImage[]> {
+    const params = new HttpParams().set('animalId', animalId);
+
+    return this.httpClient
+      .get<IAnimalImage[]>(
+        SETTINGS.API_URL + 'animalImage/getAnimalImageByAnimalId.php',
+        {
+          params,
+        }
+      )
+      .pipe(
+        map((data: IAnimalImage[]) => {
           return data;
         })
       );

@@ -2,7 +2,7 @@ import { ISpecie } from './specie';
 import { IPhoto } from './animalPhotos';
 
 export class IAnimal {
-  id: string;
+  id: number;
   name?: string;
   specie?: string;
   subspecie?: string;
@@ -19,6 +19,7 @@ export class IAnimal {
   story?: string;
   chip?: string;
   imageUrl?: string;
+  principalImageFileName?: string;
   needLicense?: string;
   adoptionDate?: string;
   passAwayDate?: string;
