@@ -87,6 +87,8 @@ export class DetailComponent implements OnInit {
       )
       .subscribe((data) => {
         this.imagesArray = data;
+        const firstPhoto = this.imagesArray.shift();
+        this.imagesArray.push(firstPhoto);
       });
   }
 

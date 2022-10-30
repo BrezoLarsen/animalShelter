@@ -68,9 +68,9 @@
         <p class="c-detail__description-text" *ngIf="animal.specie"><strong *ngIf="animal.specie.toLowerCase() === speciesLabels[species.RABBIT]">Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-conejo.doc">Descargar formulario de adopción</a></strong></p>
       </div>
 
-      <hr *ngIf="imagesArray.length">
+      <hr *ngIf="imagesArray.length && imagesArray.length > 1">
 
-      <div *ngIf="imagesArray.length" class="c-detail__gallery-block">
+      <div *ngIf="imagesArray.length && imagesArray.length > 1" class="c-detail__gallery-block">
         <div class="c-detail__gallery">
           <h3 class="c-detail__subtitle">MÁS FOTOS DE {{animal.name | uppercase}}:</h3>
           <div class="c-detail__gallery-content">
@@ -115,9 +115,9 @@
         </div>
       </div>
 
-      <hr *ngIf="!imagesArray.length">
+      <hr *ngIf="!imagesArray.length && imagesArray.length === 1">
 
-      <div *ngIf="!imagesArray.length" class="c-detail__contact">
+      <div *ngIf="!imagesArray.length && imagesArray.length === 1" class="c-detail__contact">
         <h3 class="c-detail__subtitle">CONTACTO:</h3>
         <div class="c-detail__contact-item">
           <mat-icon mat-list-icon class="hidden-xs">alternate_email</mat-icon>
