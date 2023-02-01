@@ -63,9 +63,6 @@
         <p class="c-detail__description-text" *ngIf="showLiscense"><strong>¿Es necesaria licencia? </strong>{{animal.needLicense}}</p>
         <p class="c-detail__description-text" *ngIf="animal.city"><strong>Zona: </strong>{{animal.city}}</p>
         <p class="c-detail__description-text" *ngIf="animal.extraInformation"><strong>Información extra: </strong>{{animal.extraInformation}}</p>
-        <p class="c-detail__description-text" *ngIf="animal.specie"><strong *ngIf="animal.specie.toLowerCase() === speciesLabels[species.DOG]">Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopción-perro.doc">Descargar formulario de adopción</a></strong></p>
-        <p class="c-detail__description-text" *ngIf="animal.specie"><strong *ngIf="animal.specie.toLowerCase() === speciesLabels[species.CAT]">Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-gato.docx">Descargar formulario de adopción</a></strong></p>
-        <p class="c-detail__description-text" *ngIf="animal.specie"><strong *ngIf="animal.specie.toLowerCase() === speciesLabels[species.RABBIT]">Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-conejo.doc">Descargar formulario de adopción</a></strong></p>
       </div>
 
       <hr *ngIf="imagesArray.length && imagesArray.length > 1">
@@ -115,9 +112,9 @@
         </div>
       </div>
 
-      <hr *ngIf="!imagesArray.length && imagesArray.length === 1">
+      <hr *ngIf="imagesArray.length === 1">
 
-      <div *ngIf="!imagesArray.length && imagesArray.length === 1" class="c-detail__contact">
+      <div *ngIf="imagesArray.length === 1" class="c-detail__contact">
         <h3 class="c-detail__subtitle">CONTACTO:</h3>
         <div class="c-detail__contact-item">
           <mat-icon mat-list-icon class="hidden-xs">alternate_email</mat-icon>
@@ -127,6 +124,17 @@
           <mat-icon mat-list-icon class="hidden-xs">call</mat-icon>
           <strong>Teléfonos: </strong> <br class="visible-xs">&nbsp; 676 022 124  |  606 100 661
         </div>
+        <div *ngIf="animal.specie.toLowerCase() === speciesLabels[species.DOG]" class="c-detail__contact-item">
+          <mat-icon mat-list-icon class="hidden-xs">favorite</mat-icon>
+          <strong>Formulario de adopción: </strong> <br class="visible-xs">&nbsp; Si estás interesad@ en adoptar a {{animal.name}} puedes rellenar el <a href="https://forms.gle/rHujA1m7qhwBneaB6" target="_blank" class="c-detail__link">formulario de adopción aquí</a>.
+        </div>
+        <div *ngIf="animal.specie.toLowerCase() === speciesLabels[species.DOG]" class="c-detail__contact-item">
+          <mat-icon mat-list-icon class="hidden-xs">domain</mat-icon>
+          <strong>Formulario de acogida: </strong> <br class="visible-xs">&nbsp; Si quieres ser casa de acogida de {{animal.name}} puedes rellenar el <a href="https://forms.gle/C54JTSz4PKNX8FSAA" target="_blank" class="c-detail__link">formulario de acogida aquí</a>.
+        </div>
+        <p class="c-detail__description-text"><strong *ngIf="animal.specie.toLowerCase() === speciesLabels[species.CAT]">Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-gato.docx">Descargar formulario de adopción</a></strong></p>
+        <p class="c-detail__description-text"><strong *ngIf="animal.specie.toLowerCase() === speciesLabels[species.RABBIT]">Si estás interesad@ en adoptar a {{animal.name}}, completa el siguiente formulario y envíanoslo a: hakunamatata.familiaanimalista@gmail.com <a target="_blank" href="../../../../assets/cuestionarios-adopcion/cuestionario-adopcion-conejo.doc">Descargar formulario de adopción</a></strong></p>
+
       </div>
 
       <hr>

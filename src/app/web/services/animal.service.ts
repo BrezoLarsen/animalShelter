@@ -9,8 +9,8 @@ import { catchError, tap, map } from 'rxjs/operators';
 
 import { IAnimal } from '../../interfaces/animal';
 import { SETTINGS } from 'src/app/config/settings';
-import { IFilter } from '../../../const/filters.model';
 import { IAnimalImage } from 'src/app/interfaces/animalImage';
+import { IAnimalFilter } from 'src/const/animal-filters.model';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +18,7 @@ import { IAnimalImage } from 'src/app/interfaces/animalImage';
 export class AnimalService {
   constructor(private httpClient: HttpClient) {}
 
-  getAnimalsByFilters(filters: IFilter): Observable<IAnimal[]> {
+  getAnimalsByFilters(filters: IAnimalFilter): Observable<IAnimal[]> {
     filters.tenantId = SETTINGS.TENANTID;
     return this.httpClient
       .post<IAnimal[]>(

@@ -27,6 +27,7 @@ import { VolunteerComponent } from './volunteer/volunteer.component';
 import { HelpBoxComponent } from './components/help-boxes/help-boxes.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { EventBoxComponent } from './components/event-box/event-box.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AboutComponent } from './about/about.component';
     IconTiktok,
     IconTwitter,
     IconFootprint,
+    EventBoxComponent,
   ],
   exports: [
     IconPiggy,

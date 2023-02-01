@@ -6,7 +6,7 @@ import { IAnimal } from '../../../interfaces/animal';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { Species, SpeciesLabels } from '../../../../const/species';
-import { IFilter } from 'src/const/filters.model';
+import { IAnimalFilter } from 'src/const/animal-filters.model';
 
 @Component({
   selector: 'app-detail-specie',
@@ -20,7 +20,7 @@ export class DetailSpecieComponent {
   private _animals: IAnimal[] = [];
   private _param: string;
   private _ngUnsuscribe: Subject<void> = new Subject<void>();
-  private _filters: IFilter = {
+  private _filters: IAnimalFilter = {
     showInAdoptionPage: true,
   };
 

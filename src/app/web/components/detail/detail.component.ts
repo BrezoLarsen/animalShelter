@@ -5,12 +5,12 @@ import { IAnimal } from '../../../interfaces/animal';
 import { AnimalService } from '../../services/animal.service';
 import { IPhoto } from '../../../interfaces/animalPhotos';
 import { Species, SpeciesLabels } from '../../../../const/species';
-import { IFilter } from '../../../../const/filters.model';
 import { SETTINGS } from 'src/app/config/settings';
 import { Subject } from 'rxjs';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { GenderLabels } from '../../../interfaces/genders';
 import { IAnimalImage } from 'src/app/interfaces/animalImage';
+import { IAnimalFilter } from 'src/const/animal-filters.model';
 
 @Component({
   selector: 'app-detail',
@@ -28,7 +28,7 @@ export class DetailComponent implements OnInit {
   public imagesArray: IAnimalImage[] = [];
   public imagesUrl = SETTINGS.ANIMALS_IMAGE_PATH;
 
-  private _filters: IFilter = {
+  private _filters: IAnimalFilter = {
     showInAdoptionPage: true,
   };
   private _ngUnsuscribe: Subject<void> = new Subject<void>();

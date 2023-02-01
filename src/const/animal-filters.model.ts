@@ -1,4 +1,4 @@
-export interface IFilter {
+export interface IAnimalFilter {
   tenantId?: string;
   animalId?: number;
   specieId?: number;
